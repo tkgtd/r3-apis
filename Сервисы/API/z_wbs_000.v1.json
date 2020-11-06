@@ -1,0 +1,443 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "z_wbs_000",
+    "version": "1.0",
+    "description": "Тестовый адрес: \nhttp://81.91.43.211:8000/sap/bc/srt/wsdl/srvc_000C29EC29AF1EDB85F880D55AA3405C/w­sdl11/allinone/standard/document?sap-client=850\n\nПродуктивный адрес:\nhttp://81.91.43.211:8030/sap/bc/srt/wsdl/srvc_3440B5B0A98C1EEB868FFC07B13270EE/w­sdl11/allinone/standard/document?sap-client=850\n"
+  },
+  "servers": [
+    {
+      "url": "http://localhost:3000"
+    }
+  ],
+  "paths": {
+    "/ZWsIdimage": {
+      "get": {
+        "summary": "Получение списка идентификаторов фотографий",
+        "tags": [],
+        "operationId": "get-ZWsIdimage",
+        "description": "ФМ реализующий сервис Z_WS_IDIMAGE\n\nCервис, предоставляющий WEB-сайту информацию о созданных за определенный период фотографиях заданного типа  с дополнительной информацией:\n- тип документа основания, к которому прикреплена фотография\n- номер документа основания, к которому прикреплена фотография\n- завод документа основания, к которому прикреплена фотография \n- пользователь разместивший фотографию\n",
+        "parameters": [
+          {
+            "schema": {
+              "type": "array"
+            },
+            "in": "query",
+            "name": "IT_WERKS",
+            "description": "Таблица заводов\n"
+          },
+          {
+            "schema": {
+              "type": "array"
+            },
+            "in": "query",
+            "name": "IS_IDATE",
+            "required": true,
+            "description": "Структура с датой размещения фотографии, значение с/по "
+          },
+          {
+            "schema": {
+              "type": "array"
+            },
+            "in": "query",
+            "name": "IT_UTYPE",
+            "required": true,
+            "description": "Таблица типов размещенных фотографии "
+          },
+          {
+            "schema": {
+              "type": "array"
+            },
+            "in": "query",
+            "name": "IT_DOC1 ",
+            "description": "Таблица первичных документов оснований"
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "description": "",
+                "type": "object",
+                "properties": {
+                  "IsIdate": {
+                    "type": "object",
+                    "properties": {
+                      "Begda": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "Endda": {
+                        "type": "string",
+                        "minLength": 1
+                      }
+                    },
+                    "required": [
+                      "Begda",
+                      "Endda"
+                    ]
+                  },
+                  "ItDoc1": {
+                    "type": "array",
+                    "uniqueItems": true,
+                    "minItems": 1,
+                    "items": {
+                      "required": [],
+                      "properties": {
+                        "item": {
+                          "type": "object",
+                          "properties": {
+                            "Dtype1": {
+                              "type": "string",
+                              "minLength": 1
+                            },
+                            "Nudoc1": {
+                              "type": "string",
+                              "minLength": 1
+                            }
+                          },
+                          "required": [
+                            "Dtype1",
+                            "Nudoc1"
+                          ]
+                        }
+                      }
+                    }
+                  },
+                  "ItUtype": {
+                    "type": "array",
+                    "uniqueItems": true,
+                    "minItems": 1,
+                    "items": {
+                      "required": [
+                        "item"
+                      ],
+                      "properties": {
+                        "item": {
+                          "type": "string",
+                          "minLength": 1
+                        }
+                      }
+                    }
+                  },
+                  "ItWerks": {
+                    "type": "array",
+                    "uniqueItems": true,
+                    "minItems": 1,
+                    "items": {
+                      "required": [
+                        "item"
+                      ],
+                      "properties": {
+                        "item": {
+                          "type": "string",
+                          "minLength": 1
+                        }
+                      }
+                    }
+                  }
+                },
+                "required": [
+                  "IsIdate",
+                  "ItDoc1",
+                  "ItUtype",
+                  "ItWerks"
+                ]
+              },
+              "examples": {
+                "example-1": {
+                  "value": {
+                    "IsIdate": {
+                      "Begda": "01.01.2020",
+                      "Endda": "31.12.2020"
+                    },
+                    "ItDoc1": [
+                      {
+                        "item": {
+                          "Dtype1": "08",
+                          "Nudoc1": "7000168449"
+                        }
+                      }
+                    ],
+                    "ItUtype": [
+                      {
+                        "item": "25"
+                      }
+                    ],
+                    "ItWerks": [
+                      {
+                        "item": "7701"
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "description": "",
+                  "type": "object",
+                  "properties": {
+                    "EtIdimage": {
+                      "type": "array",
+                      "uniqueItems": true,
+                      "minItems": 1,
+                      "items": {
+                        "required": [],
+                        "properties": {
+                          "item": {
+                            "type": "object",
+                            "properties": {
+                              "Idimg": {
+                                "type": "string",
+                                "minLength": 1
+                              },
+                              "Wpl": {
+                                "type": "string",
+                                "minLength": 1
+                              },
+                              "Dtype1": {
+                                "type": "string",
+                                "minLength": 1
+                              },
+                              "Nudoc1": {
+                                "type": "string",
+                                "minLength": 1
+                              },
+                              "Dtype2": {
+                                "type": "string",
+                                "minLength": 1
+                              },
+                              "Nudoc2": {
+                                "type": "string",
+                                "minLength": 1
+                              },
+                              "Dtype3": {
+                                "type": "string",
+                                "minLength": 1
+                              },
+                              "Nudoc3": {
+                                "type": "string",
+                                "minLength": 1
+                              },
+                              "Dwerk": {
+                                "type": "string",
+                                "minLength": 1
+                              },
+                              "Bname": {
+                                "type": "string",
+                                "minLength": 1
+                              }
+                            },
+                            "required": [
+                              "Idimg",
+                              "Wpl",
+                              "Dtype1",
+                              "Nudoc1",
+                              "Dtype2",
+                              "Nudoc2",
+                              "Dtype3",
+                              "Nudoc3",
+                              "Dwerk",
+                              "Bname"
+                            ]
+                          }
+                        }
+                      }
+                    },
+                    "Eerror": {
+                      "type": "string",
+                      "minLength": 1
+                    }
+                  },
+                  "required": [
+                    "EtIdimage",
+                    "Eerror"
+                  ]
+                },
+                "examples": {
+                  "example-1": {
+                    "value": {
+                      "EtIdimage": [
+                        {
+                          "item": {
+                            "Idimg": "0006389990",
+                            "Wpl": "03",
+                            "Dtype1": "08",
+                            "Nudoc1": "7000168639",
+                            "Dtype2": "11",
+                            "Nudoc2": "0001",
+                            "Dtype3": "",
+                            "Nudoc3": "",
+                            "Dwerk": "7701",
+                            "Bname": "POLUSHINAES"
+                          }
+                        }
+                      ],
+                      "Eerror": ""
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/ZWsImage": {
+      "get": {
+        "summary": "Получение списка изображений",
+        "tags": [],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "description": "",
+                  "type": "object",
+                  "properties": {
+                    "EtImage": {
+                      "type": "array",
+                      "uniqueItems": true,
+                      "minItems": 1,
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "item": {
+                            "type": "object",
+                            "properties": {
+                              "Idimg": {
+                                "type": "string",
+                                "minLength": 1
+                              },
+                              "Bin": {
+                                "type": "object",
+                                "properties": {
+                                  "item": {
+                                    "type": "object",
+                                    "properties": {
+                                      "Line": {
+                                        "type": "string",
+                                        "minLength": 1
+                                      }
+                                    }
+                                  }
+                                }
+                              },
+                              "Length": {
+                                "type": "string",
+                                "minLength": 1
+                              },
+                              "Error": {
+                                "type": "string",
+                                "minLength": 1
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "examples": {
+                  "example-1": {
+                    "value": {
+                      "EtImage": [
+                        {
+                          "item": {
+                            "Idimg": "7000168449",
+                            "Bin": {
+                              "item": {
+                                "Line": "string"
+                              }
+                            },
+                            "Length": "408736",
+                            "Error": ""
+                          }
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get-ZWsImage",
+        "description": "Cервис, предоставляющий WEB-сайту изображения\n\nФМ реализующий сервис Z_WS_IMAGE",
+        "parameters": [
+          {
+            "schema": {
+              "type": "array"
+            },
+            "in": "query",
+            "name": "ItIdimg",
+            "description": "Таблица с идентификаторами фотографий",
+            "required": true
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "description": "",
+                "type": "object",
+                "properties": {
+                  "ItIdimg": {
+                    "type": "array",
+                    "uniqueItems": true,
+                    "minItems": 1,
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "item": {
+                          "type": "string",
+                          "minLength": 1
+                        }
+                      },
+                      "required": [
+                        "item"
+                      ]
+                    }
+                  }
+                },
+                "required": [
+                  "ItIdimg"
+                ]
+              },
+              "examples": {
+                "example-1": {
+                  "value": {
+                    "ItIdimg": [
+                      {
+                        "item": "0006389992"
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "parameters": []
+    }
+  },
+  "components": {
+    "schemas": {},
+    "securitySchemes": {
+      "API Key - 1": {
+        "name": "API Key",
+        "type": "apiKey",
+        "in": "query"
+      }
+    }
+  }
+}
