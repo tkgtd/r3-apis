@@ -189,7 +189,7 @@
                       "uniqueItems": true,
                       "minItems": 1,
                       "items": {
-                        "required": [],
+                        "type": "object",
                         "properties": {
                           "item": {
                             "type": "object",
@@ -234,19 +234,7 @@
                                 "type": "string",
                                 "minLength": 1
                               }
-                            },
-                            "required": [
-                              "Idimg",
-                              "Wpl",
-                              "Dtype1",
-                              "Nudoc1",
-                              "Dtype2",
-                              "Nudoc2",
-                              "Dtype3",
-                              "Nudoc3",
-                              "Dwerk",
-                              "Bname"
-                            ]
+                            }
                           }
                         }
                       }
@@ -255,11 +243,7 @@
                       "type": "string",
                       "minLength": 1
                     }
-                  },
-                  "required": [
-                    "EtIdimage",
-                    "Eerror"
-                  ]
+                  }
                 },
                 "examples": {
                   "example-1": {

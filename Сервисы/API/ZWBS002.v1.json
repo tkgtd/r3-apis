@@ -1,0 +1,292 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "ZWBS002",
+    "version": "1.0"
+  },
+  "servers": [
+    {
+      "url": "http://localhost:3000"
+    }
+  ],
+  "paths": {
+    "/Zws002HrWhWork": {
+      "get": {
+        "summary": "Your GET endpoint",
+        "tags": [],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "description": "",
+                  "type": "object",
+                  "properties": {
+                    "EtData": {
+                      "type": "array",
+                      "uniqueItems": true,
+                      "minItems": 1,
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "item": {
+                            "type": "object",
+                            "properties": {
+                              "Erdat": {
+                                "type": "string"
+                              },
+                              "Werks": {
+                                "type": "string"
+                              },
+                              "Werks_Tx": {
+                                "type": "string"
+                              },
+                              "Pernr": {
+                                "type": "string"
+                              },
+                              "Usrid": {
+                                "type": "string"
+                              },
+                              "Pernr_Fio": {
+                                "type": "string"
+                              },
+                              "Kfig": {
+                                "type": "string"
+                              },
+                              "Kfig_Tx": {
+                                "type": "string"
+                              },
+                              "Kfgu": {
+                                "type": "string"
+                              },
+                              "Value": {
+                                "type": "string"
+                              }
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "EtMess": {
+                      "type": "array",
+                      "uniqueItems": true,
+                      "minItems": 1,
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "item": {
+                            "type": "object",
+                            "properties": {
+                              "Type": {
+                                "type": "string",
+                                "minLength": 1
+                              },
+                              "Id": {
+                                "type": "string",
+                                "minLength": 1
+                              },
+                              "Number": {
+                                "type": "string",
+                                "minLength": 1
+                              },
+                              "Message": {
+                                "type": "string",
+                                "minLength": 1
+                              },
+                              "LogNo": {
+                                "type": "string",
+                                "minLength": 1
+                              },
+                              "LogMsgNo": {
+                                "type": "string",
+                                "minLength": 1
+                              },
+                              "MessageV1": {
+                                "type": "string",
+                                "minLength": 1
+                              },
+                              "MessageV2": {
+                                "type": "string",
+                                "minLength": 1
+                              },
+                              "MessageV3": {
+                                "type": "string",
+                                "minLength": 1
+                              },
+                              "MessageV4": {
+                                "type": "string",
+                                "minLength": 1
+                              },
+                              "Parameter": {
+                                "type": "string"
+                              },
+                              "Row": {
+                                "type": "string",
+                                "minLength": 1
+                              },
+                              "Field": {
+                                "type": "string"
+                              },
+                              "System": {
+                                "type": "string"
+                              }
+                            },
+                            "required": [
+                              "Type",
+                              "Id",
+                              "Number",
+                              "Message",
+                              "LogNo",
+                              "LogMsgNo",
+                              "MessageV1",
+                              "MessageV2",
+                              "MessageV3",
+                              "MessageV4",
+                              "Parameter",
+                              "Row",
+                              "Field",
+                              "System"
+                            ]
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get-Zws002HrWhWork",
+        "description": "ФМ реализующий сервис ZWS002_HR_WH_WORK\n\nCервис, предоставляющий информацию о данных сотрудников",
+        "parameters": [
+          {
+            "schema": {
+              "type": "string"
+            },
+            "in": "query",
+            "name": "is_period",
+            "description": "Дата - период с/по",
+            "required": true
+          },
+          {
+            "schema": {
+              "type": "string"
+            },
+            "in": "query",
+            "name": "i_werks",
+            "description": "Завод",
+            "required": true
+          },
+          {
+            "schema": {
+              "type": "string"
+            },
+            "in": "query",
+            "name": "i_usrid",
+            "description": "Внешний идентификатор сотрудника"
+          },
+          {
+            "schema": {
+              "type": "string"
+            },
+            "in": "query",
+            "name": "i_kfg",
+            "description": "Вид работ"
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "description": "",
+                "type": "object",
+                "properties": {
+                  "IsPeriod": {
+                    "type": "object",
+                    "required": [
+                      "Begda",
+                      "Endda"
+                    ],
+                    "properties": {
+                      "Begda": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "Endda": {
+                        "type": "string",
+                        "minLength": 1
+                      }
+                    }
+                  },
+                  "IWerks": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "IUsrid": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "IKfg": {
+                    "type": "string",
+                    "minLength": 1
+                  }
+                },
+                "required": [
+                  "IsPeriod",
+                  "IWerks"
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "123": {
+        "description": "",
+        "type": "object",
+        "properties": {
+          "IsPeriod": {
+            "type": "object",
+            "properties": {
+              "Begda": {
+                "type": "string",
+                "minLength": 1
+              },
+              "Endda": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "required": [
+              "Begda",
+              "Endda"
+            ]
+          },
+          "IKfg": {
+            "type": "string",
+            "minLength": 1
+          },
+          "IUsrid": {
+            "type": "string",
+            "minLength": 1
+          },
+          "IWerks": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "IsPeriod",
+          "IKfg",
+          "IUsrid",
+          "IWerks"
+        ]
+      }
+    }
+  }
+}
