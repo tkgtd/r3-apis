@@ -245,48 +245,6 @@
     }
   },
   "components": {
-    "schemas": {
-      "123": {
-        "description": "",
-        "type": "object",
-        "properties": {
-          "IsPeriod": {
-            "type": "object",
-            "properties": {
-              "Begda": {
-                "type": "string",
-                "minLength": 1
-              },
-              "Endda": {
-                "type": "string",
-                "minLength": 1
-              }
-            },
-            "required": [
-              "Begda",
-              "Endda"
-            ]
-          },
-          "IKfg": {
-            "type": "string",
-            "minLength": 1
-          },
-          "IUsrid": {
-            "type": "string",
-            "minLength": 1
-          },
-          "IWerks": {
-            "type": "string",
-            "minLength": 1
-          }
-        },
-        "required": [
-          "IsPeriod",
-          "IKfg",
-          "IUsrid",
-          "IWerks"
-        ]
-      }
-    }
+    "schemas": {}
   }
 }
