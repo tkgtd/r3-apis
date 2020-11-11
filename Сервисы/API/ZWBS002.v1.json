@@ -2,7 +2,8 @@
   "openapi": "3.0.0",
   "info": {
     "title": "ZWBS002",
-    "version": "1.0"
+    "version": "1.0",
+    "description": "Тестовый адрес: \nhttp://KT0.kit.lan:8000/sap/bc/srt/wsdl/srvc_000C29EC29AF1EDB89821BF2CEF9C05C/wsdl11/allinone/standard/document?sap-client=850"
   },
   "servers": [
     {
