@@ -25,129 +25,112 @@
                   "type": "object",
                   "properties": {
                     "EtData": {
-                      "type": "array",
-                      "uniqueItems": true,
-                      "minItems": 1,
-                      "items": {
-                        "type": "object",
-                        "properties": {
-                          "item": {
-                            "type": "object",
-                            "properties": {
-                              "Erdat": {
-                                "type": "string"
-                              },
-                              "Werks": {
-                                "type": "string"
-                              },
-                              "Werks_Tx": {
-                                "type": "string"
-                              },
-                              "Pernr": {
-                                "type": "string"
-                              },
-                              "Usrid": {
-                                "type": "string"
-                              },
-                              "Pernr_Fio": {
-                                "type": "string"
-                              },
-                              "Kfig": {
-                                "type": "string"
-                              },
-                              "Kfig_Tx": {
-                                "type": "string"
-                              },
-                              "Kfgu": {
-                                "type": "string"
-                              },
-                              "Value": {
-                                "type": "string"
+                      "type": "object",
+                      "properties": {
+                        "item": {
+                          "type": "object",
+                          "properties": {
+                            "Werks": {
+                              "type": "string",
+                              "minLength": 1
+                            },
+                            "Mess": {
+                              "type": "object",
+                              "properties": {
+                                "item": {
+                                  "type": "array",
+                                  "items": {
+                                    "type": "object"
+                                  }
+                                }
+                              }
+                            },
+                            "Data": {
+                              "type": "object",
+                              "properties": {
+                                "item": {
+                                  "type": "array",
+                                  "uniqueItems": true,
+                                  "minItems": 1,
+                                  "items": {
+                                    "type": "object",
+                                    "properties": {
+                                      "Erdat": {
+                                        "type": "string",
+                                        "minLength": 1
+                                      },
+                                      "Werks": {
+                                        "type": "string",
+                                        "minLength": 1
+                                      },
+                                      "WerksTx": {
+                                        "type": "string",
+                                        "minLength": 1
+                                      },
+                                      "Pernr": {
+                                        "type": "string",
+                                        "minLength": 1
+                                      },
+                                      "Usrid": {
+                                        "type": "string",
+                                        "minLength": 1
+                                      },
+                                      "PernrFio": {
+                                        "type": "string",
+                                        "minLength": 1
+                                      },
+                                      "Kfig": {
+                                        "type": "string",
+                                        "minLength": 1
+                                      },
+                                      "KfigTx": {
+                                        "type": "string",
+                                        "minLength": 1
+                                      },
+                                      "Kfgu": {
+                                        "type": "string",
+                                        "minLength": 1
+                                      },
+                                      "Value": {
+                                        "type": "string",
+                                        "minLength": 1
+                                      }
+                                    }
+                                  }
+                                }
                               }
                             }
                           }
                         }
                       }
-                    },
-                    "EtMess": {
-                      "type": "array",
-                      "uniqueItems": true,
-                      "minItems": 1,
-                      "items": {
-                        "type": "object",
-                        "properties": {
-                          "item": {
-                            "type": "object",
-                            "properties": {
-                              "Type": {
-                                "type": "string",
-                                "minLength": 1
-                              },
-                              "Id": {
-                                "type": "string",
-                                "minLength": 1
-                              },
-                              "Number": {
-                                "type": "string",
-                                "minLength": 1
-                              },
-                              "Message": {
-                                "type": "string",
-                                "minLength": 1
-                              },
-                              "LogNo": {
-                                "type": "string",
-                                "minLength": 1
-                              },
-                              "LogMsgNo": {
-                                "type": "string",
-                                "minLength": 1
-                              },
-                              "MessageV1": {
-                                "type": "string",
-                                "minLength": 1
-                              },
-                              "MessageV2": {
-                                "type": "string",
-                                "minLength": 1
-                              },
-                              "MessageV3": {
-                                "type": "string",
-                                "minLength": 1
-                              },
-                              "MessageV4": {
-                                "type": "string",
-                                "minLength": 1
-                              },
-                              "Parameter": {
-                                "type": "string"
-                              },
-                              "Row": {
-                                "type": "string",
-                                "minLength": 1
-                              },
-                              "Field": {
-                                "type": "string"
-                              },
-                              "System": {
-                                "type": "string"
+                    }
+                  }
+                },
+                "examples": {
+                  "example-1": {
+                    "value": {
+                      "EtData": {
+                        "item": {
+                          "Werks": "string",
+                          "Mess": {
+                            "item": [
+                              {}
+                            ]
+                          },
+                          "Data": {
+                            "item": [
+                              {
+                                "Erdat": "string",
+                                "Werks": "string",
+                                "WerksTx": "string",
+                                "Pernr": "string",
+                                "Usrid": "string",
+                                "PernrFio": "string",
+                                "Kfig": "string",
+                                "KfigTx": "string",
+                                "Kfgu": "string",
+                                "Value": "string"
                               }
-                            },
-                            "required": [
-                              "Type",
-                              "Id",
-                              "Number",
-                              "Message",
-                              "LogNo",
-                              "LogMsgNo",
-                              "MessageV1",
-                              "MessageV2",
-                              "MessageV3",
-                              "MessageV4",
-                              "Parameter",
-                              "Row",
-                              "Field",
-                              "System"
                             ]
                           }
                         }
@@ -173,11 +156,11 @@
           },
           {
             "schema": {
-              "type": "string"
+              "type": "array"
             },
             "in": "query",
-            "name": "i_werks",
-            "description": "Завод",
+            "name": "IT_WERKS",
+            "description": "Таблица с заводами",
             "required": true
           },
           {
@@ -195,6 +178,14 @@
             "in": "query",
             "name": "i_kfg",
             "description": "Вид работ"
+          },
+          {
+            "schema": {
+              "type": "array"
+            },
+            "in": "query",
+            "name": "IT_BUKRS",
+            "description": "Таблица с БЕ"
           }
         ],
         "requestBody": {
@@ -204,40 +195,87 @@
                 "description": "",
                 "type": "object",
                 "properties": {
+                  "IKfg": {
+                    "type": "string"
+                  },
+                  "IUsrid": {
+                    "type": "string"
+                  },
                   "IsPeriod": {
                     "type": "object",
+                    "properties": {
+                      "Begda": {
+                        "type": "string"
+                      },
+                      "Endda": {
+                        "type": "string"
+                      }
+                    },
                     "required": [
                       "Begda",
                       "Endda"
-                    ],
-                    "properties": {
-                      "Begda": {
-                        "type": "string",
-                        "minLength": 1
-                      },
-                      "Endda": {
-                        "type": "string",
-                        "minLength": 1
+                    ]
+                  },
+                  "ItWerks": {
+                    "type": "array",
+                    "uniqueItems": true,
+                    "minItems": 1,
+                    "items": {
+                      "required": [
+                        "item"
+                      ],
+                      "properties": {
+                        "item": {
+                          "type": "string"
+                        }
                       }
                     }
                   },
-                  "IWerks": {
-                    "type": "string",
-                    "minLength": 1
-                  },
-                  "IUsrid": {
-                    "type": "string",
-                    "minLength": 1
-                  },
-                  "IKfg": {
-                    "type": "string",
-                    "minLength": 1
+                  "ItBukrs": {
+                    "type": "array",
+                    "uniqueItems": true,
+                    "minItems": 1,
+                    "items": {
+                      "required": [
+                        "item"
+                      ],
+                      "properties": {
+                        "item": {
+                          "type": "string"
+                        }
+                      }
+                    }
                   }
                 },
                 "required": [
+                  "IKfg",
+                  "IUsrid",
                   "IsPeriod",
-                  "IWerks"
+                  "ItWerks",
+                  "ItBukrs"
                 ]
+              },
+              "examples": {
+                "example-1": {
+                  "value": {
+                    "IKfg": "",
+                    "IUsrid": "",
+                    "IsPeriod": {
+                      "Begda": "2020-10-20",
+                      "Endda": "2020-10-31"
+                    },
+                    "ItWerks": [
+                      {
+                        "item": "6601"
+                      }
+                    ],
+                    "ItBukrs": [
+                      {
+                        "item": ""
+                      }
+                    ]
+                  }
+                }
               }
             }
           }
