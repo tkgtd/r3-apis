@@ -1,0 +1,207 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "zws001_order_create",
+    "version": "1.0",
+    "description": "Тестовый адрес:\nhttp://KT0.kit.lan:8000/sap/bc/srt/wsdl/srvc_000C29EC29AF1EDB89B5D6D00F1D205C/wsdl11/allinone/standard/document?sap-client=850\n\n\nПродуктивный адрес:\n"
+  },
+  "servers": [
+    {
+      "url": "http://localhost:3000"
+    }
+  ],
+  "paths": {
+    "/Zws001MassOrderCreate": {
+      "post": {
+        "summary": "",
+        "operationId": "post-Zws001MassOrderCreate",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "description": "",
+                  "type": "object",
+                  "properties": {
+                    "EtData": {
+                      "type": "object",
+                      "required": [
+                        "item"
+                      ],
+                      "properties": {
+                        "item": {
+                          "type": "object",
+                          "required": [
+                            "RowNumber",
+                            "Xblnr",
+                            "MessLog"
+                          ],
+                          "properties": {
+                            "RowNumber": {
+                              "type": "integer"
+                            },
+                            "Xblnr": {
+                              "type": "string"
+                            },
+                            "MessLog": {
+                              "type": "array",
+                              "items": {
+                                "type": "object",
+                                "properties": {
+                                  "item": {
+                                    "type": "string"
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "required": [
+                    "EtData"
+                  ]
+                },
+                "examples": {
+                  "example-1": {
+                    "value": {
+                      "EtData": {
+                        "item": {
+                          "RowNumber": "0",
+                          "Xblnr": "",
+                          "MessLog": [
+                            {
+                              "item": "File not found in zip-archive"
+                            }
+                          ]
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "application/soap+xml": {
+                "schema": {
+                  "type": "object",
+                  "properties": {}
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "type": "object",
+                  "properties": {}
+                }
+              }
+            }
+          }
+        },
+        "description": "Массовое создание заказов по шаблону компании\n\nФМ реализующий сервис - ZWS001_MASS_ORDER_CREATE",
+        "parameters": [
+          {
+            "schema": {
+              "type": "string"
+            },
+            "in": "query",
+            "name": "I_VTWEG",
+            "description": "Канал сбыта"
+          },
+          {
+            "schema": {
+              "type": "string",
+              "format": "binary"
+            },
+            "in": "query",
+            "name": "I_BIN",
+            "description": "Заполненный шаблон",
+            "required": true
+          },
+          {
+            "schema": {
+              "type": "array"
+            },
+            "in": "query",
+            "name": "IS_AUTH",
+            "description": "Данные авторизации по создаваемому заказу"
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "description": "",
+                "type": "object",
+                "properties": {
+                  "IBin": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "IVtweg": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "IsAuth": {
+                    "type": "object",
+                    "properties": {
+                      "LkProfl": {
+                        "type": "object",
+                        "properties": {
+                          "item": {
+                            "type": "array",
+                            "uniqueItems": true,
+                            "minItems": 1,
+                            "items": {
+                              "type": "object",
+                              "properties": {
+                                "Kunnr": {
+                                  "type": "string",
+                                  "minLength": 1
+                                }
+                              }
+                            }
+                          }
+                        }
+                      },
+                      "Ip4": {
+                        "type": "string",
+                        "minLength": 1
+                      }
+                    }
+                  }
+                },
+                "required": [
+                  "IBin"
+                ]
+              },
+              "examples": {
+                "example-1": {
+                  "value": {
+                    "IBin": "AQIDBAUGBwgJAA==",
+                    "IVtweg": "01",
+                    "IsAuth": {
+                      "LkProfl": {
+                        "item": [
+                          {
+                            "Kunnr": "String 2"
+                          },
+                          {
+                            "Kunnr": "String 3"
+                          }
+                        ]
+                      },
+                      "Ip4": "String 4"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {}
+  }
+}
