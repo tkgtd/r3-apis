@@ -26,17 +26,9 @@
                   "properties": {
                     "EtData": {
                       "type": "object",
-                      "required": [
-                        "item"
-                      ],
                       "properties": {
                         "item": {
                           "type": "object",
-                          "required": [
-                            "RowNumber",
-                            "Xblnr",
-                            "MessLog"
-                          ],
                           "properties": {
                             "RowNumber": {
                               "type": "integer"
@@ -59,10 +51,7 @@
                         }
                       }
                     }
-                  },
-                  "required": [
-                    "EtData"
-                  ]
+                  }
                 },
                 "examples": {
                   "example-1": {
