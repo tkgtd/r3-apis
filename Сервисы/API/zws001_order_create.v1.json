@@ -37,12 +37,17 @@
                               "type": "string"
                             },
                             "MessLog": {
-                              "type": "array",
-                              "items": {
-                                "type": "object",
-                                "properties": {
-                                  "item": {
-                                    "type": "string"
+                              "type": "object",
+                              "properties": {
+                                "item": {
+                                  "type": "array",
+                                  "items": {
+                                    "type": "object",
+                                    "properties": {
+                                      "item": {
+                                        "type": "string"
+                                      }
+                                    }
                                   }
                                 }
                               }
