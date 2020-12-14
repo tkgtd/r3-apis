@@ -416,7 +416,7 @@
     "/ZWsTknum": {
       "parameters": [],
       "get": {
-        "summary": "",
+        "summary": "Получение списка транспортировок",
         "operationId": "get-ZWsTknum",
         "responses": {
           "200": {

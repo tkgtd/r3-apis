@@ -13,7 +13,7 @@
   "paths": {
     "/Zws001MassOrderCreate": {
       "post": {
-        "summary": "",
+        "summary": "Массовое создание заказов",
         "operationId": "post-Zws001MassOrderCreate",
         "responses": {
           "200": {
