@@ -415,9 +415,9 @@
     },
     "/ZWsTknum": {
       "parameters": [],
-      "post": {
+      "get": {
         "summary": "",
-        "operationId": "post-ZWsTknum",
+        "operationId": "get-ZWsTknum",
         "responses": {
           "200": {
             "description": "OK",
@@ -435,7 +435,12 @@
                           "uniqueItems": true,
                           "minItems": 1,
                           "items": {
-                            "type": "object",
+                            "required": [
+                              "Tknum",
+                              "Tsnum",
+                              "Werka",
+                              "AdateOut"
+                            ],
                             "properties": {
                               "Tknum": {
                                 "type": "string",
@@ -453,18 +458,18 @@
                                 "type": "string",
                                 "minLength": 1
                               }
-                            },
-                            "required": [
-                              "Tknum",
-                              "Tsnum",
-                              "Werka",
-                              "AdateOut"
-                            ]
+                            }
                           }
                         }
-                      }
+                      },
+                      "required": [
+                        "item"
+                      ]
                     }
-                  }
+                  },
+                  "required": [
+                    "EtTknum"
+                  ]
                 },
                 "examples": {
                   "example-1": {
@@ -595,12 +600,12 @@
               "type": "array"
             },
             "in": "query",
-            "description": "Таблица заводов места погрузки",
-            "name": "IT_WERKS"
+            "name": "IT_WERKS",
+            "description": "Таблица заводов места погрузки"
           },
           {
             "schema": {
-              "type": "string"
+              "type": "array"
             },
             "in": "query",
             "name": "IS_IDATE",
@@ -671,10 +676,10 @@
                     "ItWerks": {
                       "item": [
                         {
-                          "item": "6601"
+                          "item": "String 2"
                         },
                         {
-                          "item": "7201"
+                          "item": "String 3"
                         }
                       ]
                     }
