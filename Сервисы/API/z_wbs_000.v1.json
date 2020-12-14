@@ -355,7 +355,7 @@
           }
         },
         "operationId": "get-ZWsImage",
-        "description": "Cервис, предоставляющий WEB-сайту изображения\n\nФМ реализующий сервис Z_WS_IMAGE",
+        "description": "Cервис предоставляющий WEB-сайту изображения\n\nФМ реализующий сервис Z_WS_IMAGE",
         "parameters": [
           {
             "schema": {
@@ -409,6 +409,311 @@
               }
             }
           }
+        }
+      },
+      "parameters": []
+    },
+    "/ZWsTknum": {
+      "get": {
+        "summary": "Your GET endpoint",
+        "tags": [],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "description": "",
+                  "type": "object",
+                  "properties": {
+                    "EtTknum": {
+                      "type": "object",
+                      "properties": {
+                        "item": {
+                          "type": "array",
+                          "uniqueItems": true,
+                          "minItems": 1,
+                          "items": {
+                            "type": "object",
+                            "properties": {
+                              "Tknum": {
+                                "type": "string",
+                                "minLength": 1
+                              },
+                              "Tsnum": {
+                                "type": "string",
+                                "minLength": 1
+                              },
+                              "Werka": {
+                                "type": "string",
+                                "minLength": 1
+                              },
+                              "AdateOut": {
+                                "type": "string",
+                                "minLength": 1
+                              }
+                            },
+                            "required": [
+                              "Tsnum",
+                              "Werka",
+                              "AdateOut"
+                            ]
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "examples": {
+                  "example-1": {
+                    "value": {
+                      "EtTknum": {
+                        "item": [
+                          {
+                            "Tknum": "7000168678",
+                            "Tsnum": "0003",
+                            "Werka": "7201",
+                            "AdateOut": "2020-04-21"
+                          },
+                          {
+                            "Tknum": "7000168756",
+                            "Tsnum": "0003",
+                            "Werka": "7201",
+                            "AdateOut": "2020-04-23"
+                          },
+                          {
+                            "Tknum": "7000168773",
+                            "Tsnum": "0003",
+                            "Werka": "7201",
+                            "AdateOut": "2020-05-12"
+                          },
+                          {
+                            "Tknum": "7000168787",
+                            "Tsnum": "0003",
+                            "Werka": "7201",
+                            "AdateOut": "2020-05-21"
+                          },
+                          {
+                            "Tknum": "7000168788",
+                            "Tsnum": "0003",
+                            "Werka": "7201",
+                            "AdateOut": "2020-05-21"
+                          },
+                          {
+                            "Tknum": "7000168815",
+                            "Tsnum": "0003",
+                            "Werka": "7201",
+                            "AdateOut": "2020-06-17"
+                          },
+                          {
+                            "Tknum": "7000168830",
+                            "Tsnum": "0003",
+                            "Werka": "7201",
+                            "AdateOut": "2020-06-25"
+                          },
+                          {
+                            "Tknum": "7000168831",
+                            "Tsnum": "0003",
+                            "Werka": "7201",
+                            "AdateOut": "2020-06-25"
+                          },
+                          {
+                            "Tknum": "7000168838",
+                            "Tsnum": "0003",
+                            "Werka": "7201",
+                            "AdateOut": "2020-06-30"
+                          },
+                          {
+                            "Tknum": "7000168848",
+                            "Tsnum": "0003",
+                            "Werka": "7201",
+                            "AdateOut": "2020-07-07"
+                          },
+                          {
+                            "Tknum": "7000168870",
+                            "Tsnum": "0003",
+                            "Werka": "7201",
+                            "AdateOut": "2020-07-30"
+                          },
+                          {
+                            "Tknum": "7000168914",
+                            "Tsnum": "0003",
+                            "Werka": "7201",
+                            "AdateOut": "2020-08-31"
+                          },
+                          {
+                            "Tknum": "7000168917",
+                            "Tsnum": "0003",
+                            "Werka": "7201",
+                            "AdateOut": "2020-09-01"
+                          },
+                          {
+                            "Tknum": "7000168930",
+                            "Tsnum": "0003",
+                            "Werka": "7201",
+                            "AdateOut": "2020-09-15"
+                          },
+                          {
+                            "Tknum": "7000168932",
+                            "Tsnum": "0003",
+                            "Werka": "7201",
+                            "AdateOut": "2020-09-16"
+                          },
+                          {
+                            "Tknum": "7000168935",
+                            "Tsnum": "0003",
+                            "Werka": "7201",
+                            "AdateOut": "2020-09-17"
+                          },
+                          {
+                            "Tknum": "7000168987",
+                            "Tsnum": "0003",
+                            "Werka": "7201",
+                            "AdateOut": "2020-11-06"
+                          },
+                          {
+                            "Tknum": "7000168990",
+                            "Tsnum": "0003",
+                            "Werka": "7201",
+                            "AdateOut": "2020-11-12"
+                          }
+                        ]
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get-ZWsTKNUM",
+        "description": "Сервис предоставляющий список транспортировок\n\nФМ реализующий сервис Z_WS_TKNUM",
+        "parameters": [
+          {
+            "schema": {
+              "type": "array"
+            },
+            "in": "query",
+            "name": " IT_WERKS",
+            "description": "Таблица заводов места погрузки",
+            "required": true
+          },
+          {
+            "schema": {
+              "type": "array"
+            },
+            "in": "query",
+            "name": "IS_IDATE",
+            "description": "Период завершения погрузки этапа транспортировки. Диапазон с/по. Дата завершения погрузки совпадает с датой отправки машины по этапу.",
+            "required": true
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "description": "",
+                "type": "object",
+                "properties": {
+                  "IsIdate": {
+                    "type": "object",
+                    "properties": {
+                      "Begda": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "Endda": {
+                        "type": "string",
+                        "minLength": 1
+                      }
+                    },
+                    "required": [
+                      "Begda",
+                      "Endda"
+                    ]
+                  },
+                  "ItWerks": {
+                    "type": "object",
+                    "properties": {
+                      "item": {
+                        "type": "array",
+                        "items": {
+                          "required": [],
+                          "properties": {}
+                        }
+                      }
+                    },
+                    "required": [
+                      "item"
+                    ]
+                  }
+                },
+                "required": [
+                  "IsIdate",
+                  "ItWerks"
+                ]
+              }
+            },
+            "application/xml": {
+              "schema": {
+                "description": "",
+                "type": "object",
+                "properties": {
+                  "IsIdate": {
+                    "type": "object",
+                    "properties": {
+                      "Begda": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "Endda": {
+                        "type": "string",
+                        "minLength": 1
+                      }
+                    },
+                    "required": [
+                      "Begda",
+                      "Endda"
+                    ]
+                  },
+                  "ItWerks": {
+                    "type": "object",
+                    "properties": {
+                      "item": {
+                        "type": "array",
+                        "uniqueItems": true,
+                        "minItems": 1,
+                        "items": {
+                          "required": [
+                            "item"
+                          ],
+                          "properties": {
+                            "item": {
+                              "type": "string",
+                              "minLength": 1
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "required": [
+                      "item"
+                    ]
+                  }
+                },
+                "required": [
+                  "IsIdate",
+                  "ItWerks"
+                ]
+              },
+              "examples": {
+                "example-1": {
+                  "value": "{\n  \"IsIdate\": {\n    \"Begda\": \"2020-01-02\",\n    \"Endda\": \"2020-01-03\"\n  },\n  \"ItWerks\": {\n    \"item\": [\n      {\n        \"item\": \"6601\"\n      },\n      {\n        \"item\": \"7201\"\n      }\n    ]\n  }\n}"
+                }
+              }
+            }
+          },
+          "description": ""
         }
       },
       "parameters": []
