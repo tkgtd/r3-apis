@@ -435,12 +435,7 @@
                           "uniqueItems": true,
                           "minItems": 1,
                           "items": {
-                            "required": [
-                              "Tknum",
-                              "Tsnum",
-                              "Werka",
-                              "AdateOut"
-                            ],
+                            "type": "object",
                             "properties": {
                               "Tknum": {
                                 "type": "string",
@@ -461,15 +456,9 @@
                             }
                           }
                         }
-                      },
-                      "required": [
-                        "item"
-                      ]
+                      }
                     }
-                  },
-                  "required": [
-                    "EtTknum"
-                  ]
+                  }
                 },
                 "examples": {
                   "example-1": {
