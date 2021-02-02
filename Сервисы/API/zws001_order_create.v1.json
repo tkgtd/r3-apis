@@ -91,7 +91,7 @@
             }
           }
         },
-        "description": "Массовое создание заказов по шаблону компании\n\nФМ реализующий сервис - ZWS001_MASS_ORDER_CREATE",
+        "description": "Массовое создание заказов по шаблону компании   \n\nФМ реализующий сервис - ZWS001_MASS_ORDER_CREATE",
         "parameters": [
           {
             "schema": {
