@@ -863,8 +863,240 @@
       "get": {
         "summary": "Your GET endpoint",
         "tags": [],
-        "responses": {},
-        "operationId": "get-ZWsTknum1"
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "description": "",
+                  "type": "object",
+                  "properties": {
+                    "EtTknum": {
+                      "type": "object",
+                      "properties": {
+                        "item": {
+                          "type": "array",
+                          "uniqueItems": true,
+                          "minItems": 1,
+                          "items": {
+                            "type": "object",
+                            "properties": {
+                              "Tknum": {
+                                "type": "string",
+                                "minLength": 1
+                              },
+                              "Route": {
+                                "type": "string",
+                                "minLength": 1
+                              },
+                              "Bezei": {
+                                "type": "string",
+                                "minLength": 1
+                              },
+                              "Vsart": {
+                                "type": "string",
+                                "minLength": 1
+                              },
+                              "Vbezei": {
+                                "type": "string",
+                                "minLength": 1
+                              },
+                              "Tsnum": {
+                                "type": "string",
+                                "minLength": 1
+                              },
+                              "WERKZ": {
+                                "type": "string",
+                                "minLength": 1
+                              },
+                              "ADATE_IN": {
+                                "type": "string",
+                                "minLength": 1
+                              },
+                              "Value": {
+                                "type": "string",
+                                "minLength": 1
+                              },
+                              "Meins": {
+                                "type": "string",
+                                "minLength": 1
+                              },
+                              "Inc_flag": {
+                                "type": "string",
+                                "minLength": 1
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "examples": {
+                  "example-1": {
+                    "value": {
+                      "EtTknum": {
+                        "item": [
+                          {
+                            "Tknum": "string",
+                            "Route": "string",
+                            "Bezei": "string",
+                            "Vsart": "string",
+                            "Vbezei": "string",
+                            "Tsnum": "string",
+                            "WERKZ": "string",
+                            "ADATE_IN": "string",
+                            "Value": "string",
+                            "Meins": "string",
+                            "Inc_flag": "string"
+                          }
+                        ]
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get-ZWsTknum1",
+        "description": "Сервис предоставляющий cписок транспортировок по этапам разгрузки\n\nФМ реализующий сервис Z_WS_TKNUM1",
+        "parameters": [
+          {
+            "schema": {
+              "type": "string"
+            },
+            "in": "query",
+            "name": "IT_WERKS",
+            "description": "Таблица заводов",
+            "required": true
+          },
+          {
+            "schema": {
+              "type": "string"
+            },
+            "in": "query",
+            "name": "IT_INC_TYPE",
+            "description": "Таблица типов инцидентов"
+          },
+          {
+            "schema": {
+              "type": "string"
+            },
+            "in": "query",
+            "name": "IS_IDATE",
+            "description": "Период завершения разгрузки этапа транспортировки. Диапазон с /по.",
+            "required": true
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "description": "",
+                "type": "object",
+                "properties": {
+                  "IsIdate": {
+                    "type": "object",
+                    "required": [
+                      "Begda",
+                      "Endda"
+                    ],
+                    "properties": {
+                      "Begda": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "Endda": {
+                        "type": "string",
+                        "minLength": 1
+                      }
+                    }
+                  },
+                  "ItWerks": {
+                    "type": "object",
+                    "required": [
+                      "item"
+                    ],
+                    "properties": {
+                      "item": {
+                        "type": "array",
+                        "uniqueItems": true,
+                        "minItems": 1,
+                        "items": {
+                          "type": "object",
+                          "properties": {
+                            "item": {
+                              "type": "string",
+                              "minLength": 1
+                            }
+                          },
+                          "required": [
+                            "item"
+                          ]
+                        }
+                      }
+                    }
+                  },
+                  "It_inc_type": {
+                    "type": "object",
+                    "properties": {
+                      "item": {
+                        "type": "array",
+                        "uniqueItems": true,
+                        "minItems": 1,
+                        "items": {
+                          "type": "object",
+                          "properties": {
+                            "item": {
+                              "type": "string",
+                              "minLength": 1
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "required": [
+                  "IsIdate",
+                  "ItWerks"
+                ]
+              },
+              "examples": {
+                "example-1": {
+                  "value": {
+                    "IsIdate": {
+                      "Begda": "2020-02-01",
+                      "Endda": "2020-02-03"
+                    },
+                    "ItWerks": {
+                      "item": [
+                        {
+                          "item": "String 2"
+                        },
+                        {
+                          "item": "String 3"
+                        }
+                      ]
+                    },
+                    "It_inc_type": {
+                      "item": [
+                        {
+                          "item": "String 2"
+                        },
+                        {
+                          "item": "String 3"
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
       }
     }
   },
