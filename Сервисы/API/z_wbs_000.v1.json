@@ -3,7 +3,7 @@
   "info": {
     "title": "z_wbs_000",
     "version": "1.0",
-    "description": "Тестовый адрес: \nhttp://81.91.43.211:8000/sap/bc/srt/wsdl/srvc_000C29EC29AF1EDB85F880D55AA3405C/w­sdl11/allinone/standard/document?sap-client=850\n\nПродуктивный адрес:\nhttp://81.91.43.211:8030/sap/bc/srt/wsdl/srvc_3440B5B0A98C1EEB868FFC07B13270EE/w­sdl11/allinone/standard/document?sap-client=850\n"
+    "description": "Тестовый адрес: \nhttp://81.91.43.211:8000/sap/bc/srt/wsdl/srvc_000C29EC29AF1EDB9988E9EA7D82005C/wsdl11/allinone/ws_policy/document?sap-client=850\n\nПродуктивный адрес:\nhttp://81.91.43.211:8030/sap/bc/srt/wsdl/srvc_3440B5B0A98C1EEB868FFC07B13270EE/w­sdl11/allinone/standard/document?sap-client=850\n"
   },
   "servers": [
     {
