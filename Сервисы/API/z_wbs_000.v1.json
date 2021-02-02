@@ -438,20 +438,37 @@
                             "type": "object",
                             "properties": {
                               "Tknum": {
-                                "type": "string",
-                                "minLength": 1
+                                "type": "string"
+                              },
+                              "Route": {
+                                "type": "string"
+                              },
+                              "Bezei": {
+                                "type": "string"
+                              },
+                              "Vsart": {
+                                "type": "string"
+                              },
+                              "Vbezei": {
+                                "type": "string"
                               },
                               "Tsnum": {
-                                "type": "string",
-                                "minLength": 1
+                                "type": "string"
                               },
                               "Werka": {
-                                "type": "string",
-                                "minLength": 1
+                                "type": "string"
                               },
                               "AdateOut": {
-                                "type": "string",
-                                "minLength": 1
+                                "type": "string"
+                              },
+                              "Value": {
+                                "type": "string"
+                              },
+                              "Meins": {
+                                "type": "string"
+                              },
+                              "Inc_Flag": {
+                                "type": "string"
                               }
                             }
                           }
@@ -467,111 +484,233 @@
                         "item": [
                           {
                             "Tknum": "7000168678",
+                            "Route": "667700",
+                            "Bezei": "Екб-Мск",
+                            "Vsart": "10",
+                            "Vbezei": "До 1,5 т (7 м3)",
                             "Tsnum": "0003",
                             "Werka": "7201",
-                            "AdateOut": "2020-04-21"
+                            "AdateOut": "2020-04-21",
+                            "Value": "1018.7",
+                            "Meins": "KG",
+                            "Inc_flag": "X"
                           },
                           {
                             "Tknum": "7000168756",
+                            "Route": "667700",
+                            "Bezei": "Екб-Мск",
+                            "Vsart": "10",
+                            "Vbezei": "До 1,5 т (7 м3)",
                             "Tsnum": "0003",
                             "Werka": "7201",
-                            "AdateOut": "2020-04-23"
+                            "AdateOut": "2020-04-23",
+                            "Value": "1018.7",
+                            "Meins": "KG",
+                            "Inc_flag": "X"
                           },
                           {
                             "Tknum": "7000168773",
+                            "Route": "667700",
+                            "Bezei": "Екб-Мск",
+                            "Vsart": "10",
+                            "Vbezei": "До 1,5 т (7 м3)",
                             "Tsnum": "0003",
                             "Werka": "7201",
-                            "AdateOut": "2020-05-12"
+                            "AdateOut": "2020-05-12",
+                            "Value": "1018.7",
+                            "Meins": "KG",
+                            "Inc_flag": "X"
                           },
                           {
                             "Tknum": "7000168787",
+                            "Route": "667700",
+                            "Bezei": "Екб-Мск",
+                            "Vsart": "10",
+                            "Vbezei": "До 1,5 т (7 м3)",
                             "Tsnum": "0003",
                             "Werka": "7201",
-                            "AdateOut": "2020-05-21"
+                            "AdateOut": "2020-05-21",
+                            "Value": "1018.7",
+                            "Meins": "KG",
+                            "Inc_flag": "X"
                           },
                           {
                             "Tknum": "7000168788",
+                            "Route": "667700",
+                            "Bezei": "Екб-Мск",
+                            "Vsart": "10",
+                            "Vbezei": "До 1,5 т (7 м3)",
                             "Tsnum": "0003",
                             "Werka": "7201",
-                            "AdateOut": "2020-05-21"
+                            "AdateOut": "2020-05-21",
+                            "Value": "1018.7",
+                            "Meins": "KG",
+                            "Inc_flag": "X"
                           },
                           {
                             "Tknum": "7000168815",
                             "Tsnum": "0003",
                             "Werka": "7201",
-                            "AdateOut": "2020-06-17"
+                            "AdateOut": "2020-06-17",
+                            "Value": "1018.7",
+                            "Meins": "KG",
+                            "Inc_flag": "X"
                           },
                           {
                             "Tknum": "7000168830",
+                            "Route": "667700",
+                            "Bezei": "Екб-Мск",
+                            "Vsart": "10",
+                            "Vbezei": "До 1,5 т (7 м3)",
                             "Tsnum": "0003",
                             "Werka": "7201",
-                            "AdateOut": "2020-06-25"
+                            "AdateOut": "2020-06-25",
+                            "Value": "1018.7",
+                            "Meins": "KG",
+                            "Inc_flag": "X"
                           },
                           {
                             "Tknum": "7000168831",
+                            "Route": "667700",
+                            "Bezei": "Екб-Мск",
+                            "Vsart": "10",
+                            "Vbezei": "До 1,5 т (7 м3)",
                             "Tsnum": "0003",
                             "Werka": "7201",
-                            "AdateOut": "2020-06-25"
+                            "AdateOut": "2020-06-25",
+                            "Value": "1018.7",
+                            "Meins": "KG",
+                            "Inc_flag": "X"
                           },
                           {
                             "Tknum": "7000168838",
+                            "Route": "667700",
+                            "Bezei": "Екб-Мск",
+                            "Vsart": "10",
+                            "Vbezei": "До 1,5 т (7 м3)",
                             "Tsnum": "0003",
                             "Werka": "7201",
-                            "AdateOut": "2020-06-30"
+                            "AdateOut": "2020-06-30",
+                            "Value": "1018.7",
+                            "Meins": "KG",
+                            "Inc_flag": "X"
                           },
                           {
                             "Tknum": "7000168848",
+                            "Route": "667700",
+                            "Bezei": "Екб-Мск",
+                            "Vsart": "10",
+                            "Vbezei": "До 1,5 т (7 м3)",
                             "Tsnum": "0003",
                             "Werka": "7201",
-                            "AdateOut": "2020-07-07"
+                            "AdateOut": "2020-07-07",
+                            "Value": "1018.7",
+                            "Meins": "KG",
+                            "Inc_flag": "X"
                           },
                           {
                             "Tknum": "7000168870",
+                            "Route": "667700",
+                            "Bezei": "Екб-Мск",
+                            "Vsart": "10",
+                            "Vbezei": "До 1,5 т (7 м3)",
                             "Tsnum": "0003",
                             "Werka": "7201",
-                            "AdateOut": "2020-07-30"
+                            "AdateOut": "2020-07-30",
+                            "Value": "1018.7",
+                            "Meins": "KG",
+                            "Inc_flag": "X"
                           },
                           {
                             "Tknum": "7000168914",
+                            "Route": "667700",
+                            "Bezei": "Екб-Мск",
+                            "Vsart": "10",
+                            "Vbezei": "До 1,5 т (7 м3)",
                             "Tsnum": "0003",
                             "Werka": "7201",
-                            "AdateOut": "2020-08-31"
+                            "AdateOut": "2020-08-31",
+                            "Value": "1018.7",
+                            "Meins": "KG",
+                            "Inc_flag": "X"
                           },
                           {
                             "Tknum": "7000168917",
+                            "Route": "667700",
+                            "Bezei": "Екб-Мск",
+                            "Vsart": "10",
+                            "Vbezei": "До 1,5 т (7 м3)",
                             "Tsnum": "0003",
                             "Werka": "7201",
-                            "AdateOut": "2020-09-01"
+                            "AdateOut": "2020-09-01",
+                            "Value": "1018.7",
+                            "Meins": "KG",
+                            "Inc_flag": "X"
                           },
                           {
                             "Tknum": "7000168930",
+                            "Route": "667700",
+                            "Bezei": "Екб-Мск",
+                            "Vsart": "10",
+                            "Vbezei": "До 1,5 т (7 м3)",
                             "Tsnum": "0003",
                             "Werka": "7201",
-                            "AdateOut": "2020-09-15"
+                            "AdateOut": "2020-09-15",
+                            "Value": "1018.7",
+                            "Meins": "KG",
+                            "Inc_flag": "X"
                           },
                           {
                             "Tknum": "7000168932",
+                            "Route": "667700",
+                            "Bezei": "Екб-Мск",
+                            "Vsart": "10",
+                            "Vbezei": "До 1,5 т (7 м3)",
                             "Tsnum": "0003",
                             "Werka": "7201",
-                            "AdateOut": "2020-09-16"
+                            "AdateOut": "2020-09-16",
+                            "Value": "1018.7",
+                            "Meins": "KG",
+                            "Inc_flag": "X"
                           },
                           {
                             "Tknum": "7000168935",
+                            "Route": "667700",
+                            "Bezei": "Екб-Мск",
+                            "Vsart": "10",
+                            "Vbezei": "До 1,5 т (7 м3)",
                             "Tsnum": "0003",
                             "Werka": "7201",
-                            "AdateOut": "2020-09-17"
+                            "AdateOut": "2020-09-17",
+                            "Value": "1018.7",
+                            "Meins": "KG",
+                            "Inc_flag": "X"
                           },
                           {
                             "Tknum": "7000168987",
+                            "Route": "667700",
+                            "Bezei": "Екб-Мск",
+                            "Vsart": "10",
+                            "Vbezei": "До 1,5 т (7 м3)",
                             "Tsnum": "0003",
                             "Werka": "7201",
-                            "AdateOut": "2020-11-06"
+                            "AdateOut": "2020-11-06",
+                            "Value": "1018.7",
+                            "Meins": "KG",
+                            "Inc_flag": "X"
                           },
                           {
                             "Tknum": "7000168990",
+                            "Route": "667700",
+                            "Bezei": "Екб-Мск",
+                            "Vsart": "10",
+                            "Vbezei": "До 1,5 т (7 м3)",
                             "Tsnum": "0003",
                             "Werka": "7201",
-                            "AdateOut": "2020-11-12"
+                            "AdateOut": "2020-11-12",
+                            "Value": "1018.7",
+                            "Meins": "KG",
+                            "Inc_flag": "X"
                           }
                         ]
                       }
@@ -582,7 +721,7 @@
             }
           }
         },
-        "description": "Сервис предоставляющий список транспортировок\n\nФМ реализующий сервис Z_WS_TKNUM",
+        "description": "Сервис предоставляющий cписок транспортировок по этапам погрузки\n\nФМ реализующий сервис Z_WS_TKNUM",
         "parameters": [
           {
             "schema": {
@@ -590,7 +729,8 @@
             },
             "in": "query",
             "name": "IT_WERKS",
-            "description": "Таблица заводов места погрузки"
+            "description": "Таблица заводов места погрузки",
+            "required": true
           },
           {
             "schema": {
@@ -598,7 +738,16 @@
             },
             "in": "query",
             "name": "IS_IDATE",
-            "description": "Период завершения погрузки этапа транспортировки. Диапазон с/по."
+            "description": "Период завершения погрузки этапа транспортировки. Диапазон с/по.",
+            "required": true
+          },
+          {
+            "schema": {
+              "type": "array"
+            },
+            "in": "query",
+            "name": "IT_INC_TYPE",
+            "description": "Таблица типов инцидентов"
           }
         ],
         "requestBody": {
@@ -610,6 +759,10 @@
                 "properties": {
                   "IsIdate": {
                     "type": "object",
+                    "required": [
+                      "Begda",
+                      "Endda"
+                    ],
                     "properties": {
                       "Begda": {
                         "type": "string",
@@ -619,13 +772,34 @@
                         "type": "string",
                         "minLength": 1
                       }
-                    },
-                    "required": [
-                      "Begda",
-                      "Endda"
-                    ]
+                    }
                   },
                   "ItWerks": {
+                    "type": "object",
+                    "required": [
+                      "item"
+                    ],
+                    "properties": {
+                      "item": {
+                        "type": "array",
+                        "uniqueItems": true,
+                        "minItems": 1,
+                        "items": {
+                          "type": "object",
+                          "properties": {
+                            "item": {
+                              "type": "string",
+                              "minLength": 1
+                            }
+                          },
+                          "required": [
+                            "item"
+                          ]
+                        }
+                      }
+                    }
+                  },
+                  "It_inc_type": {
                     "type": "object",
                     "properties": {
                       "item": {
@@ -633,9 +807,7 @@
                         "uniqueItems": true,
                         "minItems": 1,
                         "items": {
-                          "required": [
-                            "item"
-                          ],
+                          "type": "object",
                           "properties": {
                             "item": {
                               "type": "string",
@@ -644,10 +816,7 @@
                           }
                         }
                       }
-                    },
-                    "required": [
-                      "item"
-                    ]
+                    }
                   }
                 },
                 "required": [
@@ -671,6 +840,16 @@
                           "item": "String 3"
                         }
                       ]
+                    },
+                    "It_inc_type": {
+                      "item": [
+                        {
+                          "item": "String 2"
+                        },
+                        {
+                          "item": "String 3"
+                        }
+                      ]
                     }
                   }
                 }
@@ -678,6 +857,14 @@
             }
           }
         }
+      }
+    },
+    "/ZWsTknum1": {
+      "get": {
+        "summary": "Your GET endpoint",
+        "tags": [],
+        "responses": {},
+        "operationId": "get-ZWsTknum1"
       }
     }
   },
