@@ -416,7 +416,7 @@
     "/ZWsTknum": {
       "parameters": [],
       "get": {
-        "summary": "Получение списка транспортировок",
+        "summary": "Получение cписка транспортировок по этапам погрузки",
         "operationId": "get-ZWsTknum",
         "responses": {
           "200": {
@@ -861,7 +861,7 @@
     },
     "/ZWsTknum1": {
       "get": {
-        "summary": "Your GET endpoint",
+        "summary": "Получение cписка транспортировок по этапам разгрузки",
         "tags": [],
         "responses": {
           "200": {

@@ -13,7 +13,7 @@
   "paths": {
     "/Zws002HrWhWork": {
       "get": {
-        "summary": "Your GET endpoint",
+        "summary": "Получение информации о данных сотрудников",
         "tags": [],
         "responses": {
           "200": {
