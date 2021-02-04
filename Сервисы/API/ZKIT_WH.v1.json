@@ -17,7 +17,57 @@
         "operationId": "post-ZWH_PRINT_MARK_LIST",
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "description": "",
+                  "type": "object",
+                  "properties": {
+                    "Et_Mess": {
+                      "type": "array",
+                      "uniqueItems": true,
+                      "minItems": 1,
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "Mtype": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "Message": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "Icon": {
+                            "type": "string",
+                            "minLength": 1
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "examples": {
+                  "example-1": {
+                    "value": {
+                      "Et_Mess": [
+                        {
+                          "Mtype": "string",
+                          "Message": "string",
+                          "Icon": "string"
+                        },
+                        {
+                          "Mtype": "string",
+                          "Message": "string",
+                          "Icon": "string"
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            }
           }
         },
         "parameters": [
@@ -35,11 +85,46 @@
           "content": {
             "application/json": {
               "schema": {
+                "description": "",
+                "type": "object",
+                "properties": {
+                  "I_EXIDV": {
+                    "type": "string",
+                    "minLength": 1
+                  }
+                },
+                "required": [
+                  "I_EXIDV"
+                ]
+              },
+              "examples": {
+                "example-1": {
+                  "value": {
+                    "I_EXIDV": "12345678"
+                  }
+                }
+              }
+            },
+            "application/soap+xml": {
+              "schema": {
+                "type": "object",
+                "properties": {}
+              }
+            },
+            "application/xml": {
+              "schema": {
+                "type": "object",
+                "properties": {}
+              }
+            },
+            "multipart/form-data": {
+              "schema": {
                 "type": "object",
                 "properties": {}
               }
             }
-          }
+          },
+          "description": ""
         }
       }
     }
