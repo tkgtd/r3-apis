@@ -3,7 +3,7 @@
   "info": {
     "title": "zws001_order_create",
     "version": "1.0",
-    "description": "Тестовый адрес:\nhttp://KT0.kit.lan:8000/sap/bc/srt/wsdl/srvc_000C29EC29AF1EDB8E8A3B609A4A005C/wsdl11/allinone/standard/document?sap-client=850\n\n\nПродуктивный адрес:\n"
+    "description": "Тестовый адрес:\nhttp://81.91.43.211:8000/sap/bc/srt/wsdl/srvc_000C29EC29AF1EDB8E8A3B609A4A005C/wsdl11/allinone/ws_policy/document?sap-client=850\n\n\nПродуктивный адрес:\nhttp://81.91.43.211:8030/sap/bc/srt/wsdl/srvc_3440B5B0A98C1EEB91854A2C1468D0EE/wsdl11/allinone/ws_policy/document?sap-client=850"
   },
   "servers": [
     {
