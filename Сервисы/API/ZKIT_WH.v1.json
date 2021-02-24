@@ -3,7 +3,7 @@
   "info": {
     "title": "ZKIT_WH",
     "version": "1.0",
-    "description": "Тестовый адрес:\nhttp://81.91.43.211:8000/sap/bc/srt/wsdl/srvc_000C29EC29AF1EDB87E516D0DF22205C/wsdl11/allinone/ws_policy/document?sap-client=850\n\nПродуктивный адрес:\nhttp://81.91.43.211:8030/sap/bc/srt/wsdl/srvc_3440B5B0A98C1EEB88C8543A7FF0F0EE/wsdl11/allinone/ws_policy/document?sap-client=850"
+    "description": "Тестовый адрес:\nhttp://81.91.43.211:8000/sap/bc/srt/wsdl/srvc_000C29EC29AF1EDB9DD32D1C7BE1405C/wsdl11/allinone/standard/document?sap-client=850\n\nПродуктивный адрес:\nhttp://81.91.43.211:8030/sap/bc/srt/wsdl/srvc_3440B5B0A98C1EEB88C8543A7FF0F0EE/wsdl11/allinone/ws_policy/document?sap-client=850"
   },
   "servers": [
     {
@@ -127,6 +127,61 @@
           "description": ""
         },
         "description": "ФМ реализующий сервис ZWH_PRINT_MARK_LIST\n\nСервис, предоставляющий печать комплектовочного листа из приложения Склад+"
+      }
+    },
+    "/ZWH_APPLICATION_LOGS": {
+      "post": {
+        "summary": "",
+        "operationId": "post-ZWH_APPLICATION_LOGS",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "description": "ФМ реализующий сервис ZWH_APPLICATION_LOGS\n\nДанный ФМ выполняет запись данных приложения для инициализации ошибки в логике работы приложения.",
+        "parameters": [
+          {
+            "schema": {
+              "type": "string"
+            },
+            "in": "query",
+            "name": "I_AUTHO_NR",
+            "description": "Номер авторизации",
+            "required": true
+          },
+          {
+            "schema": {
+              "type": "string"
+            },
+            "in": "query",
+            "name": "I_OBJ_TYPE",
+            "description": "Тип объекта"
+          },
+          {
+            "schema": {
+              "type": "string"
+            },
+            "in": "query",
+            "name": "I_OBJ_NUM",
+            "description": "Номер объекта"
+          },
+          {
+            "schema": {
+              "type": "string"
+            },
+            "in": "query",
+            "name": "I_WORKPLACE_NR",
+            "description": "Рабочее место"
+          },
+          {
+            "schema": {
+              "type": "string"
+            },
+            "in": "query",
+            "name": "I_EVENT_TEXT",
+            "description": "Событие"
+          }
+        ]
       }
     }
   },
