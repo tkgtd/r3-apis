@@ -13,7 +13,7 @@
   "paths": {
     "/ZWH_PRINT_MARK_LIST": {
       "post": {
-        "summary": "",
+        "summary": "Печать комплектовочного листа из приложения Склад+",
         "operationId": "post-ZWH_PRINT_MARK_LIST",
         "responses": {
           "200": {
@@ -131,7 +131,7 @@
     },
     "/ZWH_APPLICATION_LOGS": {
       "post": {
-        "summary": "",
+        "summary": "Запись данных приложения для инициализации ошибки",
         "operationId": "post-ZWH_APPLICATION_LOGS",
         "responses": {
           "200": {
