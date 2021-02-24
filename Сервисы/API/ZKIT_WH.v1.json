@@ -181,7 +181,42 @@
             "name": "I_EVENT_TEXT",
             "description": "Событие"
           }
-        ]
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "description": "",
+                "type": "object",
+                "properties": {
+                  "I_AUTHO_NR": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "I_EVENT_TEXT": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "I_OBJ_NUM": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "I_OBJ_TYPE": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "I_WORKPLACE_NR": {
+                    "type": "string",
+                    "minLength": 1
+                  }
+                },
+                "required": [
+                  "I_AUTHO_NR"
+                ]
+              }
+            }
+          }
+        }
       }
     }
   },
