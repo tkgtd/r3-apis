@@ -438,37 +438,52 @@
                             "type": "object",
                             "properties": {
                               "Tknum": {
-                                "type": "string"
+                                "type": "string",
+                                "minLength": 1
                               },
                               "Route": {
-                                "type": "string"
+                                "type": "string",
+                                "minLength": 1
                               },
                               "Bezei": {
-                                "type": "string"
+                                "type": "string",
+                                "minLength": 1
                               },
                               "Vsart": {
-                                "type": "string"
+                                "type": "string",
+                                "minLength": 1
                               },
                               "Vbezei": {
-                                "type": "string"
+                                "type": "string",
+                                "minLength": 1
                               },
                               "Tsnum": {
-                                "type": "string"
+                                "type": "string",
+                                "minLength": 1
                               },
                               "Werka": {
-                                "type": "string"
+                                "type": "string",
+                                "minLength": 1
                               },
                               "AdateOut": {
-                                "type": "string"
+                                "type": "string",
+                                "minLength": 1
                               },
                               "Value": {
-                                "type": "string"
+                                "type": "string",
+                                "minLength": 1
                               },
                               "Meins": {
-                                "type": "string"
+                                "type": "string",
+                                "minLength": 1
                               },
-                              "Inc_Flag": {
-                                "type": "string"
+                              "Type_inc": {
+                                "type": "string",
+                                "minLength": 1
+                              },
+                              "Inc_flag": {
+                                "type": "string",
+                                "minLength": 1
                               }
                             }
                           }
@@ -493,6 +508,7 @@
                             "AdateOut": "2020-04-21",
                             "Value": "1018.7",
                             "Meins": "KG",
+                            "Type_inc": "07",
                             "Inc_flag": "X"
                           },
                           {
@@ -506,6 +522,7 @@
                             "AdateOut": "2020-04-23",
                             "Value": "1018.7",
                             "Meins": "KG",
+                            "Type_inc": "07",
                             "Inc_flag": "X"
                           },
                           {
@@ -519,6 +536,7 @@
                             "AdateOut": "2020-05-12",
                             "Value": "1018.7",
                             "Meins": "KG",
+                            "Type_inc": "07",
                             "Inc_flag": "X"
                           },
                           {
@@ -532,6 +550,7 @@
                             "AdateOut": "2020-05-21",
                             "Value": "1018.7",
                             "Meins": "KG",
+                            "Type_inc": "07",
                             "Inc_flag": "X"
                           },
                           {
@@ -545,6 +564,7 @@
                             "AdateOut": "2020-05-21",
                             "Value": "1018.7",
                             "Meins": "KG",
+                            "Type_inc": "07",
                             "Inc_flag": "X"
                           },
                           {
@@ -554,6 +574,7 @@
                             "AdateOut": "2020-06-17",
                             "Value": "1018.7",
                             "Meins": "KG",
+                            "Type_inc": "07",
                             "Inc_flag": "X"
                           },
                           {
@@ -567,6 +588,7 @@
                             "AdateOut": "2020-06-25",
                             "Value": "1018.7",
                             "Meins": "KG",
+                            "Type_inc": "07",
                             "Inc_flag": "X"
                           },
                           {
@@ -580,6 +602,7 @@
                             "AdateOut": "2020-06-25",
                             "Value": "1018.7",
                             "Meins": "KG",
+                            "Type_inc": "07",
                             "Inc_flag": "X"
                           },
                           {
@@ -593,6 +616,7 @@
                             "AdateOut": "2020-06-30",
                             "Value": "1018.7",
                             "Meins": "KG",
+                            "Type_inc": "07",
                             "Inc_flag": "X"
                           },
                           {
@@ -606,6 +630,7 @@
                             "AdateOut": "2020-07-07",
                             "Value": "1018.7",
                             "Meins": "KG",
+                            "Type_inc": "07",
                             "Inc_flag": "X"
                           },
                           {
@@ -619,6 +644,7 @@
                             "AdateOut": "2020-07-30",
                             "Value": "1018.7",
                             "Meins": "KG",
+                            "Type_inc": "07",
                             "Inc_flag": "X"
                           },
                           {
@@ -632,6 +658,7 @@
                             "AdateOut": "2020-08-31",
                             "Value": "1018.7",
                             "Meins": "KG",
+                            "Type_inc": "07",
                             "Inc_flag": "X"
                           },
                           {
@@ -645,6 +672,7 @@
                             "AdateOut": "2020-09-01",
                             "Value": "1018.7",
                             "Meins": "KG",
+                            "Type_inc": "07",
                             "Inc_flag": "X"
                           },
                           {
@@ -658,6 +686,7 @@
                             "AdateOut": "2020-09-15",
                             "Value": "1018.7",
                             "Meins": "KG",
+                            "Type_inc": "07",
                             "Inc_flag": "X"
                           },
                           {
@@ -671,6 +700,7 @@
                             "AdateOut": "2020-09-16",
                             "Value": "1018.7",
                             "Meins": "KG",
+                            "Type_inc": "07",
                             "Inc_flag": "X"
                           },
                           {
@@ -684,6 +714,7 @@
                             "AdateOut": "2020-09-17",
                             "Value": "1018.7",
                             "Meins": "KG",
+                            "Type_inc": "07",
                             "Inc_flag": "X"
                           },
                           {
@@ -697,6 +728,7 @@
                             "AdateOut": "2020-11-06",
                             "Value": "1018.7",
                             "Meins": "KG",
+                            "Type_inc": "07",
                             "Inc_flag": "X"
                           },
                           {
@@ -710,6 +742,7 @@
                             "AdateOut": "2020-11-12",
                             "Value": "1018.7",
                             "Meins": "KG",
+                            "Type_inc": "07",
                             "Inc_flag": "X"
                           }
                         ]
@@ -874,7 +907,6 @@
                   "properties": {
                     "EtTknum": {
                       "type": "object",
-                      "description": "",
                       "properties": {
                         "item": {
                           "type": "array",
@@ -923,6 +955,10 @@
                                 "type": "string",
                                 "minLength": 1
                               },
+                              "Type_inc": {
+                                "type": "string",
+                                "minLength": 1
+                              },
                               "Inc_flag": {
                                 "type": "string",
                                 "minLength": 1
@@ -950,6 +986,7 @@
                             "ADATE_IN": "string",
                             "Value": "string",
                             "Meins": "string",
+                            "Type_inc": "string",
                             "Inc_flag": "string"
                           }
                         ]
