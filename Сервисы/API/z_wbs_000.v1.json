@@ -3,7 +3,7 @@
   "info": {
     "title": "z_wbs_000",
     "version": "1.0",
-    "description": "Тестовый адрес: \nhttp://81.91.43.211:8000/sap/bc/srt/wsdl/srvc_000C29EC29AF1EDBA0C9C57553EDA05C/wsdl11/allinone/standard/document?sap-client=850\n\nПродуктивный адрес:\nhttp://81.91.43.211:8030/sap/bc/srt/wsdl/srvc_3440B5B0A98C1EEB9AD1CDCDEEF3F0EE/wsdl11/allinone/standard/document?sap-client=850\n"
+    "description": "Тестовый адрес: \nhttp://81.91.43.211:8000/sap/bc/srt/wsdl/srvc_000C29EC29AF1EDBA0DF79AAE2AFC05C/wsdl11/allinone/standard/document?sap-client=850\n\nПродуктивный адрес:\nhttp://81.91.43.211:8030/sap/bc/srt/wsdl/srvc_3440B5B0A98C1EEB9AD1CDCDEEF3F0EE/wsdl11/allinone/standard/document?sap-client=850\n"
   },
   "servers": [
     {
@@ -750,6 +750,86 @@
                     }
                   }
                 }
+              },
+              "application/xml": {
+                "schema": {
+                  "description": "",
+                  "type": "object",
+                  "properties": {
+                    "EtTknum": {
+                      "type": "object",
+                      "properties": {
+                        "item": {
+                          "type": "array",
+                          "uniqueItems": true,
+                          "minItems": 1,
+                          "items": {
+                            "type": "object",
+                            "properties": {
+                              "Tknum": {
+                                "type": "string",
+                                "minLength": 1
+                              },
+                              "Route": {
+                                "type": "string",
+                                "minLength": 1
+                              },
+                              "Bezei": {
+                                "type": "string",
+                                "minLength": 1
+                              },
+                              "Vsart": {
+                                "type": "string",
+                                "minLength": 1
+                              },
+                              "Vbezei": {
+                                "type": "string",
+                                "minLength": 1
+                              },
+                              "Tsnum": {
+                                "type": "string",
+                                "minLength": 1
+                              },
+                              "Werka": {
+                                "type": "string",
+                                "minLength": 1
+                              },
+                              "AdateOut": {
+                                "type": "string",
+                                "minLength": 1
+                              },
+                              "Value": {
+                                "type": "string",
+                                "minLength": 1
+                              },
+                              "Meins": {
+                                "type": "string",
+                                "minLength": 1
+                              },
+                              "Num_stage": {
+                                "type": "string",
+                                "minLength": 1
+                              },
+                              "Type_inc": {
+                                "type": "string",
+                                "minLength": 1
+                              },
+                              "Inc_flag": {
+                                "type": "string",
+                                "minLength": 1
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "examples": {
+                  "example-1": {
+                    "value": "{\n  \"EtTknum\": {\n    \"item\": [\n      {\n        \"Tknum\": \"7000168678\",\n        \"Route\": \"667700\",\n        \"Bezei\": \"Екб-Мск\",\n        \"Vsart\": \"10\",\n        \"Vbezei\": \"До 1,5 т (7 м3)\",\n        \"Tsnum\": \"0003\",\n        \"Werka\": \"7201\",\n        \"AdateOut\": \"2020-04-21\",\n        \"Value\": \"1018.7\",\n        \"Meins\": \"KG\",\n        \"Num_stage\": \"1\",\n        \"Type_inc\": \"07\",\n        \"Inc_flag\": \"X\"\n      },\n      {\n        \"Tknum\": \"7000168756\",\n        \"Route\": \"667700\",\n        \"Bezei\": \"Екб-Мск\",\n        \"Vsart\": \"10\",\n        \"Vbezei\": \"До 1,5 т (7 м3)\",\n        \"Tsnum\": \"0003\",\n        \"Werka\": \"7201\",\n        \"AdateOut\": \"2020-04-23\",\n        \"Value\": \"1018.7\",\n        \"Meins\": \"KG\",\n        \"Num_stage\": \"1\",\n        \"Type_inc\": \"07\",\n        \"Inc_flag\": \"X\"\n      },\n      {\n        \"Tknum\": \"7000168773\",\n        \"Route\": \"667700\",\n        \"Bezei\": \"Екб-Мск\",\n        \"Vsart\": \"10\",\n        \"Vbezei\": \"До 1,5 т (7 м3)\",\n        \"Tsnum\": \"0003\",\n        \"Werka\": \"7201\",\n        \"AdateOut\": \"2020-05-12\",\n        \"Value\": \"1018.7\",\n        \"Meins\": \"KG\",\n        \"Num_stage\": \"1\",\n        \"Type_inc\": \"07\",\n        \"Inc_flag\": \"X\"\n      },\n      {\n        \"Tknum\": \"7000168787\",\n        \"Route\": \"667700\",\n        \"Bezei\": \"Екб-Мск\",\n        \"Vsart\": \"10\",\n        \"Vbezei\": \"До 1,5 т (7 м3)\",\n        \"Tsnum\": \"0003\",\n        \"Werka\": \"7201\",\n        \"AdateOut\": \"2020-05-21\",\n        \"Value\": \"1018.7\",\n        \"Meins\": \"KG\",\n        \"Num_stage\": \"1\",\n        \"Type_inc\": \"07\",\n        \"Inc_flag\": \"X\"\n      },\n      {\n        \"Tknum\": \"7000168788\",\n        \"Route\": \"667700\",\n        \"Bezei\": \"Екб-Мск\",\n        \"Vsart\": \"10\",\n        \"Vbezei\": \"До 1,5 т (7 м3)\",\n        \"Tsnum\": \"0003\",\n        \"Werka\": \"7201\",\n        \"AdateOut\": \"2020-05-21\",\n        \"Value\": \"1018.7\",\n        \"Meins\": \"KG\",\n        \"Num_stage\": \"1\",\n        \"Type_inc\": \"07\",\n        \"Inc_flag\": \"X\"\n      },\n      {\n        \"Tknum\": \"7000168815\",\n        \"Tsnum\": \"0003\",\n        \"Werka\": \"7201\",\n        \"AdateOut\": \"2020-06-17\",\n        \"Value\": \"1018.7\",\n        \"Meins\": \"KG\",\n        \"Num_stage\": \"1\",\n        \"Type_inc\": \"07\",\n        \"Inc_flag\": \"X\"\n      },\n      {\n        \"Tknum\": \"7000168830\",\n        \"Route\": \"667700\",\n        \"Bezei\": \"Екб-Мск\",\n        \"Vsart\": \"10\",\n        \"Vbezei\": \"До 1,5 т (7 м3)\",\n        \"Tsnum\": \"0003\",\n        \"Werka\": \"7201\",\n        \"AdateOut\": \"2020-06-25\",\n        \"Value\": \"1018.7\",\n        \"Meins\": \"KG\",\n        \"Num_stage\": \"1\",\n        \"Type_inc\": \"07\",\n        \"Inc_flag\": \"X\"\n      },\n      {\n        \"Tknum\": \"7000168831\",\n        \"Route\": \"667700\",\n        \"Bezei\": \"Екб-Мск\",\n        \"Vsart\": \"10\",\n        \"Vbezei\": \"До 1,5 т (7 м3)\",\n        \"Tsnum\": \"0003\",\n        \"Werka\": \"7201\",\n        \"AdateOut\": \"2020-06-25\",\n        \"Value\": \"1018.7\",\n        \"Meins\": \"KG\",\n        \"Num_stage\": \"1\",\n        \"Type_inc\": \"07\",\n        \"Inc_flag\": \"X\"\n      },\n      {\n        \"Tknum\": \"7000168838\",\n        \"Route\": \"667700\",\n        \"Bezei\": \"Екб-Мск\",\n        \"Vsart\": \"10\",\n        \"Vbezei\": \"До 1,5 т (7 м3)\",\n        \"Tsnum\": \"0003\",\n        \"Werka\": \"7201\",\n        \"AdateOut\": \"2020-06-30\",\n        \"Value\": \"1018.7\",\n        \"Meins\": \"KG\",\n        \"Num_stage\": \"1\",\n        \"Type_inc\": \"07\",\n        \"Inc_flag\": \"X\"\n      },\n      {\n        \"Tknum\": \"7000168848\",\n        \"Route\": \"667700\",\n        \"Bezei\": \"Екб-Мск\",\n        \"Vsart\": \"10\",\n        \"Vbezei\": \"До 1,5 т (7 м3)\",\n        \"Tsnum\": \"0003\",\n        \"Werka\": \"7201\",\n        \"AdateOut\": \"2020-07-07\",\n        \"Value\": \"1018.7\",\n        \"Meins\": \"KG\",\n        \"Num_stage\": \"1\",\n        \"Type_inc\": \"07\",\n        \"Inc_flag\": \"X\"\n      },\n      {\n        \"Tknum\": \"7000168870\",\n        \"Route\": \"667700\",\n        \"Bezei\": \"Екб-Мск\",\n        \"Vsart\": \"10\",\n        \"Vbezei\": \"До 1,5 т (7 м3)\",\n        \"Tsnum\": \"0003\",\n        \"Werka\": \"7201\",\n        \"AdateOut\": \"2020-07-30\",\n        \"Value\": \"1018.7\",\n        \"Meins\": \"KG\",\n        \"Num_stage\": \"1\",\n        \"Type_inc\": \"07\",\n        \"Inc_flag\": \"X\"\n      },\n      {\n        \"Tknum\": \"7000168914\",\n        \"Route\": \"667700\",\n        \"Bezei\": \"Екб-Мск\",\n        \"Vsart\": \"10\",\n        \"Vbezei\": \"До 1,5 т (7 м3)\",\n        \"Tsnum\": \"0003\",\n        \"Werka\": \"7201\",\n        \"AdateOut\": \"2020-08-31\",\n        \"Value\": \"1018.7\",\n        \"Meins\": \"KG\",\n        \"Num_stage\": \"1\",\n        \"Type_inc\": \"07\",\n        \"Inc_flag\": \"X\"\n      },\n      {\n        \"Tknum\": \"7000168917\",\n        \"Route\": \"667700\",\n        \"Bezei\": \"Екб-Мск\",\n        \"Vsart\": \"10\",\n        \"Vbezei\": \"До 1,5 т (7 м3)\",\n        \"Tsnum\": \"0003\",\n        \"Werka\": \"7201\",\n        \"AdateOut\": \"2020-09-01\",\n        \"Value\": \"1018.7\",\n        \"Meins\": \"KG\",\n        \"Num_stage\": \"1\",\n        \"Type_inc\": \"07\",\n        \"Inc_flag\": \"X\"\n      },\n      {\n        \"Tknum\": \"7000168930\",\n        \"Route\": \"667700\",\n        \"Bezei\": \"Екб-Мск\",\n        \"Vsart\": \"10\",\n        \"Vbezei\": \"До 1,5 т (7 м3)\",\n        \"Tsnum\": \"0003\",\n        \"Werka\": \"7201\",\n        \"AdateOut\": \"2020-09-15\",\n        \"Value\": \"1018.7\",\n        \"Meins\": \"KG\",\n        \"Num_stage\": \"1\",\n        \"Type_inc\": \"07\",\n        \"Inc_flag\": \"X\"\n      },\n      {\n        \"Tknum\": \"7000168932\",\n        \"Route\": \"667700\",\n        \"Bezei\": \"Екб-Мск\",\n        \"Vsart\": \"10\",\n        \"Vbezei\": \"До 1,5 т (7 м3)\",\n        \"Tsnum\": \"0003\",\n        \"Werka\": \"7201\",\n        \"AdateOut\": \"2020-09-16\",\n        \"Value\": \"1018.7\",\n        \"Meins\": \"KG\",\n        \"Num_stage\": \"1\",\n        \"Type_inc\": \"07\",\n        \"Inc_flag\": \"X\"\n      },\n      {\n        \"Tknum\": \"7000168935\",\n        \"Route\": \"667700\",\n        \"Bezei\": \"Екб-Мск\",\n        \"Vsart\": \"10\",\n        \"Vbezei\": \"До 1,5 т (7 м3)\",\n        \"Tsnum\": \"0003\",\n        \"Werka\": \"7201\",\n        \"AdateOut\": \"2020-09-17\",\n        \"Value\": \"1018.7\",\n        \"Meins\": \"KG\",\n        \"Num_stage\": \"1\",\n        \"Type_inc\": \"07\",\n        \"Inc_flag\": \"X\"\n      },\n      {\n        \"Tknum\": \"7000168987\",\n        \"Route\": \"667700\",\n        \"Bezei\": \"Екб-Мск\",\n        \"Vsart\": \"10\",\n        \"Vbezei\": \"До 1,5 т (7 м3)\",\n        \"Tsnum\": \"0003\",\n        \"Werka\": \"7201\",\n        \"AdateOut\": \"2020-11-06\",\n        \"Value\": \"1018.7\",\n        \"Meins\": \"KG\",\n        \"Num_stage\": \"1\",\n        \"Type_inc\": \"07\",\n        \"Inc_flag\": \"X\"\n      },\n      {\n        \"Tknum\": \"7000168990\",\n        \"Route\": \"667700\",\n        \"Bezei\": \"Екб-Мск\",\n        \"Vsart\": \"10\",\n        \"Vbezei\": \"До 1,5 т (7 м3)\",\n        \"Tsnum\": \"0003\",\n        \"Werka\": \"7201\",\n        \"AdateOut\": \"2020-11-12\",\n        \"Value\": \"1018.7\",\n        \"Meins\": \"KG\",\n        \"Num_stage\": \"1\",\n        \"Type_inc\": \"07\",\n        \"Inc_flag\": \"X\"\n      }\n    ]\n  }\n}"
+                  }
+                }
               }
             }
           }
@@ -955,6 +1035,10 @@
                                 "type": "string",
                                 "minLength": 1
                               },
+                              "Num_stage": {
+                                "type": "string",
+                                "minLength": 1
+                              },
                               "Type_inc": {
                                 "type": "string",
                                 "minLength": 1
@@ -986,6 +1070,7 @@
                             "ADATE_IN": "string",
                             "Value": "string",
                             "Meins": "string",
+                            "Num_stage": "string",
                             "Type_inc": "string",
                             "Inc_flag": "string"
                           }
