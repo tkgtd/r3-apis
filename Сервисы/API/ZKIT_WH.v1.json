@@ -369,9 +369,9 @@
       }
     },
     "/ZWH_LOGIN": {
-      "get": {
-        "summary": "Авторизация",
-        "tags": [],
+      "post": {
+        "summary": "",
+        "operationId": "post-ZWH_LOGIN",
         "responses": {
           "200": {
             "description": "OK",
@@ -383,6 +383,14 @@
                   "properties": {
                     "ES_PARAMS": {
                       "type": "object",
+                      "required": [
+                        "ORDER",
+                        "SIZE",
+                        "COMPRESS",
+                        "AUTHO_NR",
+                        "DEBUG",
+                        "CURRENT_VER"
+                      ],
                       "properties": {
                         "ORDER": {
                           "type": "array",
@@ -392,31 +400,44 @@
                             "type": "object",
                             "properties": {
                               "MATNR": {
-                                "type": "string"
+                                "type": "string",
+                                "minLength": 1
                               },
                               "CHARG": {
-                                "type": "string"
+                                "type": "string",
+                                "minLength": 1
                               },
                               "NAME_MATNR": {
-                                "type": "string"
+                                "type": "string",
+                                "minLength": 1
                               }
-                            }
+                            },
+                            "required": [
+                              "MATNR",
+                              "CHARG",
+                              "NAME_MATNR"
+                            ]
                           }
                         },
                         "SIZE": {
-                          "type": "string"
+                          "type": "string",
+                          "minLength": 1
                         },
                         "COMPRESS": {
-                          "type": "string"
+                          "type": "string",
+                          "minLength": 1
                         },
                         "AUTHO_NR": {
-                          "type": "string"
+                          "type": "string",
+                          "minLength": 1
                         },
                         "DEBUG": {
-                          "type": "string"
+                          "type": "string",
+                          "minLength": 1
                         },
                         "CURRENT_VER": {
-                          "type": "string"
+                          "type": "string",
+                          "minLength": 1
                         }
                       }
                     },
@@ -438,6 +459,32 @@
                           "Icon": {
                             "type": "string",
                             "minLength": 1
+                          }
+                        }
+                      }
+                    },
+                    "E_RESULT": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "PROGT": {
+                            "type": "string"
+                          },
+                          "GRUPS": {
+                            "type": "string"
+                          },
+                          "TABED": {
+                            "type": "string"
+                          },
+                          "DEFAU": {
+                            "type": "string"
+                          },
+                          "NAMEP": {
+                            "type": "string"
+                          },
+                          "WFLAG": {
+                            "type": "string"
                           }
                         }
                       }
@@ -467,6 +514,16 @@
                           "Message": "string",
                           "Icon": "string"
                         }
+                      ],
+                      "E_RESULT": [
+                        {
+                          "PROGT": "string",
+                          "GRUPS": "string",
+                          "TABED": "string",
+                          "DEFAU": "string",
+                          "NAMEP": "string",
+                          "WFLAG": "string"
+                        }
                       ]
                     }
                   }
@@ -475,7 +532,6 @@
             }
           }
         },
-        "operationId": "get-ZWH_LOGIN",
         "description": "ФМ реализующий web-сервис ZWH_LOGIN\n\nДанный сервис выполняет следующее:\n\n-Прием данных для статистики используемых устройств;\n\n-Проверка актуальности установленной версии приложения;\n\n-Отправка параметров для обработки фото;\n\n-Отправка списка упаковочных материалов, доступных к отгрузке/приему; \n\n-Отправка флага включения регистрации дополнительных логов;\n\n-Отправка флага включения проверки наличия обновления приложения.\n\n",
         "parameters": [
           {
@@ -531,7 +587,7 @@
               "type": "string"
             },
             "in": "query",
-            "name": "I_VERSION_APP ",
+            "name": "I_VERSION_APP",
             "description": "Номер версии приложения"
           },
           {
@@ -547,7 +603,7 @@
               "type": "string"
             },
             "in": "query",
-            "name": "I_TYPE_CONNECT ",
+            "name": "I_TYPE_CONNECT",
             "description": "Номер типа подключения"
           },
           {
@@ -567,34 +623,44 @@
                 "type": "object",
                 "properties": {
                   "I_ASSEMBLY_APP": {
-                    "type": "string"
+                    "type": "string",
+                    "minLength": 1
                   },
                   "I_DEVICE_ID": {
-                    "type": "string"
+                    "type": "string",
+                    "minLength": 1
                   },
                   "I_DEVICE_IMEI": {
-                    "type": "string"
+                    "type": "string",
+                    "minLength": 1
                   },
                   "I_MODEL": {
-                    "type": "string"
+                    "type": "string",
+                    "minLength": 1
                   },
                   "I_MODEL_TX": {
-                    "type": "string"
+                    "type": "string",
+                    "minLength": 1
                   },
                   "I_SERIAL_NO": {
-                    "type": "string"
+                    "type": "string",
+                    "minLength": 1
                   },
                   "I_TYPE_CONNECT": {
-                    "type": "string"
+                    "type": "string",
+                    "minLength": 1
                   },
                   "I_TYPE_DEVICE": {
-                    "type": "string"
+                    "type": "string",
+                    "minLength": 1
                   },
                   "I_VERSION_APP": {
-                    "type": "string"
+                    "type": "string",
+                    "minLength": 1
                   },
                   "I_VERSION_OS": {
-                    "type": "string"
+                    "type": "string",
+                    "minLength": 1
                   }
                 }
               },
