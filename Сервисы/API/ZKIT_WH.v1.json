@@ -221,7 +221,7 @@
     },
     "/ZWH_RELEASE_APP": {
       "post": {
-        "summary": "",
+        "summary": "Передача установочного файла приложения",
         "operationId": "post-ZWH_RELEASE_APP",
         "responses": {
           "200": {
@@ -291,7 +291,7 @@
     },
     "/ZWH_ERRORS_LOG": {
       "post": {
-        "summary": "",
+        "summary": "Сохранение ошибок приложения в лог",
         "operationId": "post-ZWH_ERRORS_LOG",
         "responses": {
           "200": {
@@ -371,7 +371,7 @@
     },
     "/ZWH_LOGIN": {
       "post": {
-        "summary": "",
+        "summary": "Авторизация",
         "operationId": "post-ZWH_LOGIN",
         "responses": {
           "200": {
