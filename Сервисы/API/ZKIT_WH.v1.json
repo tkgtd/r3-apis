@@ -220,9 +220,9 @@
       }
     },
     "/ZWH_RELEASE_APP": {
-      "get": {
-        "summary": "Передача установочного файла приложения",
-        "tags": [],
+      "post": {
+        "summary": "",
+        "operationId": "post-ZWH_RELEASE_APP",
         "responses": {
           "200": {
             "description": "OK",
@@ -249,7 +249,6 @@
             }
           }
         },
-        "operationId": "get-ZWH_RELEASE_APP",
         "description": "ФМ реализующий web-сервис ZWH_RELEASE_APP\n\nДанный сервис выполняет передачу бинарного файла приложения для обновления приложения на устройстве.\n",
         "parameters": [
           {
@@ -258,8 +257,8 @@
             },
             "in": "query",
             "name": "I_AUTHO_NR",
-            "required": true,
-            "description": "Номер авторизации"
+            "description": "Номер авторизации",
+            "required": true
           }
         ],
         "requestBody": {
@@ -277,6 +276,13 @@
                 "required": [
                   "I_AUTHO_NR"
                 ]
+              },
+              "examples": {
+                "example-1": {
+                  "value": {
+                    "I_AUTHO_NR": "string"
+                  }
+                }
               }
             }
           }
@@ -284,9 +290,9 @@
       }
     },
     "/ZWH_ERRORS_LOG": {
-      "get": {
-        "summary": "Сохранение ошибок приложения в лог",
-        "tags": [],
+      "post": {
+        "summary": "",
+        "operationId": "post-ZWH_ERRORS_LOG",
         "responses": {
           "200": {
             "description": "OK",
@@ -297,12 +303,10 @@
                   "type": "object",
                   "properties": {
                     "E_RESULT": {
-                      "type": "string"
+                      "type": "string",
+                      "minLength": 1
                     }
-                  },
-                  "required": [
-                    "E_RESULT"
-                  ]
+                  }
                 },
                 "examples": {
                   "example-1": {
@@ -315,8 +319,7 @@
             }
           }
         },
-        "operationId": "get-ZWH_ERRORS_LOG",
-        "description": "ФМ реализцющий web-сервис ZWH_ERRORS_LOG\n\nДанный сервис выполняет запись ошибок в лог. Сервис вызывается сразу после авторизации в фоне.",
+        "description": "ФМ реализцющий web-сервис ZWH_ERRORS_LOG\n\nДанный сервис выполняет запись ошибок в лог. Сервис вызывается сразу после авторизации в фоне.\n",
         "parameters": [
           {
             "schema": {
@@ -344,23 +347,21 @@
                 "type": "object",
                 "properties": {
                   "I_ERROR_NR": {
-                    "type": "string"
+                    "type": "string",
+                    "minLength": 1
                   },
                   "I_ERROR_CODE": {
-                    "type": "string"
+                    "type": "string",
+                    "minLength": 1
                   }
                 },
                 "required": [
-                  "I_ERROR_NR",
-                  "I_ERROR_CODE"
+                  "I_ERROR_NR"
                 ]
               },
               "examples": {
                 "example-1": {
-                  "value": {
-                    "I_ERROR_NR": "string",
-                    "I_ERROR_CODE": "string"
-                  }
+                  "value": {}
                 }
               }
             }
