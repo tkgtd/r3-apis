@@ -3,7 +3,7 @@
   "info": {
     "title": "ZKIT_WH",
     "version": "1.0",
-    "description": "Тестовый адрес:\nhttp://81.91.43.211:8000/sap/bc/srt/wsdl/srvc_000C29EC29AF1EDB9DED8B8757D6A05C/wsdl11/allinone/standard/document?sap-client=850\n\nПродуктивный адрес:\nhttp://81.91.43.211:8030/sap/bc/srt/wsdl/srvc_3440B5B0A98C1EEB88C8543A7FF0F0EE/wsdl11/allinone/ws_policy/document?sap-client=850"
+    "description": "Тестовый адрес:\nhttp://81.91.43.211:8000/sap/bc/srt/wsdl/srvc_000C29EC29AF1EDBA48B587C0AAF605C/wsdl11/allinone/standard/document?sap-client=850\n\nПродуктивный адрес:\nhttp://81.91.43.211:8030/sap/bc/srt/wsdl/srvc_3440B5B0A98C1EEB88C8543A7FF0F0EE/wsdl11/allinone/ws_policy/document?sap-client=850"
   },
   "servers": [
     {
@@ -138,7 +138,7 @@
             "description": "OK"
           }
         },
-        "description": "ФМ реализующий сервис ZWH_APPLICATION_LOGS\n\nДанный ФМ выполняет запись данных приложения для инициализации ошибки в логике работы приложения.",
+        "description": "ФМ реализующий сервис ZWH_APPLICATION_LOGS\n\nДанный сервис выполняет запись данных приложения для инициализации ошибки в логике работы приложения.",
         "parameters": [
           {
             "schema": {
@@ -213,6 +213,406 @@
                 "required": [
                   "I_AUTHO_NR"
                 ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "/ZWH_RELEASE_APP": {
+      "get": {
+        "summary": "Передача установочного файла приложения",
+        "tags": [],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "description": "",
+                  "type": "object",
+                  "properties": {
+                    "E_BIN_APP": {
+                      "type": "string",
+                      "minLength": 1
+                    }
+                  }
+                },
+                "examples": {
+                  "example-1": {
+                    "value": {
+                      "E_BIN_APP": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get-ZWH_RELEASE_APP",
+        "description": "ФМ реализующий web-сервис ZWH_RELEASE_APP\n\nДанный сервис выполняет передачу бинарного файла приложения для обновления приложения на устройстве.\n",
+        "parameters": [
+          {
+            "schema": {
+              "type": "string"
+            },
+            "in": "query",
+            "name": "I_AUTHO_NR",
+            "required": true,
+            "description": "Номер авторизации"
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "description": "",
+                "type": "object",
+                "properties": {
+                  "I_AUTHO_NR": {
+                    "type": "string",
+                    "minLength": 1
+                  }
+                },
+                "required": [
+                  "I_AUTHO_NR"
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "/ZWH_ERRORS_LOG": {
+      "get": {
+        "summary": "Сохранение ошибок приложения в лог",
+        "tags": [],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "description": "",
+                  "type": "object",
+                  "properties": {
+                    "E_RESULT": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "E_RESULT"
+                  ]
+                },
+                "examples": {
+                  "example-1": {
+                    "value": {
+                      "E_RESULT": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get-ZWH_ERRORS_LOG",
+        "description": "ФМ реализцющий web-сервис ZWH_ERRORS_LOG\n\nДанный сервис выполняет запись ошибок в лог. Сервис вызывается сразу после авторизации в фоне.",
+        "parameters": [
+          {
+            "schema": {
+              "type": "string"
+            },
+            "in": "query",
+            "name": "I_ERROR_NR ",
+            "description": "Номер авторизации из ошибки в приложении",
+            "required": true
+          },
+          {
+            "schema": {
+              "type": "string"
+            },
+            "in": "query",
+            "name": "I_ERROR_CODE",
+            "description": "Информация о ошибке в приложении"
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "description": "",
+                "type": "object",
+                "properties": {
+                  "I_ERROR_NR": {
+                    "type": "string"
+                  },
+                  "I_ERROR_CODE": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "I_ERROR_NR",
+                  "I_ERROR_CODE"
+                ]
+              },
+              "examples": {
+                "example-1": {
+                  "value": {
+                    "I_ERROR_NR": "string",
+                    "I_ERROR_CODE": "string"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/ZWH_LOGIN": {
+      "get": {
+        "summary": "Авторизация",
+        "tags": [],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "description": "",
+                  "type": "object",
+                  "properties": {
+                    "ES_PARAMS": {
+                      "type": "object",
+                      "properties": {
+                        "ORDER": {
+                          "type": "array",
+                          "uniqueItems": true,
+                          "minItems": 1,
+                          "items": {
+                            "type": "object",
+                            "properties": {
+                              "MATNR": {
+                                "type": "string"
+                              },
+                              "CHARG": {
+                                "type": "string"
+                              },
+                              "NAME_MATNR": {
+                                "type": "string"
+                              }
+                            }
+                          }
+                        },
+                        "SIZE": {
+                          "type": "string"
+                        },
+                        "COMPRESS": {
+                          "type": "string"
+                        },
+                        "AUTHO_NR": {
+                          "type": "string"
+                        },
+                        "DEBUG": {
+                          "type": "string"
+                        },
+                        "CURRENT_VER": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "ET_MESSAGE": {
+                      "type": "array",
+                      "uniqueItems": true,
+                      "minItems": 1,
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "Mtype": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "Message": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "Icon": {
+                            "type": "string",
+                            "minLength": 1
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "examples": {
+                  "example-1": {
+                    "value": {
+                      "ES_PARAMS": {
+                        "ORDER": [
+                          {
+                            "MATNR": "string",
+                            "CHARG": "string",
+                            "NAME_MATNR": "string"
+                          }
+                        ],
+                        "SIZE": "string",
+                        "COMPRESS": "string",
+                        "AUTHO_NR": "string",
+                        "DEBUG": "string",
+                        "CURRENT_VER": "string"
+                      },
+                      "ET_MESSAGE": [
+                        {
+                          "Mtype": "string",
+                          "Message": "string",
+                          "Icon": "string"
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get-ZWH_LOGIN",
+        "description": "ФМ реализующий web-сервис ZWH_LOGIN\n\nДанный сервис выполняет следующее:\n\n-Прием данных для статистики используемых устройств;\n\n-Проверка актуальности установленной версии приложения;\n\n-Отправка параметров для обработки фото;\n\n-Отправка списка упаковочных материалов, доступных к отгрузке/приему; \n\n-Отправка флага включения регистрации дополнительных логов;\n\n-Отправка флага включения проверки наличия обновления приложения.\n\n",
+        "parameters": [
+          {
+            "schema": {
+              "type": "string"
+            },
+            "in": "query",
+            "name": "I_DEVICE_ID ",
+            "description": "ID устройства Андроид"
+          },
+          {
+            "schema": {
+              "type": "string"
+            },
+            "in": "query",
+            "name": "I_SERIAL_NO ",
+            "description": "Серийный номер"
+          },
+          {
+            "schema": {
+              "type": "string"
+            },
+            "in": "query",
+            "name": "I_DEVICE_IMEI ",
+            "description": "IMEI устройства"
+          },
+          {
+            "schema": {
+              "type": "string"
+            },
+            "in": "query",
+            "name": "I_MODEL ",
+            "description": "Номер модели устройства"
+          },
+          {
+            "schema": {
+              "type": "string"
+            },
+            "in": "query",
+            "name": "I_MODEL_TX ",
+            "description": "Модель устройства"
+          },
+          {
+            "schema": {
+              "type": "string"
+            },
+            "in": "query",
+            "name": "I_VERSION_OS ",
+            "description": "Версия ОС Android"
+          },
+          {
+            "schema": {
+              "type": "string"
+            },
+            "in": "query",
+            "name": "I_VERSION_APP ",
+            "description": "Номер версии приложения"
+          },
+          {
+            "schema": {
+              "type": "string"
+            },
+            "in": "query",
+            "name": "I_ASSEMBLY_APP ",
+            "description": "Номер сборки приложения"
+          },
+          {
+            "schema": {
+              "type": "string"
+            },
+            "in": "query",
+            "name": "I_TYPE_CONNECT ",
+            "description": "Номер типа подключения"
+          },
+          {
+            "schema": {
+              "type": "string"
+            },
+            "in": "query",
+            "name": "I_TYPE_DEVICE",
+            "description": "Номер типа устройства"
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "description": "",
+                "type": "object",
+                "properties": {
+                  "I_ASSEMBLY_APP": {
+                    "type": "string"
+                  },
+                  "I_DEVICE_ID": {
+                    "type": "string"
+                  },
+                  "I_DEVICE_IMEI": {
+                    "type": "string"
+                  },
+                  "I_MODEL": {
+                    "type": "string"
+                  },
+                  "I_MODEL_TX": {
+                    "type": "string"
+                  },
+                  "I_SERIAL_NO": {
+                    "type": "string"
+                  },
+                  "I_TYPE_CONNECT": {
+                    "type": "string"
+                  },
+                  "I_TYPE_DEVICE": {
+                    "type": "string"
+                  },
+                  "I_VERSION_APP": {
+                    "type": "string"
+                  },
+                  "I_VERSION_OS": {
+                    "type": "string"
+                  }
+                }
+              },
+              "examples": {
+                "example-1": {
+                  "value": {
+                    "I_ASSEMBLY_APP": "string",
+                    "I_DEVICE_ID": "string",
+                    "I_DEVICE_IMEI": "string",
+                    "I_MODEL": "string",
+                    "I_MODEL_TX": "string",
+                    "I_SERIAL_NO": "string",
+                    "I_TYPE_CONNECT": "string",
+                    "I_TYPE_DEVICE": "string",
+                    "I_VERSION_APP": "string",
+                    "I_VERSION_OS": "string"
+                  }
+                }
               }
             }
           }
