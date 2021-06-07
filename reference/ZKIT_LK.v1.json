@@ -1,0 +1,294 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "ZKIT_LK.v1",
+    "version": "1.0"
+  },
+  "servers": [
+    {
+      "url": "http://localhost:3000"
+    }
+  ],
+  "paths": {
+    "ZlkGetDocPdf1": {
+      "parameters": [],
+      "post": {
+        "summary": "",
+        "operationId": "postZlkGetDocPdf1",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "description": "",
+                  "type": "object",
+                  "x-examples": {
+                    "example-1": {
+                      "EsData": {
+                        "Doc": [
+                          {
+                            "ITEMS": {
+                              "DOC_TYPE": "",
+                              "VBELV": "",
+                              "NAME": "",
+                              "BUKRS": "",
+                              "VBEL2": ""
+                            }
+                          }
+                        ],
+                        "Bin": ""
+                      }
+                    }
+                  },
+                  "properties": {
+                    "EsData": {
+                      "type": "object",
+                      "properties": {
+                        "Doc": {
+                          "type": "array",
+                          "uniqueItems": true,
+                          "minItems": 1,
+                          "items": {
+                            "type": "object",
+                            "properties": {
+                              "item": {
+                                "type": "object",
+                                "properties": {
+                                  "DOC_TYPE": {
+                                    "type": "string"
+                                  },
+                                  "VBELV": {
+                                    "type": "string"
+                                  },
+                                  "NAME": {
+                                    "type": "string"
+                                  },
+                                  "BUKRS": {
+                                    "type": "string"
+                                  },
+                                  "VBEL2": {
+                                    "type": "string"
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "Bin": {
+                          "type": "string",
+                          "format": "binary"
+                        }
+                      }
+                    }
+                  }
+                },
+                "examples": {
+                  "example-1": {
+                    "value": {
+                      "EsData": {
+                        "Doc": [
+                          {
+                            "item": {
+                              "DOC_TYPE": "string",
+                              "VBELV": "string",
+                              "NAME": "string",
+                              "BUKRS": "string",
+                              "VBEL2": "string"
+                            }
+                          }
+                        ],
+                        "Bin": "string"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "description": "Данный сервис возвращает многостраничный PDF файл (двоичные данные) с маркировками по списку заказов и типу печатного документа \n\nФМ Реализующий веб-сервис ZLK_GET_DOC_PDF1",
+        "parameters": [
+          {
+            "schema": {
+              "type": "string"
+            },
+            "in": "query",
+            "name": "i_kunnr",
+            "description": "Пользователь в личном кабинете.(= Номеру дебитору в сап)",
+            "required": true
+          },
+          {
+            "schema": {
+              "type": "string"
+            },
+            "in": "query",
+            "required": true,
+            "name": "I_DOC_TYPE",
+            "description": "Тип выходного документа"
+          },
+          {
+            "schema": {
+              "type": "string"
+            },
+            "in": "query",
+            "required": true,
+            "name": "it_vbeln_vbelv",
+            "description": "Таблица с номерами заказов и номерами ЭР"
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "description": "",
+                "type": "object",
+                "properties": {
+                  "IDocType": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "IKunnr": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "ItVbelnVbelv": {
+                    "type": "array",
+                    "uniqueItems": true,
+                    "minItems": 1,
+                    "items": {
+                      "required": [],
+                      "properties": {
+                        "item": {
+                          "type": "object",
+                          "properties": {
+                            "Vbeln": {
+                              "type": "string",
+                              "minLength": 1
+                            },
+                            "Vbelv": {
+                              "type": "string",
+                              "minLength": 1
+                            }
+                          },
+                          "required": [
+                            "Vbeln",
+                            "Vbelv"
+                          ]
+                        }
+                      }
+                    }
+                  }
+                },
+                "required": [
+                  "IDocType",
+                  "IKunnr",
+                  "ItVbelnVbelv"
+                ],
+                "x-examples": {
+                  "example-1": {
+                    "IDocType": "St",
+                    "IKunnr": "String 12",
+                    "ItVbelnVbelv": [
+                      {
+                        "item": {
+                          "Vbeln": "String 13",
+                          "Vbelv": "String 14"
+                        }
+                      },
+                      {
+                        "item": {
+                          "Vbeln": "String 13",
+                          "Vbelv": "String 14"
+                        }
+                      }
+                    ]
+                  }
+                }
+              },
+              "examples": {
+                "example-1": {
+                  "value": {
+                    "IDocType": "string",
+                    "IKunnr": "string",
+                    "ItVbelnVbelv": [
+                      {
+                        "item": {
+                          "Vbeln": "string",
+                          "Vbelv": "string"
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            },
+            "application/xml": {
+              "schema": {
+                "type": "object",
+                "properties": {}
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "User": {
+        "title": "User",
+        "type": "object",
+        "description": "",
+        "examples": [
+          {
+            "id": 142,
+            "firstName": "Alice",
+            "lastName": "Smith",
+            "email": "alice.smith@gmail.com",
+            "dateOfBirth": "1997-10-31",
+            "emailVerified": true,
+            "signUpDate": "2019-08-24"
+          }
+        ],
+        "properties": {
+          "id": {
+            "type": "integer",
+            "description": "Unique identifier for the given user."
+          },
+          "firstName": {
+            "type": "string"
+          },
+          "lastName": {
+            "type": "string"
+          },
+          "email": {
+            "type": "string",
+            "format": "email"
+          },
+          "dateOfBirth": {
+            "type": "string",
+            "format": "date",
+            "example": "1997-10-31"
+          },
+          "emailVerified": {
+            "type": "boolean",
+            "description": "Set to true if the user's email has been verified."
+          },
+          "createDate": {
+            "type": "string",
+            "format": "date",
+            "description": "The date that the user was created."
+          }
+        },
+        "required": [
+          "id",
+          "firstName",
+          "lastName",
+          "email",
+          "emailVerified"
+        ]
+      }
+    }
+  }
+}
