@@ -14,7 +14,7 @@
     "ZlkGetDocPdf1": {
       "parameters": [],
       "post": {
-        "summary": "",
+        "summary": "Многостраничный PDF файл (двоичные данные) ПФ ЭР",
         "operationId": "postZlkGetDocPdf1",
         "responses": {
           "200": {
