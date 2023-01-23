@@ -4,9 +4,9 @@
     "id": "sgb1bvb6gew4n"
   },
   "info": {
-    "title": "zbc_int_api_directory.v1",
+    "title": "ZBC_INT_API_DIRECTORY.v1",
     "version": "1.0",
-    "description": "Тестовый адрес:\nhttp://hanatst.tk-kit.lan:8100/sap/bc/srt/wsdl/flv_10002A101AD1/srvc_url/sap/bc/srt/rfc/sap/zbc_int_api_directory/555/zbc_int_api_directory/srv?sap-client=555\n\nПродуктивный адрес:\nhttp://node01.tk-kit.lan:8100/sap/bc/srt/wsdl/flv_10002A101AD1/srvc_url/sap/bc/srt/rfc/sap/zbc_int_api_directory/555/zbc_int_api_directory/srv?sap-client=555"
+    "description": "Тестовый адрес:\nhttp://81.91.43.211:8130/sap/bc/srt/wsdl/flv_10002A101AD1/srvc_url/sap/bc/srt/rfc/sap/zbc_int_api_directory/555/zbc_int_api_directory/srv?sap-client=555\n\nПродуктивный адрес:\nhttp://81.91.43.211:8100/sap/bc/srt/wsdl/flv_10002A101AD1/srvc_url/sap/bc/srt/rfc/sap/zbc_int_api_directory/555/zbc_int_api_directory/srv?sap-client=555"
   },
   "host": "localhost:3000",
   "schemes": [
