@@ -1,9 +1,12 @@
 {
   "openapi": "3.1.0",
+  "x-stoplight": {
+    "id": "brn9p7quuzcy7"
+  },
   "info": {
     "title": "ZKIT_LK.v1",
     "version": "1.0",
-    "description": "123"
+    "description": "Тестовый адрес:\nhttp://81.91.43.211:8000/sap/bc/srt/wsdl/flv_10002A101AD1/srvc_url/sap/bc/srt/rfc/sap/zkit_lk/850/zkit_lk37/zkit_lk37?sap-client=850\n\nПродуктивный адрес:\nhttp://81.91.43.211:8030/sap/bc/srt/wsdl/flv_10002A101AD1/srvc_url/sap/bc/srt/rfc/sap/zkit_lk/850/zkit_lk39/zkit_lk39?sap-client=850"
   },
   "servers": [
     {
@@ -228,6 +231,2201 @@
               "schema": {
                 "type": "object",
                 "properties": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/ZgetListOrder": {
+      "get": {
+        "summary": "Список заказов",
+        "tags": [],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "EOrd": {
+                      "type": "array",
+                      "description": "Список заказов",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "Vbeln": {
+                            "type": "string",
+                            "description": "Торговый документ"
+                          },
+                          "Xblnr": {
+                            "type": "string",
+                            "description": "Ссылочный номер документа"
+                          },
+                          "Erdat": {
+                            "type": "string",
+                            "description": "Дата создания записи YYYYMMDD"
+                          },
+                          "Erzet": {
+                            "type": "string",
+                            "description": "Время ввода HHMMSS"
+                          },
+                          "Kunnr": {
+                            "type": "string",
+                            "description": "Заказчик"
+                          },
+                          "Skunr": {
+                            "type": "string",
+                            "description": "Клиент отправитель"
+                          },
+                          "Rkunr": {
+                            "type": "string",
+                            "description": "Клиент получатель"
+                          },
+                          "Netwr": {
+                            "type": "number",
+                            "description": "Стоимость нетто заказа в валюте документа"
+                          },
+                          "Waerk": {
+                            "type": "string",
+                            "description": "Валюта документа сбыта"
+                          },
+                          "Kuntx": {
+                            "type": "string",
+                            "description": "Наименование заказчика"
+                          },
+                          "Skutx": {
+                            "type": "string",
+                            "description": "Наименование отправителя"
+                          },
+                          "Rkutx": {
+                            "type": "string",
+                            "description": "Наименование получателя"
+                          },
+                          "Netwk": {
+                            "type": "number",
+                            "description": "К оплате"
+                          },
+                          "Stato": {
+                            "type": "string",
+                            "description": "Статус заказа"
+                          },
+                          "Statp": {
+                            "type": "string",
+                            "description": "Статус оплаты"
+                          },
+                          "StPay": {
+                            "type": "string",
+                            "description": "Статус оплаты: Оплачен, Не оплачен, Отсрочка"
+                          },
+                          "Sdirect": {
+                            "type": "object",
+                            "description": "Откуда",
+                            "properties": {
+                              "Sland": {
+                                "type": "string",
+                                "description": "Код страны"
+                              },
+                              "Sregio": {
+                                "type": "string",
+                                "description": "Регион (штат, федер. земля, провинция, область, графство)"
+                              },
+                              "Scode": {
+                                "type": "string",
+                                "description": "Кодирование города"
+                              },
+                              "ScodeName": {
+                                "type": "string",
+                                "description": "Город"
+                              },
+                              "ScodeType": {
+                                "type": "string",
+                                "description": "Дополнение к названию города"
+                              },
+                              "Szone": {
+                                "type": "string",
+                                "description": "Транспортная зона"
+                              }
+                            }
+                          },
+                          "Rdirect": {
+                            "type": "object",
+                            "description": "Куда",
+                            "properties": {
+                              "Rland": {
+                                "type": "string",
+                                "description": "Код страны"
+                              },
+                              "Rregio": {
+                                "type": "string",
+                                "description": "Регион (штат, федер. земля, провинция, область, графство)"
+                              },
+                              "Rcode": {
+                                "type": "string",
+                                "description": "Кодирование города"
+                              },
+                              "RcodeName": {
+                                "type": "string",
+                                "description": "Город"
+                              },
+                              "RcodeType": {
+                                "type": "string",
+                                "description": "Дополнение к названию города"
+                              },
+                              "Rzone": {
+                                "type": "string",
+                                "description": "Транспортная зона"
+                              }
+                            }
+                          },
+                          "Stat": {
+                            "type": "array",
+                            "description": "Статус заказа",
+                            "items": {
+                              "type": "object",
+                              "properties": {
+                                "Date": {
+                                  "type": "string",
+                                  "description": "Дата создания записи",
+                                  "pattern": "YYYYMMDD"
+                                },
+                                "Time": {
+                                  "type": "string",
+                                  "pattern": "HHMMSS",
+                                  "description": "Время создания записи"
+                                },
+                                "Faksk": {
+                                  "type": "string",
+                                  "description": "Блокирование вида фактуры документа сбыта"
+                                }
+                              }
+                            }
+                          },
+                          "Zbaggage": {
+                            "type": "string",
+                            "description": "Тип посылки"
+                          },
+                          "Vbelv": {
+                            "type": "string",
+                            "description": "Номер заявки"
+                          },
+                          "ZtypeTransp": {
+                            "type": "string",
+                            "description": "Выбранный тип перевозки"
+                          }
+                        }
+                      }
+                    },
+                    "ELzone": {
+                      "type": "array",
+                      "description": "Направление",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "Lzone": {
+                            "type": "string",
+                            "description": "Транспортная зона"
+                          },
+                          "Vtext": {
+                            "type": "string",
+                            "description": "Название"
+                          },
+                          "Direct": {
+                            "type": "string",
+                            "description": "Направление"
+                          }
+                        }
+                      }
+                    },
+                    "EDebi": {
+                      "type": "array",
+                      "description": "Партнеры заказа",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "Kunnr": {
+                            "type": "string",
+                            "description": "Номер дебитора"
+                          },
+                          "Name": {
+                            "type": "string",
+                            "description": "Наименование дебитора (длинное)"
+                          },
+                          "Partn": {
+                            "type": "string",
+                            "description": "Партнеры заказа"
+                          }
+                        }
+                      }
+                    },
+                    "ECount": {
+                      "type": "integer"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get-ZgetListOrder",
+        "description": "Список заказов",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "ILogin": {
+                    "type": "string",
+                    "description": "Логин пользователя"
+                  },
+                  "IKunnr": {
+                    "type": "string",
+                    "description": "Номер дебитора"
+                  },
+                  "IHash": {
+                    "type": "string",
+                    "description": "Хеш-значение"
+                  },
+                  "IIp": {
+                    "type": "string",
+                    "description": "IP-адрес"
+                  },
+                  "ISrdat": {
+                    "type": "string",
+                    "description": "Дата создания записи с. YYYYMMDD"
+                  },
+                  "IErdat": {
+                    "type": "string",
+                    "description": "Дата создания записи по. YYYYMMDD"
+                  },
+                  "ISort": {
+                    "type": "string",
+                    "description": "Если 'A' - сортировка по дате создания записи по возрастанию\nЕсли 'B' - сортировка по дате создания записи по убыванию"
+                  }
+                },
+                "required": [
+                  "ILogin",
+                  "IKunnr",
+                  "IHash",
+                  "IIp",
+                  "ISrdat",
+                  "IErdat",
+                  "ISort"
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "/ZlkGetDocsList": {
+      "get": {
+        "summary": "Список документов для заказа",
+        "tags": [],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "Docs": {
+                      "type": "array",
+                      "description": "Документы к заказу",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "DocType": {
+                            "type": "string",
+                            "description": "Тип документа"
+                          },
+                          "Vbelv": {
+                            "type": "string",
+                            "description": "Номер документа"
+                          },
+                          "Name": {
+                            "type": "string",
+                            "description": "Наименование документа"
+                          },
+                          "Bukrs": {
+                            "type": "string",
+                            "description": "Балансовая единица"
+                          },
+                          "Vbel2": {
+                            "type": "string",
+                            "description": "Номер для отображения"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get-ZlkGetDocsList",
+        "description": "Список документов для заказа",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "ILogin": {
+                    "type": "string",
+                    "description": "Логин пользователя"
+                  },
+                  "IKunnr": {
+                    "type": "string",
+                    "description": "Номер дебитора"
+                  },
+                  "IHash": {
+                    "type": "string",
+                    "description": "Хеш-значение"
+                  },
+                  "IIp": {
+                    "type": "string",
+                    "description": "IP-адрес"
+                  },
+                  "IVbeln": {
+                    "type": "string",
+                    "description": "Торговый документ"
+                  }
+                },
+                "required": [
+                  "ILogin",
+                  "IKunnr",
+                  "IHash",
+                  "IIp",
+                  "IVbeln"
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "/ZlkGetDocPdf": {
+      "get": {
+        "summary": "Получение документов заказа pdf",
+        "tags": [],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "Binary": {
+                      "type": "object",
+                      "description": "pdf-документ",
+                      "properties": {
+                        "DocType": {
+                          "type": "string",
+                          "description": "Тип документа"
+                        },
+                        "Vbelv": {
+                          "type": "string",
+                          "description": "Номер документа"
+                        },
+                        "Name": {
+                          "type": "string",
+                          "description": "Наименование документа"
+                        },
+                        "Burks": {
+                          "type": "string",
+                          "description": "Балансовая единица"
+                        },
+                        "Vbel2": {
+                          "type": "string",
+                          "description": "Номер для отображения"
+                        },
+                        "Bin": {
+                          "type": "string",
+                          "description": "Двоичные данные"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get-ZlkGetDocPdf",
+        "description": "Получение документов заказа pdf",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "ILogin": {
+                    "type": "string",
+                    "description": "Логин пользователя"
+                  },
+                  "IKunnr": {
+                    "type": "string",
+                    "description": "Номер дебитора"
+                  },
+                  "IHash": {
+                    "type": "string",
+                    "description": "Хеш-значение"
+                  },
+                  "IIp": {
+                    "type": "string",
+                    "description": "IP-адрес"
+                  },
+                  "IVbeln": {
+                    "type": "string",
+                    "description": "Торговый документ"
+                  },
+                  "IDocType": {
+                    "type": "string",
+                    "description": "Тип документа"
+                  },
+                  "IVbelv": {
+                    "type": "string",
+                    "description": "Номер документа"
+                  }
+                },
+                "required": [
+                  "ILogin",
+                  "IKunnr",
+                  "IHash",
+                  "IIp",
+                  "IVbeln",
+                  "IDocType",
+                  "IVbelv"
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "/ZlkGetOrderImage": {
+      "get": {
+        "summary": "Просмотр изображений, прикрепленных к ЭР",
+        "tags": [],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "Docs": {
+                      "type": "array",
+                      "description": "Получить документ заказа",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "Vbelv": {
+                            "type": "string",
+                            "description": "Номер документа"
+                          },
+                          "Bin": {
+                            "type": "string",
+                            "description": "Двоичные данные"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get-ZlkGetOrderImage",
+        "description": "Просмотр изображений, прикрепленных к ЭР",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "ILogin": {
+                    "type": "string",
+                    "description": "Логин пользователя"
+                  },
+                  "IKunnr": {
+                    "type": "string",
+                    "description": "Номер дебитора"
+                  },
+                  "IHash": {
+                    "type": "string",
+                    "description": "Хеш-значение"
+                  },
+                  "IIp": {
+                    "type": "string",
+                    "description": "IP-адрес"
+                  },
+                  "IVbeln": {
+                    "type": "string",
+                    "description": "Торговый документ"
+                  },
+                  "IUtype": {
+                    "type": "string",
+                    "description": "Тип размещенного документа",
+                    "default": "'01'"
+                  },
+                  "IDtype2": {
+                    "type": "string",
+                    "description": "Тип документа-основания",
+                    "default": "'05'"
+                  },
+                  "IWpl": {
+                    "type": "string",
+                    "description": "Код рабочего места",
+                    "default": "'06'"
+                  },
+                  "IDtype1": {
+                    "type": "string",
+                    "description": "Тип документа-основания",
+                    "default": "'07'"
+                  }
+                },
+                "required": [
+                  "ILogin",
+                  "IKunnr",
+                  "IHash",
+                  "IIp"
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "/ZgetActs": {
+      "get": {
+        "summary": "Список актов и их статусы",
+        "tags": [],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "EActs": {
+                      "type": "array",
+                      "description": "Сверка расчетов с клиентами",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "Mandt": {
+                            "type": "string",
+                            "description": "Мандант"
+                          },
+                          "DocId": {
+                            "type": "string",
+                            "description": "Номер документа"
+                          },
+                          "Kunnr": {
+                            "type": "string",
+                            "description": "Номер дебитора"
+                          },
+                          "Bukrs": {
+                            "type": "string",
+                            "description": "Балансовая единица"
+                          },
+                          "StaId": {
+                            "type": "string",
+                            "description": "Статус"
+                          },
+                          "Datum": {
+                            "type": "string",
+                            "pattern": "YYYYMMDD",
+                            "description": "Дата создания"
+                          },
+                          "DTim": {
+                            "type": "string",
+                            "description": "Время создания",
+                            "pattern": "HHMMSS"
+                          },
+                          "Autor": {
+                            "type": "string",
+                            "description": "Автор"
+                          },
+                          "DatB": {
+                            "type": "string",
+                            "description": "Дата с",
+                            "pattern": "YYYYMMDD"
+                          },
+                          "DatE": {
+                            "type": "string",
+                            "description": "Дата по",
+                            "pattern": "YYYYMMDD"
+                          },
+                          "InSald": {
+                            "type": "number",
+                            "description": "ВхСальдо"
+                          },
+                          "Dsum": {
+                            "type": "number",
+                            "description": "Дебет"
+                          },
+                          "Ksum": {
+                            "type": "number",
+                            "description": "Кредит"
+                          },
+                          "OutSald": {
+                            "type": "number",
+                            "description": "ИсхСальдо"
+                          },
+                          "Waers": {
+                            "type": "string",
+                            "description": "Код валюты"
+                          },
+                          "Idimg": {
+                            "type": "string",
+                            "description": "Номер записи"
+                          },
+                          "Uploaded": {
+                            "type": "string",
+                            "description": "Скан загружен?"
+                          },
+                          "BukrsName": {
+                            "type": "string",
+                            "description": "Название балансовой единицы или фирмы"
+                          }
+                        }
+                      }
+                    },
+                    "ECount": {
+                      "type": "integer"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get-ZgetActs",
+        "description": "Список актов и их статусы",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "ILogin": {
+                    "type": "string",
+                    "description": "Логин пользователя"
+                  },
+                  "IKunnr": {
+                    "type": "string",
+                    "description": "Номер дебитора"
+                  },
+                  "IHash": {
+                    "type": "string",
+                    "description": "Хеш-значение"
+                  },
+                  "IIP": {
+                    "type": "string",
+                    "description": "IP-адрес"
+                  },
+                  "ISrdat": {
+                    "type": "string",
+                    "description": "Дата с",
+                    "pattern": "YYYYMMDD"
+                  },
+                  "IErdat": {
+                    "type": "string",
+                    "description": "Дата по",
+                    "pattern": "YYYYMMDD"
+                  }
+                },
+                "required": [
+                  "ILogin",
+                  "IKunnr",
+                  "IHash",
+                  "IIP",
+                  "ISrdat",
+                  "IErdat"
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "/ZlkNoticeGet": {
+      "get": {
+        "summary": "Получение настроек уведомлений клиента",
+        "tags": [],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "ENdeb": {
+                      "type": "array",
+                      "description": "Статусы",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "Event": {
+                            "type": "string",
+                            "description": "Событие"
+                          },
+                          "Caption": {
+                            "type": "string",
+                            "description": "Наименование статуса"
+                          },
+                          "ValSms": {
+                            "type": "string",
+                            "description": "SMS"
+                          },
+                          "ValEmail": {
+                            "type": "string",
+                            "description": "e-mail"
+                          },
+                          "ColorLine": {
+                            "type": "string",
+                            "description": "Более точно не опр. область, возм. исп. для уровня \"заплат\""
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get-ZlkNoticeGet",
+        "description": "Получение настроек уведомлений клиента",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "ILogin": {
+                    "type": "string",
+                    "description": "Логин пользователя"
+                  },
+                  "IKunnr": {
+                    "type": "string",
+                    "description": "Номер дебитора"
+                  },
+                  "IHash": {
+                    "type": "string",
+                    "description": "Хеш-значение"
+                  },
+                  "IIp": {
+                    "type": "string",
+                    "description": "IP-адрес"
+                  }
+                },
+                "required": [
+                  "ILogin",
+                  "IKunnr",
+                  "IHash",
+                  "IIp"
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "/ZlkProfile": {
+      "get": {
+        "summary": "Получение профиля клиента",
+        "tags": [],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "EProf": {
+                      "type": "object",
+                      "description": "Профиль дебитора",
+                      "properties": {
+                        "Kunnr": {
+                          "type": "string",
+                          "description": "Номер дебитора"
+                        },
+                        "Name": {
+                          "type": "string",
+                          "description": "Наименование дебитора"
+                        },
+                        "Country": {
+                          "type": "string",
+                          "description": "Код страны"
+                        },
+                        "Inn": {
+                          "type": "string",
+                          "description": "Регистрационный налоговый номер"
+                        },
+                        "Kpp": {
+                          "type": "string",
+                          "description": "КПП"
+                        },
+                        "Status": {
+                          "type": "string",
+                          "description": "Статус дебитора"
+                        },
+                        "TelCountryCode": {
+                          "type": "string",
+                          "description": "Код страны для телефона/факса"
+                        },
+                        "Tel": {
+                          "type": "string",
+                          "description": "Полный номер телефона: код + номер + внутренний номер"
+                        },
+                        "NameShort": {
+                          "type": "string",
+                          "description": "Наименование заказчика"
+                        },
+                        "Banks": {
+                          "type": "array",
+                          "description": "Банковские данные",
+                          "items": {
+                            "type": "object",
+                            "properties": {
+                              "Banka": {
+                                "type": "string",
+                                "description": "Название финансово-кредитного учреждения"
+                              },
+                              "Banks": {
+                                "type": "string",
+                                "description": "Код страны для банка"
+                              },
+                              "Bankl": {
+                                "type": "string",
+                                "description": "Ключ банка"
+                              },
+                              "Bankn": {
+                                "type": "string",
+                                "description": "Номер банковского счета"
+                              },
+                              "Brnch": {
+                                "type": "string",
+                                "description": "Филиал банка"
+                              }
+                            }
+                          }
+                        },
+                        "UrAddr": {
+                          "type": "string",
+                          "description": "Юридический адрес"
+                        },
+                        "FkAddr": {
+                          "type": "string",
+                          "description": "Фактический адрес"
+                        },
+                        "Stat": {
+                          "type": "string",
+                          "description": "Статус дебитора"
+                        },
+                        "EdoStat": {
+                          "type": "array",
+                          "description": "Статус подключения ЭДО дебитора",
+                          "items": {
+                            "type": "object",
+                            "properties": {
+                              "Bukrs": {
+                                "type": "string",
+                                "description": "Балансовая единица"
+                              },
+                              "Stat": {
+                                "type": "string",
+                                "description": "Подключен к ЭДО?"
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get-ZlkProfile",
+        "description": "Получение профиля клиента",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "ILogin": {
+                    "type": "string",
+                    "description": "Логин пользователя"
+                  },
+                  "Ikunnr": {
+                    "type": "string",
+                    "description": "Номер дебитора"
+                  },
+                  "IHash": {
+                    "type": "string",
+                    "description": "Хеш-значение"
+                  },
+                  "IIP": {
+                    "type": "string",
+                    "description": "IP-адрес"
+                  }
+                },
+                "required": [
+                  "ILogin",
+                  "Ikunnr",
+                  "IHash",
+                  "IIP"
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "/ZlkOrderCancel": {
+      "get": {
+        "summary": "Отмена ЭР",
+        "tags": [],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "EResult": {
+                      "type": "string",
+                      "description": "'S' - успешно\nИначе текст ошибки"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get-ZlkOrderCancel",
+        "description": "Отмена ЭР",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "ILogin": {
+                    "type": "string",
+                    "description": "Логин пользователя"
+                  },
+                  "IKunnr": {
+                    "type": "string",
+                    "description": "Номер дебитора"
+                  },
+                  "IHash": {
+                    "type": "string",
+                    "description": "Хеш-значение"
+                  },
+                  "IIp": {
+                    "type": "string",
+                    "description": "IP-адрес"
+                  },
+                  "IVbeln": {
+                    "type": "string",
+                    "description": "Номер документа сбыта"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/ZlkOrderInfo": {
+      "get": {
+        "summary": "Подробная информация по заказу",
+        "tags": [],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "EMove": {
+                      "type": "array",
+                      "description": "Статус заказа",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "Date": {
+                            "type": "string",
+                            "description": "Дата статуса"
+                          },
+                          "Time": {
+                            "type": "string",
+                            "description": "Время статуса"
+                          },
+                          "Faksk": {
+                            "type": "string",
+                            "description": "Блокирование вида фактуры документа сбыта"
+                          }
+                        }
+                      }
+                    },
+                    "EComm": {
+                      "type": "object",
+                      "description": "Общие сведения",
+                      "properties": {
+                        "Kunnr": {
+                          "type": "string",
+                          "description": "Номер дебитора"
+                        },
+                        "Name": {
+                          "type": "string",
+                          "description": "Наименование дебитора"
+                        },
+                        "Country": {
+                          "type": "string",
+                          "description": "Код страны"
+                        },
+                        "Inn": {
+                          "type": "string",
+                          "description": "ИНН"
+                        },
+                        "Kpp": {
+                          "type": "string",
+                          "description": "КПП"
+                        },
+                        "Status": {
+                          "type": "string",
+                          "description": "Статус дебитора"
+                        },
+                        "TelCountryCode": {
+                          "type": "string",
+                          "description": "Код страны для телефона"
+                        },
+                        "Tel": {
+                          "type": "string",
+                          "description": "Полный номер телефона: код + номер + внутренний номер"
+                        },
+                        "NameShort": {
+                          "type": "string",
+                          "description": "Короткое наименование заказчика"
+                        }
+                      }
+                    },
+                    "EGinf": {
+                      "type": "object",
+                      "description": "Информация о грузе",
+                      "properties": {
+                        "Charact": {
+                          "type": "string",
+                          "description": "Характер груза"
+                        },
+                        "Kwmeng": {
+                          "type": "number",
+                          "description": "Количество"
+                        },
+                        "Vrkme": {
+                          "type": "string",
+                          "description": "Продажная ЕИ"
+                        },
+                        "Brgew": {
+                          "type": "number",
+                          "description": "Вес позиции"
+                        },
+                        "Gewei": {
+                          "type": "string",
+                          "description": "Единица измерения веса"
+                        },
+                        "Volum": {
+                          "type": "number",
+                          "description": "Объем позиции"
+                        },
+                        "Voleh": {
+                          "type": "string",
+                          "description": "Единица изме объема"
+                        },
+                        "TempM": {
+                          "type": "string",
+                          "description": "Температурный режим"
+                        }
+                      }
+                    },
+                    "ESend": {
+                      "type": "object",
+                      "description": "Отправитель груза",
+                      "properties": {
+                        "Kunnr": {
+                          "type": "string",
+                          "description": "Номер дебитора"
+                        },
+                        "Name": {
+                          "type": "string",
+                          "description": "Наименование дебитора"
+                        },
+                        "Country": {
+                          "type": "string",
+                          "description": "Код страны"
+                        },
+                        "Inn": {
+                          "type": "string",
+                          "description": "ИНН"
+                        },
+                        "Kpp": {
+                          "type": "string",
+                          "description": "КПП"
+                        },
+                        "Status": {
+                          "type": "string",
+                          "description": "Статус дебитора"
+                        },
+                        "TelCountryCode": {
+                          "type": "string",
+                          "description": "Код страны для телефона"
+                        },
+                        "Tel": {
+                          "type": "string",
+                          "description": "Полный номер телефона: код + номер + внутренний номер"
+                        },
+                        "NameShort": {
+                          "type": "string",
+                          "description": "Короткое наименование заказчика"
+                        },
+                        "Point": {
+                          "type": "string",
+                          "description": "Пункт назначения"
+                        },
+                        "Address": {
+                          "type": "string",
+                          "description": "Адрес"
+                        },
+                        "Contact": {
+                          "type": "string",
+                          "description": "Контактное лицо"
+                        },
+                        "Phone": {
+                          "type": "string",
+                          "description": "Телефон"
+                        },
+                        "TimeWork": {
+                          "type": "string",
+                          "description": "Время работы"
+                        },
+                        "Landx": {
+                          "type": "string",
+                          "description": "Название страны"
+                        },
+                        "Bezei": {
+                          "type": "string",
+                          "description": "Название"
+                        },
+                        "Strtypeab": {
+                          "type": "string",
+                          "description": "Сокращение для типа улицы"
+                        },
+                        "PostCode1": {
+                          "type": "string",
+                          "description": "Почтовый индекс города"
+                        },
+                        "CityCode": {
+                          "type": "string",
+                          "description": "Кодирование города"
+                        },
+                        "City": {
+                          "type": "string",
+                          "description": "Город"
+                        },
+                        "Street": {
+                          "type": "string",
+                          "description": "Улица"
+                        },
+                        "HouseNum1": {
+                          "type": "string",
+                          "description": "Номер дома"
+                        },
+                        "HouseNum2": {
+                          "type": "string",
+                          "description": "Дополнение к номеру дома"
+                        },
+                        "Roomnumber": {
+                          "type": "string",
+                          "description": "Номер квартиры или помещения"
+                        }
+                      }
+                    },
+                    "EReci": {
+                      "type": "object",
+                      "description": "Получатель груза",
+                      "properties": {
+                        "Kunnr": {
+                          "type": "string",
+                          "description": "Номер дебитора"
+                        },
+                        "Name": {
+                          "type": "string",
+                          "description": "Наименование дебитора"
+                        },
+                        "Country": {
+                          "type": "string",
+                          "description": "Код страны"
+                        },
+                        "Inn": {
+                          "type": "string",
+                          "description": "ИНН"
+                        },
+                        "Kpp": {
+                          "type": "string",
+                          "description": "КПП"
+                        },
+                        "Status": {
+                          "type": "string",
+                          "description": "Статус дебитора"
+                        },
+                        "TelCountryCode": {
+                          "type": "string",
+                          "description": "Код страны для телефона"
+                        },
+                        "Tel": {
+                          "type": "string",
+                          "description": "Полный номер телефона: код + номер + внутренний номер"
+                        },
+                        "NameShort": {
+                          "type": "string",
+                          "description": "Короткое наименование заказчика"
+                        },
+                        "Point": {
+                          "type": "string",
+                          "description": "Пункт назначения"
+                        },
+                        "Address": {
+                          "type": "string",
+                          "description": "Адрес"
+                        },
+                        "Contact": {
+                          "type": "string",
+                          "description": "Контактное лицо"
+                        },
+                        "Phone": {
+                          "type": "string",
+                          "description": "Телефон"
+                        },
+                        "TimeWork": {
+                          "type": "string",
+                          "description": "Время работы"
+                        },
+                        "Landx": {
+                          "type": "string",
+                          "description": "Название страны"
+                        },
+                        "Bezei": {
+                          "type": "string",
+                          "description": "Название"
+                        },
+                        "Strtypeab": {
+                          "type": "string",
+                          "description": "Сокращение для типа улицы"
+                        },
+                        "PostCode1": {
+                          "type": "string",
+                          "description": "Почтовый индекс города"
+                        },
+                        "CityCode": {
+                          "type": "string",
+                          "description": "Кодирование города"
+                        },
+                        "City": {
+                          "type": "string",
+                          "description": "Город"
+                        },
+                        "Street": {
+                          "type": "string",
+                          "description": "Улица"
+                        },
+                        "HouseNum1": {
+                          "type": "string",
+                          "description": "Номер дома"
+                        },
+                        "HouseNum2": {
+                          "type": "string",
+                          "description": "Дополнение к номеру дома"
+                        },
+                        "Roomnumber": {
+                          "type": "string",
+                          "description": "Номер квартиры или помещения"
+                        }
+                      }
+                    },
+                    "EServ": {
+                      "type": "array",
+                      "description": "Информация об услугах",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "Posnr": {
+                            "type": "string",
+                            "description": "Номер позиции документа сбыта"
+                          },
+                          "Article": {
+                            "type": "string",
+                            "description": "Артикул"
+                          },
+                          "Arktx": {
+                            "type": "string",
+                            "description": "Краткий текст позиции заказа клиента"
+                          },
+                          "Kwmeng": {
+                            "type": "string",
+                            "description": "Количество"
+                          },
+                          "Vrkme": {
+                            "type": "string",
+                            "description": "Продажная ЕИ"
+                          },
+                          "Netwr": {
+                            "type": "number",
+                            "description": "Цена"
+                          },
+                          "Netws": {
+                            "type": "number",
+                            "description": "Сумма"
+                          },
+                          "Mwsbp": {
+                            "type": "number",
+                            "description": "Сумма налога в валюте документа"
+                          },
+                          "Waerk": {
+                            "type": "string",
+                            "description": "Валюта документа сбыта"
+                          },
+                          "Kunnr": {
+                            "type": "string",
+                            "description": "Номер дебитора"
+                          },
+                          "Paytx": {
+                            "type": "string",
+                            "description": "Плательщик по услуге"
+                          },
+                          "Nds": {
+                            "type": "string",
+                            "description": "Размер НДС"
+                          }
+                        }
+                      }
+                    },
+                    "ESubi": {
+                      "type": "object",
+                      "description": "Доп. информация к заказу",
+                      "properties": {
+                        "Mwsbp": {
+                          "type": "number",
+                          "description": "Сумма налога в валюте документа"
+                        },
+                        "Summa": {
+                          "type": "number",
+                          "description": "Сумма по ЭР"
+                        },
+                        "Route": {
+                          "type": "string",
+                          "description": "Маршрут"
+                        },
+                        "Comment": {
+                          "type": "string",
+                          "description": "Комментарий"
+                        },
+                        "Xblnr": {
+                          "type": "string",
+                          "description": "Ссылочный номер документа"
+                        },
+                        "Vbelv": {
+                          "type": "string",
+                          "description": "Номер заявки"
+                        }
+                      }
+                    },
+                    "EStPay": {
+                      "type": "string",
+                      "description": "Статус оплаты заказа"
+                    },
+                    "EsFrom": {
+                      "type": "object",
+                      "description": "Город откуда",
+                      "properties": {
+                        "CityCode": {
+                          "type": "string",
+                          "description": "Кодирование города"
+                        },
+                        "CityName": {
+                          "type": "string",
+                          "description": "Название города"
+                        },
+                        "CityExt": {
+                          "type": "string",
+                          "description": "Дополнение к названию города"
+                        }
+                      }
+                    },
+                    "EsTo": {
+                      "type": "object",
+                      "description": "Город куда",
+                      "properties": {
+                        "CityCode": {
+                          "type": "string",
+                          "description": "Кодирование города"
+                        },
+                        "CityName": {
+                          "type": "string",
+                          "description": "Название города"
+                        },
+                        "CityExt": {
+                          "type": "string",
+                          "description": "Дополнение к названию города"
+                        }
+                      }
+                    },
+                    "EInvoiceErdat": {
+                      "type": "string",
+                      "pattern": "YYYYMMDD"
+                    },
+                    "EtKunnr": {
+                      "type": "array",
+                      "description": "Адресные данные дебиторов",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "Kunnr": {
+                            "type": "string",
+                            "description": "Номер дебитора"
+                          },
+                          "LandxU": {
+                            "type": "string",
+                            "description": "Название страны юридического адреса"
+                          },
+                          "BezeiU": {
+                            "type": "string",
+                            "description": "Сокращение для типа улицы юридического адреса"
+                          },
+                          "StrtypeabU": {
+                            "type": "string",
+                            "description": "Почтовый индекс города юридическо"
+                          },
+                          "PostCode1U": {
+                            "type": "string",
+                            "description": "Почтовый индекс города юридического адреса"
+                          },
+                          "CityCodeU": {
+                            "type": "string",
+                            "description": "Кодирование города юридического адреса"
+                          },
+                          "CityU": {
+                            "type": "string",
+                            "description": "Город юр. адреса"
+                          },
+                          "StreetU": {
+                            "type": "string",
+                            "description": "Улица юр. адреса"
+                          },
+                          "HouseNum1U": {
+                            "type": "string",
+                            "description": "Номер дома юр. адреса"
+                          },
+                          "HouseNum2U": {
+                            "type": "string",
+                            "description": "Дополнение к номеру дома юр. адреса"
+                          },
+                          "RoomnumberU": {
+                            "type": "string",
+                            "description": "Номер квартиры или помещения юр. адреса"
+                          },
+                          "LandxF": {
+                            "type": "string",
+                            "description": "Название страны факт. ад"
+                          },
+                          "StrtypeabF": {
+                            "type": "string",
+                            "description": "Сокращение для типа улицы факт. адреса"
+                          },
+                          "PostCode1F": {
+                            "type": "string",
+                            "description": "Почтовый индекс города факт. адреса"
+                          },
+                          "CiteCodeF": {
+                            "type": "string",
+                            "description": "Кодирование города факт. адреса"
+                          },
+                          "CityF": {
+                            "type": "string",
+                            "description": "Название города факт. адрес"
+                          },
+                          "StreetF": {
+                            "type": "string",
+                            "description": "Улица факт. ад"
+                          },
+                          "HouseNum1F": {
+                            "type": "string",
+                            "description": "Номер дома фак"
+                          },
+                          "HouseNum2F": {
+                            "type": "string",
+                            "description": "Дополнение к номеру дома факт. адреса"
+                          },
+                          "RoomnumberF": {
+                            "type": "string",
+                            "description": "Номер квартиры или помещения факт. адреса"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get-ZlkOrderInfo",
+        "description": "Подробная информация по заказу ",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "ILogin": {
+                    "type": "string",
+                    "description": "Логин пользователя"
+                  },
+                  "IKunnr": {
+                    "type": "string",
+                    "description": "Номер дебитора"
+                  },
+                  "IHash": {
+                    "type": "string",
+                    "description": "Хеш-значение"
+                  },
+                  "IIp": {
+                    "type": "string",
+                    "description": "IP-адрес"
+                  },
+                  "IVbeln": {
+                    "type": "string",
+                    "description": "Торговый документ"
+                  },
+                  "INoCheckCompl": {
+                    "type": "string",
+                    "description": "'X' - Не проверять на полноту заказа"
+                  },
+                  "IXblnr": {
+                    "type": "string",
+                    "description": "Ссылочный номер документа"
+                  }
+                },
+                "required": [
+                  "ILogin",
+                  "IKunnr",
+                  "IHash",
+                  "IIp"
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "/ZgetBalance": {
+      "get": {
+        "summary": "Получение списка БЕ и их баланса по клиенту",
+        "tags": [],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "ERet": {
+                      "type": "array",
+                      "description": "Баланс дебитора",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "Bukrs": {
+                            "type": "string",
+                            "description": "Балансовая единица"
+                          },
+                          "BukrsName": {
+                            "type": "string",
+                            "description": "Название балансовой единицы"
+                          },
+                          "Saldo": {
+                            "type": "number",
+                            "description": "Конечный остаток"
+                          },
+                          "Waerk": {
+                            "type": "string",
+                            "description": "Валюта документа сбыта"
+                          },
+                          "Ktext": {
+                            "type": "string",
+                            "description": "Краткий текст"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get-ZgetBalance",
+        "description": "Получение списка БЕ и их баланса по клиенту",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "ILogin": {
+                    "type": "string",
+                    "description": "Логин пользователя"
+                  },
+                  "IKunnr": {
+                    "type": "string",
+                    "description": "Номер дебитора"
+                  },
+                  "IHash": {
+                    "type": "string",
+                    "description": "Хеш-значение"
+                  },
+                  "IIp": {
+                    "type": "string",
+                    "description": "IP-адрес"
+                  }
+                },
+                "required": [
+                  "ILogin",
+                  "IKunnr",
+                  "IHash",
+                  "IIp"
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "/ZlkActCreate": {
+      "get": {
+        "summary": "Создание  нового акта сверки",
+        "tags": [],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "EAct": {
+                      "type": "object",
+                      "description": "Созданный акт",
+                      "properties": {
+                        "Mandt": {
+                          "type": "string",
+                          "description": "Мандант"
+                        },
+                        "DocId": {
+                          "type": "string",
+                          "description": "Номер документа"
+                        },
+                        "Kunnr": {
+                          "type": "string",
+                          "description": "Номер дебитора"
+                        },
+                        "Bukrs": {
+                          "type": "string",
+                          "description": "Балансовая единица"
+                        },
+                        "StaId": {
+                          "type": "string",
+                          "description": "Статус"
+                        },
+                        "Datum": {
+                          "type": "string",
+                          "pattern": "YYYYMMDD",
+                          "description": "Дата создания"
+                        },
+                        "DTim": {
+                          "type": "string",
+                          "pattern": "HHMMSS",
+                          "description": "Время создания"
+                        },
+                        "Autor": {
+                          "type": "string",
+                          "description": "Автор"
+                        },
+                        "DatB": {
+                          "type": "string",
+                          "description": "Дата с",
+                          "pattern": "YYYYMMDD"
+                        },
+                        "DatE": {
+                          "type": "string",
+                          "description": "Дата по",
+                          "pattern": "YYYYMMDD"
+                        },
+                        "InSald": {
+                          "type": "number",
+                          "description": "ВхСальдо"
+                        },
+                        "Dsum": {
+                          "type": "number",
+                          "description": "Дебет"
+                        },
+                        "Ksum": {
+                          "type": "number",
+                          "description": "Кредит"
+                        },
+                        "OutSald": {
+                          "type": "number",
+                          "description": "ИсхСальдо"
+                        },
+                        "Waers": {
+                          "type": "string",
+                          "description": "Код валюты"
+                        },
+                        "Idimg": {
+                          "type": "string",
+                          "description": "Номер записи"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get-ZlkActCreate",
+        "description": "Создание  нового акта сверки",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "ILogin": {
+                    "type": "string",
+                    "description": "Логин пользователя"
+                  },
+                  "IKunnr": {
+                    "type": "string",
+                    "description": "Номер дебитора"
+                  },
+                  "IHash": {
+                    "type": "string",
+                    "description": "Хеш-значение"
+                  },
+                  "IIp": {
+                    "type": "string",
+                    "description": "IP-адрес"
+                  },
+                  "ISrdat": {
+                    "type": "string",
+                    "pattern": "YYYYMMDD",
+                    "description": "Дата с"
+                  },
+                  "IErdat": {
+                    "type": "string",
+                    "pattern": "YYYYMMDD",
+                    "description": "Дата по"
+                  },
+                  "IBukrs": {
+                    "type": "string",
+                    "description": "Балансовая единица"
+                  }
+                },
+                "required": [
+                  "ILogin",
+                  "IKunnr",
+                  "IHash",
+                  "IIp",
+                  "ISrdat",
+                  "IErdat",
+                  "IBukrs"
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "/ZlkUploadDoc": {
+      "post": {
+        "summary": "Загрузка документов",
+        "operationId": "post-ZlkUploadDoc",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "IsOk": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "description": "Загрузка документов",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "ILogin": {
+                    "type": "string",
+                    "description": "Логин пользователя"
+                  },
+                  "IKunnr": {
+                    "type": "string",
+                    "description": "Номер дебитора"
+                  },
+                  "IHash": {
+                    "type": "string",
+                    "description": "Хеш-значение"
+                  },
+                  "IIp": {
+                    "type": "string",
+                    "description": "IP-адрес"
+                  },
+                  "IType": {
+                    "type": "string",
+                    "description": "Тип приклепляемого файла с сайта"
+                  },
+                  "IDocId": {
+                    "type": "string"
+                  },
+                  "IBin": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "ILogin",
+                  "IKunnr",
+                  "IHash",
+                  "IIp",
+                  "IType",
+                  "IDocId",
+                  "IBin"
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "/ZlkGetBe": {
+      "get": {
+        "summary": "Получение БЕ дебитора",
+        "tags": [],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "EBukrs": {
+                      "type": "array",
+                      "description": "Балансовые единицы",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "Bukrs": {
+                            "type": "string",
+                            "description": "Балансовая единица"
+                          },
+                          "Butxt": {
+                            "type": "string",
+                            "description": "Название балансовой единицы"
+                          },
+                          "Block": {
+                            "type": "string",
+                            "description": "Блокирована?"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get-ZlkGetBe",
+        "description": "БЕ по которым работает клиент",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "ILogin": {
+                    "type": "string",
+                    "description": "Логин пользователя"
+                  },
+                  "IKunnr": {
+                    "type": "string",
+                    "description": "Номер дебитора"
+                  },
+                  "IHash": {
+                    "type": "string",
+                    "description": "Хеш-значение"
+                  },
+                  "IIp": {
+                    "type": "string",
+                    "description": "IP-адрес"
+                  }
+                },
+                "required": [
+                  "ILogin",
+                  "IKunnr",
+                  "IHash",
+                  "IIp"
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "/ZgetDebNotice": {
+      "get": {
+        "summary": "Список уведомлений",
+        "tags": [],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "ENotice": {
+                      "type": "array",
+                      "description": "Уведомления дебитора",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "Dat": {
+                            "type": "string",
+                            "description": "Дата/время уведомления"
+                          },
+                          "Xblnr": {
+                            "type": "string",
+                            "description": "Ссылочный номер документа"
+                          },
+                          "EventName": {
+                            "type": "string",
+                            "description": "Название события"
+                          },
+                          "Type": {
+                            "type": "string",
+                            "description": "Тип уведомления"
+                          },
+                          "Adr": {
+                            "type": "string",
+                            "description": "Получатель уведомления"
+                          },
+                          "Title": {
+                            "type": "string",
+                            "description": "Заголовок уведомления"
+                          },
+                          "Mess": {
+                            "type": "array",
+                            "description": "Сообщения клиенту",
+                            "items": {
+                              "type": "object",
+                              "properties": {
+                                "Line": {
+                                  "type": "string",
+                                  "description": "Сообщение"
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get-ZgetDebNotice",
+        "description": "История уведомлений дебитора",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "ILogin": {
+                    "type": "string",
+                    "description": "Логин пользователя"
+                  },
+                  "IKunnr": {
+                    "type": "string",
+                    "description": "Номер дебитора"
+                  },
+                  "IHash": {
+                    "type": "string",
+                    "description": "Хеш-значение"
+                  },
+                  "IIp": {
+                    "type": "string",
+                    "description": "IP-адрес"
+                  },
+                  "ISms": {
+                    "type": "string",
+                    "description": "Уведомления по SMS"
+                  },
+                  "IEmail": {
+                    "type": "string",
+                    "description": "Уведомления по EMAIL"
+                  },
+                  "IXblnr": {
+                    "type": "string",
+                    "description": "Ссылочный номер документа"
+                  },
+                  "IDatab": {
+                    "type": "string",
+                    "description": "Дата начала действия"
+                  },
+                  "IDatbi": {
+                    "type": "string",
+                    "description": "Дата окончания действия"
+                  }
+                },
+                "required": [
+                  "ILogin",
+                  "IKunnr",
+                  "IHash",
+                  "IIp"
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "/ZlkNoticeSet": {
+      "post": {
+        "summary": "Обновление настроек уведомлений клиента",
+        "operationId": "post-ZlkNoticeSet",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "E_RET": {
+                      "type": "string",
+                      "description": "'X' - успешно"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "description": "Обновление настроек уведомлений клиента",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "ILogin": {
+                    "type": "string",
+                    "description": "Логин пользователя"
+                  },
+                  "IKunnr": {
+                    "type": "string",
+                    "description": "Номер дебитора"
+                  },
+                  "IHash": {
+                    "type": "string",
+                    "description": "Хеш-значение"
+                  },
+                  "IIp": {
+                    "type": "string",
+                    "description": "IP-адрес"
+                  },
+                  "INoti": {
+                    "type": "array",
+                    "description": "Статусы",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "Event": {
+                          "type": "string",
+                          "description": "Событие"
+                        },
+                        "Caption": {
+                          "type": "string",
+                          "description": "Наименование статуса"
+                        },
+                        "ValSms": {
+                          "type": "string",
+                          "description": "SMS"
+                        },
+                        "ValEmail": {
+                          "type": "string",
+                          "description": "e-mail"
+                        },
+                        "ColorLine": {
+                          "type": "string"
+                        }
+                      }
+                    }
+                  }
+                },
+                "required": [
+                  "ILogin",
+                  "IKunnr",
+                  "IHash",
+                  "IIp",
+                  "INoti"
+                ]
               }
             }
           }

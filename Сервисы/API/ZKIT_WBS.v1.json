@@ -1,0 +1,448 @@
+{
+  "swagger": "2.0",
+  "x-stoplight": {
+    "id": "945d4eps03uqz"
+  },
+  "info": {
+    "title": "ZKIT_WBS.v1",
+    "version": "1.0",
+    "description": "Тестовый адрес:\nhttp://81.91.43.211:8000/sap/bc/srt/wsdl/flv_10002A101AD1/srvc_url/sap/bc/srt/rfc/sap/zkit_wbs/850/kit_wbs42/kit_wbs42?sap-client=850\n\nПродуктивный адрес:\nhttp://81.91.43.211:8030/sap/bc/srt/wsdl/flv_10002A101AD1/srvc_url/sap/bc/srt/rfc/sap/zkit_wbs/850/kit_wbs44/kit_wbs44?sap-client=850"
+  },
+  "host": "localhost:3000",
+  "schemes": [
+    "http"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "consumes": [
+    "application/json"
+  ],
+  "paths": {
+    "/Z_GET_BAGGAGE_VALUES": {
+      "get": {
+        "summary": "Возможные значения признака \"Посылка\"",
+        "tags": [],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "ET_BAGGAGE": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "DOMVALUE": {
+                        "type": "string",
+                        "description": "Тип посылки"
+                      },
+                      "DDTEXT": {
+                        "type": "string",
+                        "description": "Описание типа посылки"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get-Z_GET_BAGGAGE_VALUES",
+        "description": "Возможные значения признака \"Посылка\""
+      }
+    },
+    "/Z_GET_BAGGAGE_PARAM": {
+      "get": {
+        "summary": "Параметры для каждого типа посылки",
+        "tags": [],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "E_LENGTH": {
+                  "type": "number",
+                  "description": "Длина"
+                },
+                "E_WIDTH": {
+                  "type": "number",
+                  "description": "Ширина"
+                },
+                "E_HEIGHT": {
+                  "type": "number",
+                  "description": "Высота"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get-Z_GET_BAGGAGE_PARAM",
+        "description": "Параметры для каждого типа посылки",
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "I_BAGGAGE": {
+                  "type": "string",
+                  "description": "Тип посылки"
+                }
+              },
+              "required": [
+                "I_BAGGAGE"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    "/Z_STATUS_ORDER": {
+      "get": {
+        "summary": "Статус заказа",
+        "tags": [],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "E_STAT": {
+                  "type": "array",
+                  "description": "Статус заказа",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "DATE": {
+                        "type": "string",
+                        "description": "Дата создания записи YYYYMMDD"
+                      },
+                      "TIME": {
+                        "type": "string",
+                        "description": "Время создания записи HHMMSS"
+                      },
+                      "FAKSK": {
+                        "type": "string",
+                        "description": "Блокирование вида фактуры документа сбыта"
+                      }
+                    }
+                  }
+                },
+                "E_DOP": {
+                  "type": "array",
+                  "description": "Информация об остановках / перенаправках",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "ST_NAME": {
+                        "type": "string"
+                      },
+                      "XBLNR": {
+                        "type": "string",
+                        "description": "Ссылочный номер документа"
+                      },
+                      "DATE": {
+                        "type": "string",
+                        "description": "YYYYMMDD"
+                      },
+                      "TIME": {
+                        "type": "string",
+                        "description": "HHMMSS"
+                      }
+                    }
+                  }
+                },
+                "E_ADR": {
+                  "type": "string"
+                },
+                "E_STAT_ORD": {
+                  "type": "array",
+                  "description": "Информация о статусах заказа",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "CRM_GUID": {
+                        "type": "string"
+                      },
+                      "ERDAT": {
+                        "type": "string",
+                        "description": "YYYYMMDD"
+                      },
+                      "KUNNR": {
+                        "type": "string",
+                        "description": "Номер дебитора"
+                      },
+                      "KUNNR_TX": {
+                        "type": "string",
+                        "description": "Имя дебитора"
+                      },
+                      "STAT": {
+                        "type": "array",
+                        "description": "Статус заказа",
+                        "items": {
+                          "type": "object",
+                          "properties": {
+                            "DATE": {
+                              "type": "string",
+                              "description": "YYYYMMDD"
+                            },
+                            "TIME": {
+                              "type": "string",
+                              "description": "HHMMSS"
+                            },
+                            "FAKSK": {
+                              "type": "string",
+                              "description": "Блокирование вида фактуры документа сбыта"
+                            }
+                          }
+                        }
+                      },
+                      "DOP": {
+                        "type": "array",
+                        "description": "Информация об остановках / перенаправках",
+                        "items": {
+                          "type": "object",
+                          "properties": {
+                            "ST_NAME": {
+                              "type": "string"
+                            },
+                            "XBLNR": {
+                              "type": "string",
+                              "description": "Ссылочный номер документа"
+                            },
+                            "DATE": {
+                              "type": "string",
+                              "description": "YYYYMMDD"
+                            },
+                            "TIME": {
+                              "type": "string",
+                              "description": "HHMMSS"
+                            }
+                          }
+                        }
+                      },
+                      "ADR": {
+                        "type": "string"
+                      }
+                    }
+                  }
+                },
+                "ET_STATUS": {
+                  "type": "array",
+                  "description": "История изменения статусов заказа",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "VBELN": {
+                        "type": "string",
+                        "description": "Торговый документ"
+                      },
+                      "FAKSK": {
+                        "type": "string",
+                        "description": "Блокирование вида фактуры документа сбыта"
+                      },
+                      "CHARG": {
+                        "type": "string",
+                        "description": "Номер партии"
+                      },
+                      "XBLNR": {
+                        "type": "string",
+                        "description": "Ссылочный номер документа"
+                      },
+                      "POINT": {
+                        "type": "string",
+                        "description": "Место возникновения статуса"
+                      },
+                      "SDATE": {
+                        "type": "string",
+                        "description": "Дата статуса MMMMYYDD"
+                      },
+                      "STIME": {
+                        "type": "string",
+                        "description": "Время статуса HHMMSS"
+                      }
+                    }
+                  }
+                },
+                "E_CITY_FR": {
+                  "type": "string",
+                  "description": "Город отправления"
+                },
+                "E_CITY_TO": {
+                  "type": "string",
+                  "description": "Город назначения"
+                },
+                "E_RP_ADR": {
+                  "type": "string",
+                  "description": "Адрес РП"
+                },
+                "E_RP_TEL": {
+                  "type": "string",
+                  "description": "Телефон РП"
+                },
+                "E_RP_WORKTIME": {
+                  "type": "string",
+                  "description": "Рабочее время"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get-Z_STATUS_ORDER",
+        "description": "Статус заказа",
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "I_XBLNR": {
+                  "type": "string",
+                  "description": "Ссылочный номер документа"
+                },
+                "CODE": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "I_XBLNR"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    "/Z_DEB_INFO": {
+      "get": {
+        "summary": "Информация о дебиторе",
+        "tags": [],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "E_DEB": {
+                  "type": "array",
+                  "description": "Информация о дебиторе",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "KUNNR": {
+                        "type": "string",
+                        "description": "Номер дебитора"
+                      },
+                      "STATUS": {
+                        "type": "string"
+                      },
+                      "NAME": {
+                        "type": "string"
+                      },
+                      "INN": {
+                        "type": "string",
+                        "description": "ИНН"
+                      },
+                      "KPP": {
+                        "type": "string",
+                        "description": "КПП"
+                      },
+                      "LAND": {
+                        "type": "string",
+                        "description": "Код страны"
+                      },
+                      "UR_ADDR": {
+                        "type": "string",
+                        "description": "Юридический адрес"
+                      },
+                      "FK_ADDR": {
+                        "type": "string",
+                        "description": "Фактический адрес"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get-ZKIT_WBS",
+        "description": "Поиск дебитора в SAP по реквизитам",
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "STCD1": {
+                  "type": "string",
+                  "description": "ИНН"
+                },
+                "STCD3": {
+                  "type": "string",
+                  "description": "КПП"
+                },
+                "STATUS": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "STCD3",
+                "STATUS"
+              ]
+            }
+          }
+        ]
+      },
+      "parameters": []
+    },
+    "/Z_DELREQ_WF": {
+      "post": {
+        "summary": "Задача на запрос доставки",
+        "operationId": "post-Z_DELREQ_WF",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "E_RETURN": {
+                  "type": "string",
+                  "description": "'N' - xblnr не найден\n'Y' - успешно\n'R' - неудачно"
+                }
+              }
+            }
+          }
+        },
+        "description": "Задача на запрос доставки",
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "I_XBLNR": {
+                  "type": "string",
+                  "description": "Ссылочный номер документа"
+                },
+                "I_MSG": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "I_XBLNR"
+              ]
+            }
+          }
+        ]
+      }
+    }
+  },
+  "definitions": {}
+}

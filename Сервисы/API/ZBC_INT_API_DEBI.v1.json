@@ -1,0 +1,293 @@
+{
+  "swagger": "2.0",
+  "x-stoplight": {
+    "id": "0soou4b63d5mb"
+  },
+  "info": {
+    "title": "ZBC_INT_API_DEBI.v1",
+    "version": "1.0",
+    "description": "Тестовый адрес:\nhttp://81.91.43.211:8000/sap/bc/srt/wsdl/flv_10002A101AD1/srvc_url/sap/bc/srt/rfc/sap/zbc_int_api_debi/850/srv1/srv1?sap-client=850\n\nПродуктивный адрес:\nhttp://81.91.43.211:8030/sap/bc/srt/wsdl/flv_10002A101AD1/srvc_url/sap/bc/srt/rfc/sap/zbc_int_api_debi/850/srv3/srv3?sap-client=850"
+  },
+  "host": "localhost:3000",
+  "schemes": [
+    "http"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "consumes": [
+    "application/json"
+  ],
+  "paths": {
+    "/ZbcIntApiDebGetEkitPct": {
+      "get": {
+        "summary": "Процентная ставка дебитора по Екиту",
+        "tags": [],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "EtData": {
+                  "type": "array",
+                  "description": "Процентные ставки для ЕКИТа",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "Type": {
+                        "type": "string",
+                        "description": "Правило расчета условий"
+                      },
+                      "Land": {
+                        "type": "string",
+                        "description": "Код страны"
+                      },
+                      "Value": {
+                        "type": "number",
+                        "description": "Сумма или процентная ставка условия"
+                      },
+                      "Waers": {
+                        "type": "string",
+                        "description": "Единица условия (валюта или процентная ставка)"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get-ZbcIntApiDebGetEkitPct",
+        "description": "Процентная ставка дебитора по Екиту",
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "IKunnr": {
+                  "type": "string",
+                  "description": "Номер дебитора"
+                }
+              },
+              "required": [
+                "IKunnr"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    "/ZbcIntApiDebRegi": {
+      "post": {
+        "summary": "Регистрация дебитора",
+        "operationId": "post-ZbcIntApiDebRegi",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "EKunnr": {
+                  "type": "string",
+                  "description": "Номер дебитора"
+                },
+                "EEmail": {
+                  "type": "string",
+                  "description": "Адрес электронной почты"
+                },
+                "EInn": {
+                  "type": "string",
+                  "description": "ИНН"
+                },
+                "EKpp": {
+                  "type": "string",
+                  "description": "КПП"
+                },
+                "EName": {
+                  "type": "string",
+                  "description": "Элемент данных для WWI-Callbacks"
+                },
+                "EPhone": {
+                  "type": "string",
+                  "description": "Номер телефона: код + номер"
+                }
+              }
+            }
+          },
+          "201": {
+            "description": "Created",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "E_KUNNR": {
+                  "type": "string",
+                  "description": "Номер дебитора"
+                },
+                "E_EMAIL": {
+                  "type": "string",
+                  "description": "Адрес электронной почты"
+                },
+                "E_INN": {
+                  "type": "string",
+                  "description": "ИНН"
+                },
+                "E_KPP": {
+                  "type": "string",
+                  "description": "КПП"
+                },
+                "E_NAME": {
+                  "type": "string"
+                },
+                "E_PHONE": {
+                  "type": "string",
+                  "description": "Номер телефона: код + номер"
+                }
+              }
+            }
+          }
+        },
+        "description": "Регистрация дебитора",
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "IName": {
+                  "type": "string",
+                  "description": "Имя дебитора"
+                },
+                "IStatus": {
+                  "type": "string"
+                },
+                "IPhone": {
+                  "type": "string",
+                  "description": "Номер телефона"
+                },
+                "ILandPhone": {
+                  "type": "string",
+                  "description": "Телефонный код страны",
+                  "default": "'RU'"
+                },
+                "IEmail": {
+                  "type": "string"
+                },
+                "IStcd1": {
+                  "type": "string",
+                  "description": "ИНН"
+                },
+                "IStcd3": {
+                  "type": "string",
+                  "description": "КПП"
+                },
+                "IKsign": {
+                  "type": "string"
+                },
+                "IKunnr": {
+                  "type": "string",
+                  "description": "Номер дебитора"
+                },
+                "IuCity": {
+                  "type": "string"
+                },
+                "IuStreet": {
+                  "type": "string"
+                },
+                "IuHouse": {
+                  "type": "string"
+                },
+                "IuSupp": {
+                  "type": "string"
+                },
+                "IuRoom": {
+                  "type": "string"
+                },
+                "IfCity": {
+                  "type": "string"
+                },
+                "IfStreet": {
+                  "type": "string"
+                },
+                "IfHouse": {
+                  "type": "string"
+                },
+                "IfSupp": {
+                  "type": "string"
+                },
+                "IfRoom": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "IName",
+                "IStatus",
+                "IPhone",
+                "IEmail"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    "/ZbcIntApiDebUnregPushId": {
+      "post": {
+        "summary": "Отписка от уведомлений push",
+        "operationId": "post-ZbcIntApiDebUnregPushId",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "EOk": {
+                  "type": "string",
+                  "description": "Успешно ли разрегистрировались"
+                }
+              }
+            }
+          }
+        },
+        "description": "Отписка от уведомлений push",
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "IKunnr": {
+                  "type": "string",
+                  "description": "Номер дебитора"
+                },
+                "IPushId": {
+                  "type": "string",
+                  "description": "Push id"
+                },
+                "IFirebaseToken": {
+                  "type": "string",
+                  "default": "SPACE",
+                  "description": "firebase token ID"
+                },
+                "IOs": {
+                  "type": "string",
+                  "description": "Push Operation System"
+                }
+              },
+              "required": [
+                "IKunnr",
+                "IPushId",
+                "IFirebaseToken",
+                "IOs"
+              ]
+            }
+          }
+        ]
+      }
+    }
+  },
+  "definitions": {}
+}

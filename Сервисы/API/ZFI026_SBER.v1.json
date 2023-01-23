@@ -1,0 +1,442 @@
+{
+  "swagger": "2.0",
+  "x-stoplight": {
+    "id": "yts0psdhj6mta"
+  },
+  "info": {
+    "title": "ZFI026_SBER.v1",
+    "version": "1.0",
+    "description": "Тестовый адрес:\nhttp://hanatst.tk-kit.lan:8100/sap/bc/srt/wsdl/flv_10002A101AD1/srvc_url/sap/bc/srt/rfc/sap/zfi026_sber/500/zfi026_sber/zfi026_sber?sap-client=500\n\nПродуктивный адрес:\nhttp://node01.tk-kit.lan:8100/sap/bc/srt/wsdl/flv_10002A101AD1/srvc_url/sap/bc/srt/rfc/sap/zfi026_sber/500/zfi026_sber/lpdef?sap-client=500"
+  },
+  "host": "localhost:3000",
+  "schemes": [
+    "http"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "consumes": [
+    "application/json"
+  ],
+  "paths": {
+    "/Zfi026AcqSberWebsrvBills": {
+      "get": {
+        "summary": "Поиск счетов на оплату",
+        "tags": [],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "EtData": {
+                  "type": "array",
+                  "description": "Счета на оплату интернет-эквайринга для WEB",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "Bukrs": {
+                        "type": "string",
+                        "description": "Балансовая единица"
+                      },
+                      "Belnr": {
+                        "type": "string",
+                        "description": "Номер бухгалтерского документа"
+                      },
+                      "Gjahr": {
+                        "type": "string",
+                        "description": "Финансовый год"
+                      },
+                      "Kunnr": {
+                        "type": "string",
+                        "description": "Номер дебитора"
+                      },
+                      "Wrbtr": {
+                        "type": "number",
+                        "description": "Сумма в валюте документа"
+                      },
+                      "Waers": {
+                        "type": "string",
+                        "description": "Код валюты"
+                      },
+                      "KunnrName": {
+                        "type": "string",
+                        "description": "Наименование плательщика"
+                      },
+                      "Paytx": {
+                        "type": "string",
+                        "description": "Назначение платежа в счета на оплату для интернет-эквайринга"
+                      },
+                      "Payed": {
+                        "type": "string",
+                        "description": "Индикатор оплаты заказа платежной системы"
+                      }
+                    }
+                  }
+                },
+                "EtLog": {
+                  "type": "array",
+                  "description": "Журнал ошибок для WEB",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "Message": {
+                        "type": "string"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get-Zfi026AcqSberWebsrvBills",
+        "description": "Поиск счетов на оплату",
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "IXblnr": {
+                  "type": "string",
+                  "description": "Номер заказа для оплаты"
+                },
+                "IPayer": {
+                  "type": "string",
+                  "description": "Плательщик по интернет-эквайрингу"
+                },
+                "IWaers": {
+                  "type": "string",
+                  "description": "Код валюты"
+                }
+              },
+              "required": [
+                "IXblnr"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    "/Zfi026SberWebsrvChecStPay": {
+      "post": {
+        "summary": "Проверка статуса оплаты",
+        "operationId": "post-Zfi026SberWebsrvChecStPay",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "EtMess": {
+                  "type": "array",
+                  "description": "Журнал ошибок для WEB",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "Message": {
+                        "type": "string",
+                        "description": "Сообщение"
+                      }
+                    }
+                  }
+                },
+                "EStatPay": {
+                  "type": "string",
+                  "description": "Статус оплаты"
+                }
+              }
+            }
+          }
+        },
+        "description": "Проверка статуса оплаты",
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "IsKey": {
+                  "type": "object",
+                  "description": "Ключ счета на оплату",
+                  "properties": {
+                    "Bukrs": {
+                      "type": "string",
+                      "description": "Балансовая единица"
+                    },
+                    "Belnr": {
+                      "type": "string",
+                      "description": "Номер бухгалтерского документа"
+                    },
+                    "Gjahr": {
+                      "type": "string",
+                      "description": "Финансовый год"
+                    }
+                  }
+                }
+              },
+              "required": [
+                "IsKey"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    "/Zfi026SbpSberWebsrvPaycrea": {
+      "post": {
+        "summary": "Создание заказа в платежной системе SBP",
+        "operationId": "post-Zfi026AcqSberWebsrvPaycrea",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "EPsPage": {
+                  "type": "string",
+                  "description": "Страница платежной системы"
+                },
+                "EPsOrder": {
+                  "type": "string",
+                  "description": "Номер заказа в платежной системе"
+                },
+                "EtMess": {
+                  "type": "array",
+                  "description": "Журнал ошибок для WEB",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "Message": {
+                        "type": "string",
+                        "description": "Сообщение"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "description": "Создание заказа в платежной системе SBP",
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "IsKey": {
+                  "type": "object",
+                  "description": "Ключ счета на оплату",
+                  "properties": {
+                    "Bukrs": {
+                      "type": "string",
+                      "description": "Балансовая единица"
+                    },
+                    "Belnr": {
+                      "type": "string",
+                      "description": "Номер бухгалтерского документа"
+                    },
+                    "Gjahr": {
+                      "type": "string",
+                      "description": "Финансовый год"
+                    }
+                  }
+                },
+                "ISumma": {
+                  "type": "number",
+                  "description": "Сумма в валюте документа"
+                },
+                "IWaers": {
+                  "type": "string",
+                  "description": "Код валюты"
+                },
+                "IEmail": {
+                  "type": "string",
+                  "description": "Email адрес для получения чека"
+                }
+              },
+              "required": [
+                "IsKey"
+              ]
+            }
+          }
+        ]
+      },
+      "parameters": []
+    },
+    "/Zfi026AcqSberWebsrvPaycrea": {
+      "parameters": [],
+      "post": {
+        "summary": "Создание заказа в платежной системе",
+        "operationId": "post-Zfi026AcqSberWebsrvPaycrea1",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "EPsPage": {
+                  "type": "string",
+                  "description": "Страница платежной системы"
+                },
+                "EPsOrder": {
+                  "type": "string",
+                  "description": "Номер заказа в платежной системе"
+                },
+                "EtMess": {
+                  "type": "array",
+                  "description": "Журнал ошибок для WEB",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "Message": {
+                        "type": "string",
+                        "description": "Сообщение"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "E_PS_PAGE": {
+                  "type": "string",
+                  "description": "Страница платежной системы"
+                },
+                "E_PS_ORDER": {
+                  "type": "string",
+                  "description": "Номер заказа в платежной системе"
+                },
+                "ET_MESS": {
+                  "type": "array",
+                  "description": "Журнал ошибок для WEB",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "MESSAGE": {
+                        "type": "string",
+                        "description": "Сообщение"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "description": "Создание заказа в платежной системе",
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "IsKey": {
+                  "type": "object",
+                  "description": "Ключ счета на оплату",
+                  "properties": {
+                    "Bukrs": {
+                      "type": "string",
+                      "description": "Балансовая единица"
+                    },
+                    "Belnr": {
+                      "type": "string",
+                      "description": "Номер бухгалтерского документа"
+                    },
+                    "Gjahr": {
+                      "type": "string",
+                      "description": "Финансовый год"
+                    }
+                  }
+                },
+                "IPgview": {
+                  "type": "string",
+                  "description": "pageView страницы платежного интерфейса"
+                },
+                "ISumma": {
+                  "type": "number",
+                  "description": "Сумма в валюте документа"
+                },
+                "IWaers": {
+                  "type": "string",
+                  "description": "Код валюты"
+                },
+                "IEmail": {
+                  "type": "string",
+                  "description": "Email адрес для получения чека"
+                },
+                "IWpOk": {
+                  "type": "string",
+                  "description": "Ссылка на страницу после успешной оплаты"
+                },
+                "IWpFail": {
+                  "type": "string",
+                  "description": "Ссылка на страницу после ошибочной оплаты"
+                }
+              },
+              "required": [
+                "IsKey"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    "/Zfi026AcqSberWebsrvPaychec": {
+      "get": {
+        "summary": "Проверка оплаты заказа",
+        "tags": [],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "EtMess": {
+                  "type": "string",
+                  "description": "Журнал ошибок для WEB"
+                },
+                "EPayed": {
+                  "type": "string",
+                  "description": "Заказ оплачен"
+                },
+                "EExpire": {
+                  "type": "string",
+                  "description": "Истек срок действия заказа"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get-Zfi026AcqSberWebsrvPaychec",
+        "description": "Проверка оплаты заказа",
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "IOrdid": {
+                  "type": "string",
+                  "description": "Номер заказа в платежной системе"
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  "definitions": {}
+}

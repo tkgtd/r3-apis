@@ -1,0 +1,361 @@
+{
+  "swagger": "2.0",
+  "x-stoplight": {
+    "id": "uda99dg5ad2ly"
+  },
+  "info": {
+    "title": "ZBC_INT_API_ORDER_R3.v1",
+    "version": "1.0",
+    "description": "Тестовый адрес:\nhttp://81.91.43.211:8000/sap/bc/srt/wsdl/flv_10002A101AD1/srvc_url/sap/bc/srt/rfc/sap/zbc_int_api_order/850/srv1/srv1?sap-client=850\n\nПродуктивный адрес:\nhttp://81.91.43.211:8030/sap/bc/srt/wsdl/flv_10002A101AD1/srvc_url/sap/bc/srt/rfc/sap/zbc_int_api_order/850/srv1/srv1?sap-client=850"
+  },
+  "host": "localhost:3000",
+  "schemes": [
+    "http"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "consumes": [
+    "application/json"
+  ],
+  "paths": {
+    "/ZBC_INT_API_FR_CREATE": {
+      "post": {
+        "summary": "Создание грузового заказа",
+        "operationId": "post-ZBC_INT_API_FR_CREATE",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "headers": {},
+            "schema": {
+              "type": "object",
+              "properties": {
+                "E_VBELN": {
+                  "type": "string",
+                  "description": "Торговый документ"
+                },
+                "E_XBLNR": {
+                  "type": "string",
+                  "description": "Ссылочный номер документа"
+                }
+              }
+            }
+          }
+        },
+        "description": "Создание грузового заказа",
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "IT_ITEM": {
+                  "type": "array",
+                  "description": "Позиции для заказа",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "GR_TYPE": {
+                        "type": "string",
+                        "description": "Тип грузовой позиции"
+                      },
+                      "MENGE": {
+                        "type": "number",
+                        "description": "Количество"
+                      },
+                      "LAENG": {
+                        "type": "number",
+                        "description": "Длина"
+                      },
+                      "BREIT": {
+                        "type": "number",
+                        "description": "Ширина"
+                      },
+                      "HOEHE": {
+                        "type": "number",
+                        "description": "Высота"
+                      },
+                      "BRGEW": {
+                        "type": "number",
+                        "description": "Вес брутто"
+                      },
+                      "VOLUM": {
+                        "type": "number",
+                        "description": "Объем"
+                      },
+                      "GR_NATURE": {
+                        "type": "string",
+                        "description": "Характер груза"
+                      },
+                      "HAND_50": {
+                        "type": "number",
+                        "description": "Стоимость вида условия для наложенного платежа"
+                      },
+                      "HAND_PRICE": {
+                        "type": "number",
+                        "description": "Стоимость вида условия для ручной цены"
+                      },
+                      "WAERS": {
+                        "type": "string",
+                        "description": "Код валюты"
+                      },
+                      "UEPOS": {
+                        "type": "integer",
+                        "description": "Номер позиции документа сбыта"
+                      },
+                      "ABGRU": {
+                        "type": "string",
+                        "description": "Причина отклонения по предложениям и заказам"
+                      },
+                      "ARTICLE": {
+                        "type": "string",
+                        "description": "Артикул услуги (материала)"
+                      },
+                      "LDDAT": {
+                        "type": "string",
+                        "description": "Дата начала YYYYMMDD"
+                      },
+                      "LDUHR": {
+                        "type": "string",
+                        "description": "Время начала HHMMSS"
+                      },
+                      "WADAT": {
+                        "type": "string",
+                        "description": "Дата завершения YYYYMMDD"
+                      },
+                      "WAUHR": {
+                        "type": "string",
+                        "description": "Время завершения HHMMSS"
+                      },
+                      "PAYER": {
+                        "type": "string",
+                        "description": "Кто является плательщиком за услугу"
+                      }
+                    }
+                  }
+                },
+                "IT_PARTNER": {
+                  "type": "array",
+                  "description": "Партнеры для заказа",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "PARVW": {
+                        "type": "string",
+                        "description": "Роль партнера"
+                      },
+                      "KUNNR": {
+                        "type": "string",
+                        "description": "Номер дебитора"
+                      },
+                      "STCD1": {
+                        "type": "string",
+                        "description": "Регистрационный налоговый номер 1"
+                      },
+                      "STCD3": {
+                        "type": "string",
+                        "description": "Налоговый номер 3"
+                      },
+                      "PHONE": {
+                        "type": "string",
+                        "description": "Полный номер телефона: код + номер + внутренний номер"
+                      },
+                      "PHONE2": {
+                        "type": "string",
+                        "description": "Дополнительный второй номер: полный номер телефона: код + номер + внутренний номер"
+                      },
+                      "PHONE3": {
+                        "type": "string",
+                        "description": "Дополнительный третий номер: полный номер телефона: код + номер + внутренний номер"
+                      },
+                      "NAME": {
+                        "type": "string",
+                        "description": "Наименование дебитора"
+                      },
+                      "KTOKD": {
+                        "type": "string",
+                        "description": "Группа счетов дебитора"
+                      },
+                      "BUKRS": {
+                        "type": "string",
+                        "description": "Балансовая единица"
+                      },
+                      "VKBUR": {
+                        "type": "string",
+                        "description": "Отдел сбыта"
+                      },
+                      "LZONE": {
+                        "type": "string",
+                        "description": "Транспортная зона"
+                      },
+                      "EMAIL": {
+                        "type": "string",
+                        "description": "Адрес электронной почты"
+                      },
+                      "TIME_WORK": {
+                        "type": "string",
+                        "description": "Время работы"
+                      },
+                      "LAND_JU": {
+                        "type": "string",
+                        "description": "Код страны дебитора (юридический адрес)"
+                      },
+                      "CITY_JU": {
+                        "type": "string",
+                        "description": "Город дебитора (юридический адрес)"
+                      },
+                      "CITY_ID_JU": {
+                        "type": "string",
+                        "description": "Кодирование города для файла города и улицы  дебитора (юридический адрес)"
+                      },
+                      "POSTAL_JU": {
+                        "type": "string",
+                        "description": "Почтовый индекс  дебитора (юридический адрес)"
+                      },
+                      "REGIO_JU": {
+                        "type": "string",
+                        "description": "Регион (штат, федер. земля, провинция, область, графство)  дебитора (юридический адрес)"
+                      },
+                      "STREET_JU": {
+                        "type": "string",
+                        "description": "Улица дебитора (юридический адрес)"
+                      },
+                      "STREET_ID_JU": {
+                        "type": "string",
+                        "description": "Кодировка улицы для файла города и улицы дебитора (юридический адрес)"
+                      },
+                      "HOUSE_JU": {
+                        "type": "string",
+                        "description": "Номер дома дебитора (юридический адрес)"
+                      },
+                      "HSN_SUPP_JU": {
+                        "type": "string",
+                        "description": "Дополнение к номеру дома дебитора (юридический адрес)"
+                      },
+                      "ROOM_JU": {
+                        "type": "string",
+                        "description": "Номер квартиры или помещения дебитора (юридический адрес)"
+                      },
+                      "LAND_FA": {
+                        "type": "string",
+                        "description": "Код страны дебитора (фактический адрес)"
+                      },
+                      "CITY_FA": {
+                        "type": "string",
+                        "description": "Город дебитора (фактический адрес)"
+                      },
+                      "CITY_ID_FA": {
+                        "type": "string",
+                        "description": "Кодирование города для файла города и улицы дебитора (фактический адрес)"
+                      },
+                      "POSTAL_FA": {
+                        "type": "string",
+                        "description": "Почтовый индекс дебитора (фактический адрес)"
+                      },
+                      "REGIO_FA": {
+                        "type": "string",
+                        "description": "Регион (штат, федер. земля, провинция, область, графство) дебитора (фактический адрес)"
+                      },
+                      "STREET_FA": {
+                        "type": "string",
+                        "description": "Улица дебитора (фактический адрес)"
+                      },
+                      "STREET_ID_FA": {
+                        "type": "string",
+                        "description": "Кодировка улицы для файла города и улицы дебитора (фактический адрес)"
+                      },
+                      "HOUSE_FA": {
+                        "type": "string",
+                        "description": "Номер дома дебитора (фактический адрес)"
+                      },
+                      "HSN_SUPP_FA": {
+                        "type": "string",
+                        "description": "Дополнение к номеру дома дебитора (фактический адрес)"
+                      },
+                      "ROOM_FA": {
+                        "type": "string",
+                        "description": "Номер квартиры или помещения дебитора (фактический адрес)"
+                      }
+                    }
+                  }
+                },
+                "PRICE": {
+                  "type": "number",
+                  "description": "Объявленная стоимость"
+                },
+                "WAERS": {
+                  "type": "string",
+                  "description": "Код валюты"
+                },
+                "IS_OPTION": {
+                  "type": "object",
+                  "description": "Вариант перевозки",
+                  "properties": {
+                    "FR_TYPE": {
+                      "type": "string",
+                      "description": "Выбранный тип перевозки"
+                    },
+                    "WERKS_FROM": {
+                      "type": "string",
+                      "description": "Начальный завод"
+                    },
+                    "WERKS_TO": {
+                      "type": "string",
+                      "description": "Конечный завод"
+                    }
+                  }
+                },
+                "I_CRM_GUID": {
+                  "type": "string",
+                  "description": "Трек номер"
+                },
+                "COMMENT": {
+                  "type": "string",
+                  "description": "Комментарий"
+                },
+                "I_VTWEG": {
+                  "type": "string",
+                  "description": "Канал сбыта"
+                },
+                "I_HAVE_DOC": {
+                  "type": "string",
+                  "description": "есть документы на стоимость груза"
+                },
+                "I_BAGGAGE": {
+                  "type": "string",
+                  "description": "Тип посылки"
+                },
+                "I_DLV_NOTE": {
+                  "type": "string",
+                  "description": "Комментарий к услуге доставки"
+                },
+                "I_PUP_NOTE": {
+                  "type": "string",
+                  "description": "Комментарий к услуге забора"
+                },
+                "I_GR_ACC_PD": {
+                  "type": "string",
+                  "description": "Плановая дата принятия груза к перевозке YYYYMMDD"
+                },
+                "I_GR_ACC_PT": {
+                  "type": "string",
+                  "description": "Плановое время принятия груза к перевозке HHMMSS"
+                }
+              },
+              "required": [
+                "IT_ITEM",
+                "IT_PARTNER",
+                "PRICE",
+                "WAERS",
+                "IS_OPTION"
+              ]
+            },
+            "description": ""
+          }
+        ]
+      }
+    }
+  },
+  "definitions": {}
+}

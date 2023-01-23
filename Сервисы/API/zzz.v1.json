@@ -1,5 +1,8 @@
 {
   "openapi": "3.0.0",
+  "x-stoplight": {
+    "id": "bmk2l89565n8t"
+  },
   "info": {
     "title": "zzz",
     "version": "1.0",

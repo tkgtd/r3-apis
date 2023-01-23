@@ -1,5 +1,8 @@
 {
   "openapi": "3.0.0",
+  "x-stoplight": {
+    "id": "sykdry53aiywi"
+  },
   "info": {
     "title": "ZWBS002",
     "version": "1.0",

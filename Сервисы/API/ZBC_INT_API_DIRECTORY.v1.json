@@ -1,0 +1,358 @@
+{
+  "swagger": "2.0",
+  "x-stoplight": {
+    "id": "sgb1bvb6gew4n"
+  },
+  "info": {
+    "title": "zbc_int_api_directory.v1",
+    "version": "1.0",
+    "description": "Тестовый адрес:\nhttp://hanatst.tk-kit.lan:8100/sap/bc/srt/wsdl/flv_10002A101AD1/srvc_url/sap/bc/srt/rfc/sap/zbc_int_api_directory/555/zbc_int_api_directory/srv?sap-client=555\n\nПродуктивный адрес:\nhttp://node01.tk-kit.lan:8100/sap/bc/srt/wsdl/flv_10002A101AD1/srvc_url/sap/bc/srt/rfc/sap/zbc_int_api_directory/555/zbc_int_api_directory/srv?sap-client=555"
+  },
+  "host": "localhost:3000",
+  "schemes": [
+    "http"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "consumes": [
+    "application/json"
+  ],
+  "paths": {
+    "/ZBC_INT_API_DIR_WERKS": {
+      "get": {
+        "summary": "Справочник Заводы",
+        "tags": [],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "ET_WERKS_LIST": {
+                  "type": "array",
+                  "description": "Список заводов",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "WERKS": {
+                        "type": "string",
+                        "description": "Завод"
+                      },
+                      "LAND1": {
+                        "type": "string",
+                        "description": "Код страны"
+                      },
+                      "WERKS_NAME": {
+                        "type": "string",
+                        "description": "Название завода"
+                      },
+                      "PSTLZ": {
+                        "type": "string",
+                        "description": "Почтовый индекс"
+                      },
+                      "REGIO": {
+                        "type": "string",
+                        "description": "Регион (штат, федер. земля, провинция, область, графство)"
+                      },
+                      "ORT01": {
+                        "type": "string",
+                        "description": "Город"
+                      },
+                      "STRAS": {
+                        "type": "string",
+                        "description": "Улица и номер дома"
+                      },
+                      "ZSCHWORK": {
+                        "type": "string",
+                        "description": "Расписание РП"
+                      },
+                      "ZALTAD": {
+                        "type": "string"
+                      },
+                      "CITY_CODE": {
+                        "type": "string",
+                        "description": "Код города"
+                      },
+                      "STREETCODE": {
+                        "type": "string",
+                        "description": "Код улицы"
+                      },
+                      "TEL_NUMBER": {
+                        "type": "string",
+                        "description": "номер телефона: код + номер"
+                      },
+                      "TEL_EXTENS": {
+                        "type": "string",
+                        "description": "номер телефона: внутренний номер"
+                      },
+                      "REMARK": {
+                        "type": "string",
+                        "description": "Примечания к адресу"
+                      },
+                      "EKIT": {
+                        "type": "string"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get-ZBC_INT_API_DIR_WERKS",
+        "description": "Справочник Заводы",
+        "parameters": []
+      }
+    },
+    "/ZBC_INT_API_DIR_WAERS": {
+      "get": {
+        "summary": "Справочник Валюты",
+        "tags": [],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "ET_WAERS_LIST": {
+                  "type": "array",
+                  "description": "Список валют",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "WAERS": {
+                        "type": "string",
+                        "description": "Код валюты"
+                      },
+                      "LTEXT": {
+                        "type": "string",
+                        "description": "Подробный текст"
+                      },
+                      "KTEXT": {
+                        "type": "string",
+                        "description": "Краткий текст"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get-ZBC_INT_API_DIR_WAERS",
+        "description": "Справочник Валюты"
+      }
+    },
+    "/ZBC_INT_API_DIR_MATNR": {
+      "get": {
+        "summary": "Справочник Услуги",
+        "tags": [],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "ET_MATNR_LIST": {
+                  "type": "array",
+                  "description": "Список услуг",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "MATKL": {
+                        "type": "string",
+                        "description": "Группа материалов"
+                      },
+                      "MATNR": {
+                        "type": "string",
+                        "description": "Номер материала"
+                      },
+                      "ZARTICLE": {
+                        "type": "string",
+                        "description": "Артикул"
+                      },
+                      "MAKTX": {
+                        "type": "string"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get-ZBC_INT_API_DIR_MATNR",
+        "description": "Справочник Услуги",
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "I_MATKL": {
+                  "type": "string",
+                  "description": "Группа материалов"
+                }
+              }
+            }
+          }
+        ]
+      }
+    },
+    "/ZBC_INT_API_DIR_MATKL": {
+      "get": {
+        "summary": "Справочник Группы Услуг",
+        "tags": [],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "ET_MATKL_LIST": {
+                  "type": "array",
+                  "description": "Список групп услуг",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "MATKL": {
+                        "type": "string",
+                        "description": "Группа материалов"
+                      },
+                      "WGBEZ": {
+                        "type": "string",
+                        "description": "Название группы материалов"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get-ZBC_INT_API_DIR_MATKL",
+        "description": "Справочник Группы Услуг"
+      }
+    },
+    "/ZBC_INT_API_DIR_TRANSP_TYPE": {
+      "get": {
+        "summary": "Справочник Типы Перевозок",
+        "tags": [],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "ET_TYPE_LIST": {
+                  "type": "array",
+                  "description": "Список типов перевозки",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "FR_TYPE": {
+                        "type": "string",
+                        "description": "Тип перевозки"
+                      },
+                      "TYPE_NAME": {
+                        "type": "string",
+                        "description": "Название типа перевозки"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get-ZBC_INT_API_DIR_TRANSP_TYPE",
+        "description": "Справочник Типы Перевозок"
+      }
+    },
+    "/ZBC_INT_API_DIR_CURST": {
+      "get": {
+        "summary": "Справочник курсы валют",
+        "tags": [],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "ET_CURST_LIST": {
+                  "type": "array",
+                  "description": "Список курсов валют",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "FCURR": {
+                        "type": "string",
+                        "description": "Исходная валюта"
+                      },
+                      "TCURR": {
+                        "type": "string",
+                        "description": "Целевая валюта"
+                      },
+                      "UKURS": {
+                        "type": "number",
+                        "description": "Валютный курс"
+                      },
+                      "GDATU": {
+                        "type": "string",
+                        "description": "Дата, начиная с которой действует курс"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get-ZBC_INT_API_DIR_CURST",
+        "description": "Справочник курсы валют"
+      }
+    },
+    "/ZBC_INT_API_DIR_COUNTRY": {
+      "get": {
+        "summary": "Справочник Страны",
+        "tags": [],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "ET_COUNTRY_LIST": {
+                  "type": "array",
+                  "description": "Список стран",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "LAND1": {
+                        "type": "string",
+                        "description": "Код страны"
+                      },
+                      "LANDX": {
+                        "type": "string",
+                        "description": "Название страны"
+                      },
+                      "WAERS": {
+                        "type": "string",
+                        "description": "Валюта страны"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get-ZBC_INT_API_DIR_COUNTRY",
+        "description": "Справочник Страны"
+      }
+    }
+  },
+  "definitions": {}
+}

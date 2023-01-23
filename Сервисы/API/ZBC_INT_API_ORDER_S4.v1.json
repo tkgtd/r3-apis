@@ -1,0 +1,363 @@
+{
+  "swagger": "2.0",
+  "x-stoplight": {
+    "id": "z9ozlbfcqotwg"
+  },
+  "info": {
+    "title": "ZBC_INT_API_ORDER_S4.v1",
+    "version": "1.0",
+    "description": "Тестовый адрес:\nhttp://hanatst.tk-kit.lan:8100/sap/bc/srt/wsdl/flv_10002A101AD1/srvc_url/sap/bc/srt/rfc/sap/zbc_int_api_order/555/zbc_int_api_order/srv?sap-client=555\n\nПродуктивный адрес:\nhttp://node01.tk-kit.lan:8100/sap/bc/srt/wsdl/flv_10002A101AD1/srvc_url/sap/bc/srt/rfc/sap/zbc_int_api_order/555/zbc_int_api_order/srv?sap-client=555"
+  },
+  "host": "localhost:3000",
+  "schemes": [
+    "http"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "consumes": [
+    "application/json"
+  ],
+  "paths": {
+    "/ZBC_INT_API_FR_CALC": {
+      "get": {
+        "summary": "Расчет стоимости заказа (калькулятор)",
+        "tags": [],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "ET_FREIGHT": {
+                  "type": "array",
+                  "description": "Стоимость перевозки",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "FR_TYPE": {
+                        "type": "string",
+                        "description": "Выбранный тип перевозки"
+                      },
+                      "WERKS_FROM": {
+                        "type": "string",
+                        "description": "Завод откуда"
+                      },
+                      "WERKS_TO": {
+                        "type": "string",
+                        "description": "Завод куда"
+                      },
+                      "DAY_COUNT": {
+                        "type": "string",
+                        "description": "Количество дней"
+                      },
+                      "FREIGHT": {
+                        "type": "number",
+                        "description": "Стоимость перевозки"
+                      },
+                      "WAERS": {
+                        "type": "string",
+                        "description": "Код валюты"
+                      },
+                      "DETAIL": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "properties": {
+                            "ARTICLE": {
+                              "type": "string",
+                              "description": "Номер материала"
+                            },
+                            "FREIGHT": {
+                              "type": "number",
+                              "description": "Стоимость перевозки"
+                            },
+                            "IS_OVER": {
+                              "type": "string"
+                            }
+                          }
+                        }
+                      },
+                      "NOTICE": {
+                        "type": "string",
+                        "description": "Уведомления клиенту"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get-ZBC_INT_API_FR_CALC",
+        "description": "Расчет стоимости заказа (калькулятор)",
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "IT_ITEM": {
+                  "type": "array",
+                  "description": "Позиции для заказа",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "GR_TYPE": {
+                        "type": "string",
+                        "description": "Тип грузовой позиции"
+                      },
+                      "MENGE": {
+                        "type": "number",
+                        "description": "Количество"
+                      },
+                      "LAENG": {
+                        "type": "number",
+                        "description": "Длина"
+                      },
+                      "BREIT": {
+                        "type": "number",
+                        "description": "Ширина"
+                      },
+                      "HOEHE": {
+                        "type": "number",
+                        "description": "Высота"
+                      },
+                      "BRGEW": {
+                        "type": "number",
+                        "description": "Вес брутто"
+                      },
+                      "VOLUM": {
+                        "type": "number",
+                        "description": "Объем"
+                      },
+                      "GR_NATURE": {
+                        "type": "string",
+                        "description": "Характер груза"
+                      },
+                      "HAND_50": {
+                        "type": "number",
+                        "description": "Стоимость вида условия для наложенного платежа"
+                      },
+                      "HAND_PRICE": {
+                        "type": "number",
+                        "description": "Стоимость вида условия для ручной цены"
+                      },
+                      "WAERS": {
+                        "type": "string",
+                        "description": "Код валюты"
+                      },
+                      "UEPOS": {
+                        "type": "string",
+                        "description": "Номер позиции документа сбыта"
+                      },
+                      "ABGRU": {
+                        "type": "string",
+                        "description": "Причина отклонения предложений и заказов клиентов"
+                      },
+                      "ARTICLE": {
+                        "type": "string",
+                        "description": "Артикул"
+                      },
+                      "LDDAT": {
+                        "type": "string",
+                        "pattern": "YYYYMMDD",
+                        "description": "Дата погрузки"
+                      },
+                      "LDUHR": {
+                        "type": "string",
+                        "description": "Время погрузки (местное, относится к пункту отгрузки)",
+                        "pattern": "HHMMSS"
+                      },
+                      "WADAT": {
+                        "type": "string",
+                        "description": "Дата отпуска материала",
+                        "pattern": "YYYYMMDD"
+                      },
+                      "WAUHR": {
+                        "type": "string",
+                        "description": "Время отпуска материала (местное, относится к заводу)",
+                        "pattern": "HHMMSS"
+                      },
+                      "NOTES": {
+                        "type": "string",
+                        "description": "Примечание к услуге"
+                      },
+                      "PAYER": {
+                        "type": "string",
+                        "description": "Кто является плательщиком за услугу"
+                      }
+                    }
+                  }
+                },
+                "IT_PARTNER": {
+                  "type": "array",
+                  "description": "Партнеры для заказа",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "PARVW": {
+                        "type": "string",
+                        "description": "Роль партнера"
+                      },
+                      "KUNNR": {
+                        "type": "string",
+                        "description": "Номер дебитора"
+                      },
+                      "STCD1": {
+                        "type": "string",
+                        "description": "Регистрационный налоговый номер"
+                      },
+                      "STCD3": {
+                        "type": "string",
+                        "description": "Налоговый номер"
+                      },
+                      "PHONE": {
+                        "type": "string",
+                        "description": "Полный номер телефона: код + номер + внутренний номер"
+                      },
+                      "PHONE2": {
+                        "type": "string",
+                        "description": "Второй полный номер телефона: код + номер + внутренний номер"
+                      },
+                      "PHONE3": {
+                        "type": "string",
+                        "description": "Третий полный номер телефона: код + номер + внутренний номер"
+                      },
+                      "NAME": {
+                        "type": "string",
+                        "description": "Наименование дебитора"
+                      },
+                      "KTOKD": {
+                        "type": "string",
+                        "description": "Группа счетов дебитора"
+                      },
+                      "BUKRS": {
+                        "type": "string",
+                        "description": "Балансовая единица"
+                      },
+                      "VKBUR": {
+                        "type": "string",
+                        "description": "Отдел сбыта"
+                      },
+                      "LZONE": {
+                        "type": "string",
+                        "description": "Транспортная зона"
+                      },
+                      "EMAIL": {
+                        "type": "string",
+                        "description": "Адрес электронной почты"
+                      },
+                      "TIME_WORK": {
+                        "type": "string",
+                        "description": "Время работы"
+                      },
+                      "LAND_JU": {
+                        "type": "string",
+                        "description": "Код страны юр. адрес"
+                      },
+                      "CITY_JU": {
+                        "type": "string",
+                        "description": "Город юр. адрес"
+                      },
+                      "CITY_ID_JU": {
+                        "type": "string",
+                        "description": "Код города юр. адрес"
+                      },
+                      "POSTAL_JU": {
+                        "type": "string",
+                        "description": "Почтовый индекс юр. адрес"
+                      },
+                      "REGIO_JU": {
+                        "type": "string",
+                        "description": "Регион юр. адрес"
+                      },
+                      "STREET_JU": {
+                        "type": "string",
+                        "description": "Улица юр. адрес"
+                      },
+                      "STREET_ID_JU": {
+                        "type": "string",
+                        "description": "Код улицы юр. адрес"
+                      },
+                      "HOUSE_JU": {
+                        "type": "string",
+                        "description": "Номер дома юр. адрес"
+                      },
+                      "HSN_SUPP_JU": {
+                        "type": "string",
+                        "description": "Дополнение к номеру дома юр. адрес"
+                      },
+                      "ROOM_JU": {
+                        "type": "string",
+                        "description": "Номер квартиры или помещения юр. адрес"
+                      },
+                      "LAND_FA": {
+                        "type": "string",
+                        "description": "Код страны факт. адрес"
+                      },
+                      "CITY_FA": {
+                        "type": "string",
+                        "description": "Город факт. адрес"
+                      },
+                      "CITY_ID_FA": {
+                        "type": "string",
+                        "description": "Код города "
+                      },
+                      "POSTAL_FA": {
+                        "type": "string",
+                        "description": "Почтовый индекс факт. адрес"
+                      },
+                      "REGIO_FA": {
+                        "type": "string",
+                        "description": "Регион факт"
+                      },
+                      "STREET_FA": {
+                        "type": "string",
+                        "description": "Улица факт. адрес"
+                      },
+                      "STREET_ID_FA": {
+                        "type": "string",
+                        "description": "Код улицы факт. адрес"
+                      },
+                      "HOUSE_FA": {
+                        "type": "string",
+                        "description": "Номер дома факт. адрес"
+                      },
+                      "HSN_SUPP_FA": {
+                        "type": "string",
+                        "description": "Дополнение к номеру дома факт. адрес"
+                      },
+                      "ROOM_FA": {
+                        "type": "string",
+                        "description": "Номер квартиры или помещения факт. адрес"
+                      }
+                    }
+                  }
+                },
+                "PRICE": {
+                  "type": "number",
+                  "description": "Объявленная стоимость"
+                },
+                "WAERS": {
+                  "type": "string",
+                  "description": "Код валюты"
+                },
+                "I_HAVE_DOC": {
+                  "type": "string",
+                  "description": "есть документы на груз"
+                }
+              },
+              "required": [
+                "IT_ITEM",
+                "IT_PARTNER"
+              ]
+            }
+          }
+        ]
+      }
+    }
+  },
+  "definitions": {}
+}

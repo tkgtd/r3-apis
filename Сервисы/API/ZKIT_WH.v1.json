@@ -1,5 +1,8 @@
 {
   "openapi": "3.0.0",
+  "x-stoplight": {
+    "id": "t2yjhyxd808p3"
+  },
   "info": {
     "title": "ZKIT_WH",
     "version": "1.0",

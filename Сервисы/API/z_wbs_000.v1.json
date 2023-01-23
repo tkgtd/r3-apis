@@ -1,9 +1,12 @@
 {
   "openapi": "3.0.0",
+  "x-stoplight": {
+    "id": "2vf9uuqmfp78f"
+  },
   "info": {
     "title": "z_wbs_000",
     "version": "1.0",
-    "description": "Тестовый адрес: \nhttp://81.91.43.211:8000/sap/bc/srt/wsdl/srvc_000C29EC29AF1EDBA0DF79AAE2AFC05C/wsdl11/allinone/standard/document?sap-client=850  \n\nПродуктивный адрес:\nhttp://sapclsrv1.kit.lan:8030/sap/bc/srt/wsdl/srvc_3440B5B0A98C1EEBA0E3829D9595D0EE/wsdl11/allinone/standard/document?sap-client=850\n"
+    "description": "Тестовый адрес: \nhttp://81.91.43.211:8000/sap/bc/srt/wsdl/flv_10002A101AD1/srvc_url/sap/bc/srt/rfc/sap/z_wbs_000/850/srv5/srv5?sap-client=850\n\nПродуктивный адрес:\nhttp://81.91.43.211:8030/sap/bc/srt/wsdl/flv_10002A101AD1/srvc_url/sap/bc/srt/rfc/sap/z_wbs_000/850/srv3/srv3?sap-client=850\n"
   },
   "servers": [
     {
@@ -57,11 +60,14 @@
           "content": {
             "application/json": {
               "schema": {
-                "description": "",
                 "type": "object",
                 "properties": {
                   "IsIdate": {
                     "type": "object",
+                    "required": [
+                      "Begda",
+                      "Endda"
+                    ],
                     "properties": {
                       "Begda": {
                         "type": "string",
@@ -71,77 +77,30 @@
                         "type": "string",
                         "minLength": 1
                       }
-                    },
-                    "required": [
-                      "Begda",
-                      "Endda"
-                    ]
+                    }
                   },
                   "ItDoc1": {
                     "type": "array",
                     "uniqueItems": true,
                     "minItems": 1,
-                    "items": {
-                      "required": [],
-                      "properties": {
-                        "item": {
-                          "type": "object",
-                          "properties": {
-                            "Dtype1": {
-                              "type": "string",
-                              "minLength": 1
-                            },
-                            "Nudoc1": {
-                              "type": "string",
-                              "minLength": 1
-                            }
-                          },
-                          "required": [
-                            "Dtype1",
-                            "Nudoc1"
-                          ]
-                        }
-                      }
-                    }
+                    "items": {}
                   },
                   "ItUtype": {
                     "type": "array",
                     "uniqueItems": true,
                     "minItems": 1,
-                    "items": {
-                      "required": [
-                        "item"
-                      ],
-                      "properties": {
-                        "item": {
-                          "type": "string",
-                          "minLength": 1
-                        }
-                      }
-                    }
+                    "items": {}
                   },
                   "ItWerks": {
                     "type": "array",
                     "uniqueItems": true,
                     "minItems": 1,
-                    "items": {
-                      "required": [
-                        "item"
-                      ],
-                      "properties": {
-                        "item": {
-                          "type": "string",
-                          "minLength": 1
-                        }
-                      }
-                    }
+                    "items": {}
                   }
                 },
                 "required": [
                   "IsIdate",
-                  "ItDoc1",
-                  "ItUtype",
-                  "ItWerks"
+                  "ItUtype"
                 ]
               },
               "examples": {
@@ -181,7 +140,6 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "description": "",
                   "type": "object",
                   "properties": {
                     "EtIdimage": {
@@ -226,7 +184,7 @@
                                 "type": "string",
                                 "minLength": 1
                               },
-                              "Dwerk": {
+                              "Werks": {
                                 "type": "string",
                                 "minLength": 1
                               },
@@ -371,7 +329,6 @@
           "content": {
             "application/json": {
               "schema": {
-                "description": "",
                 "type": "object",
                 "properties": {
                   "ItIdimg": {
@@ -381,13 +338,13 @@
                     "items": {
                       "type": "object",
                       "properties": {
-                        "item": {
+                        "Line": {
                           "type": "string",
                           "minLength": 1
                         }
                       },
                       "required": [
-                        "item"
+                        "Line"
                       ]
                     }
                   }
@@ -424,7 +381,6 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "description": "",
                   "type": "object",
                   "properties": {
                     "EtTknum": {
@@ -481,11 +437,11 @@
                                 "type": "string",
                                 "minLength": 1
                               },
-                              "Type_inc": {
+                              "TypeInc": {
                                 "type": "string",
                                 "minLength": 1
                               },
-                              "Inc_flag": {
+                              "IncFlag": {
                                 "type": "string",
                                 "minLength": 1
                               }
@@ -653,7 +609,6 @@
           "content": {
             "application/json": {
               "schema": {
-                "description": "",
                 "type": "object",
                 "properties": {
                   "IsIdate": {
@@ -698,7 +653,7 @@
                       }
                     }
                   },
-                  "It_inc_type": {
+                  "ItIncType": {
                     "type": "object",
                     "properties": {
                       "item": {
@@ -768,7 +723,6 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "description": "",
                   "type": "object",
                   "properties": {
                     "EtTknum": {
@@ -825,11 +779,11 @@
                                 "type": "string",
                                 "minLength": 1
                               },
-                              "Type_inc": {
+                              "TypeInc": {
                                 "type": "string",
                                 "minLength": 1
                               },
-                              "Inc_flag": {
+                              "IncFlag": {
                                 "type": "string",
                                 "minLength": 1
                               }
@@ -903,7 +857,6 @@
           "content": {
             "application/json": {
               "schema": {
-                "description": "",
                 "type": "object",
                 "properties": {
                   "IsIdate": {
@@ -948,7 +901,7 @@
                       }
                     }
                   },
-                  "It_inc_type": {
+                  "ItIncType": {
                     "type": "object",
                     "properties": {
                       "item": {

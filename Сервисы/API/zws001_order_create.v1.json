@@ -1,5 +1,8 @@
 {
   "openapi": "3.0.0",
+  "x-stoplight": {
+    "id": "quuljsi0lm2mx"
+  },
   "info": {
     "title": "zws001_order_create",
     "version": "1.0",
