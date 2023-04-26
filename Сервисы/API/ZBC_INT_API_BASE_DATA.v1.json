@@ -164,7 +164,8 @@
                     "properties": {
                       "WAERS": {
                         "type": "string",
-                        "description": "Код валюты"
+                        "description": "Код валюты",
+                        "example": "RUB"
                       },
                       "LTEXT": {
                         "type": "string",
