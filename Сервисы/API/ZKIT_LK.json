@@ -1455,6 +1455,13 @@
                       "description": "'S' - успешно\nИначе текст ошибки"
                     }
                   }
+                },
+                "examples": {
+                  "0": {
+                    "value": {
+                      "EResult": "S"
+                    }
+                  }
                 }
               }
             }
@@ -1831,7 +1838,7 @@
                             "description": "Краткий текст позиции заказа клиента"
                           },
                           "Kwmeng": {
-                            "type": "string",
+                            "type": "number",
                             "description": "Количество"
                           },
                           "Vrkme": {
@@ -2031,6 +2038,157 @@
                           }
                         }
                       }
+                    }
+                  }
+                },
+                "examples": {
+                  "1": {
+                    "value": {
+                      "EMove": [
+                        {
+                          "Date": "26.04.2023",
+                          "Time": "16:51:11",
+                          "Faksk": "00"
+                        },
+                        {
+                          "Date": "26.04.2023",
+                          "Time": "16:51:18",
+                          "Faksk": "01"
+                        }
+                      ],
+                      "EComm": {
+                        "Kunnr": "1000100",
+                        "Name": "Общество с ограниченной ответственностью 'Малина знак'",
+                        "Country": "RU",
+                        "Inn": "8903999236",
+                        "Kpp": "910201001",
+                        "Status": "1",
+                        "TelCountryCode": "+7",
+                        "Tel": "0080050066",
+                        "NameShort": "OOO 'Малина!'"
+                      },
+                      "EGinf": {
+                        "Charact": "",
+                        "Kwmeng": 1,
+                        "Vrkme": "МСТ",
+                        "Brgew": 4,
+                        "Gewei": "КГ",
+                        "Volum": 0.002,
+                        "Voleh": "М3",
+                        "TempM": "Не требуется"
+                      },
+                      "ESend": {
+                        "Kunnr": "1000100",
+                        "Name": "Общество с ограниченной ответственностью 'Малина знак'",
+                        "Country": "RU",
+                        "Inn": "8903999236",
+                        "Kpp": "910201001",
+                        "Status": "1",
+                        "TelCountryCode": "+7",
+                        "Tel": "0080050066",
+                        "NameShort": "OOO 'Малина!'",
+                        "Point": "г.Екатеринбург",
+                        "Address": "ул 8 Марта, дом № 269",
+                        "Contact": "",
+                        "Phone": "+70080050066",
+                        "TimeWork": "",
+                        "Landx": "Россия",
+                        "Bezei": "Свердловская обл.",
+                        "Strtypeab": "ул",
+                        "PostCode1": "620085",
+                        "CityCode": "660000100000",
+                        "City": "Екатеринбург",
+                        "Street": "8 Марта",
+                        "HouseNum1": "269",
+                        "HouseNum2": "",
+                        "Roomnumber": ""
+                      },
+                      "EReci": {
+                        "Kunnr": "1000100",
+                        "Name": "Общество с ограниченной ответственностью 'Малина знак'",
+                        "Country": "RU",
+                        "Inn": "8903999236",
+                        "Kpp": "910201001",
+                        "Status": "1",
+                        "TelCountryCode": "+7",
+                        "Tel": "0080050066",
+                        "NameShort": "OOO 'Малина!'",
+                        "Point": "г.Екатеринбург",
+                        "Address": "ул 8 Марта, дом № 269",
+                        "Contact": "",
+                        "Phone": "+70080050066",
+                        "TimeWork": "",
+                        "Landx": "Россия",
+                        "Bezei": "Свердловская обл.",
+                        "Strtypeab": "ул",
+                        "PostCode1": "620085",
+                        "CityCode": "660000100000",
+                        "City": "Екатеринбург",
+                        "Street": "8 Марта",
+                        "HouseNum1": "269",
+                        "HouseNum2": "",
+                        "Roomnumber": ""
+                      },
+                      "EServ": [
+                        {
+                          "Posnr": "string",
+                          "Article": "string",
+                          "Arktx": "string",
+                          "Kwmeng": 1,
+                          "Vrkme": "string",
+                          "Netwr": 0,
+                          "Netws": 0,
+                          "Mwsbp": 0,
+                          "Waerk": "string",
+                          "Kunnr": "string",
+                          "Paytx": "string",
+                          "Nds": "string"
+                        }
+                      ],
+                      "ESubi": {
+                        "Mwsbp": 0,
+                        "Summa": 0,
+                        "Route": "string",
+                        "Comment": "string",
+                        "Xblnr": "string",
+                        "Vbelv": "string"
+                      },
+                      "EStPay": "string",
+                      "EsFrom": {
+                        "CityCode": "string",
+                        "CityName": "string",
+                        "CityExt": "string"
+                      },
+                      "EsTo": {
+                        "CityCode": "string",
+                        "CityName": "string",
+                        "CityExt": "string"
+                      },
+                      "EInvoiceErdat": "string",
+                      "EtKunnr": [
+                        {
+                          "Kunnr": "string",
+                          "LandxU": "string",
+                          "BezeiU": "string",
+                          "StrtypeabU": "string",
+                          "PostCode1U": "string",
+                          "CityCodeU": "string",
+                          "CityU": "string",
+                          "StreetU": "string",
+                          "HouseNum1U": "string",
+                          "HouseNum2U": "string",
+                          "RoomnumberU": "string",
+                          "LandxF": "string",
+                          "StrtypeabF": "string",
+                          "PostCode1F": "string",
+                          "CiteCodeF": "string",
+                          "CityF": "string",
+                          "StreetF": "string",
+                          "HouseNum1F": "string",
+                          "HouseNum2F": "string",
+                          "RoomnumberF": "string"
+                        }
+                      ]
                     }
                   }
                 }
