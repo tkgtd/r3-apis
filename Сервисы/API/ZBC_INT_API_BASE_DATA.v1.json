@@ -169,11 +169,13 @@
                       },
                       "LTEXT": {
                         "type": "string",
-                        "description": "Подробный текст"
+                        "description": "Подробный текст",
+                        "example": "Российский рубль"
                       },
                       "KTEXT": {
                         "type": "string",
-                        "description": "Краткий текст"
+                        "description": "Краткий текст",
+                        "example": "Рубль"
                       }
                     }
                   }
