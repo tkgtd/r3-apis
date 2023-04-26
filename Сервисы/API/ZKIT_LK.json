@@ -2580,6 +2580,13 @@
                       "type": "string"
                     }
                   }
+                },
+                "examples": {
+                  "0": {
+                    "value": {
+                      "IsOk": "X"
+                    }
+                  }
                 }
               }
             }
@@ -2666,6 +2673,24 @@
                           }
                         }
                       }
+                    }
+                  }
+                },
+                "examples": {
+                  "0": {
+                    "value": {
+                      "EBukrs": [
+                        {
+                          "Bukrs": "66KS",
+                          "Butxt": "ООО «КИТ»-Сервис",
+                          "Block": "X"
+                        },
+                        {
+                          "Bukrs": "GPL1",
+                          "Butxt": "ООО 'КИТ.ТК'",
+                          "Block": ""
+                        }
+                      ]
                     }
                   }
                 }
