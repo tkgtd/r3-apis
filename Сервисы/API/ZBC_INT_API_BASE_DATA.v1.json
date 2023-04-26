@@ -115,7 +115,31 @@
                   }
                 }
               }
-            }
+            },
+            "examples": [
+              {
+                "ET_WERKS_LIST": [
+                  {
+                    "WERKS": "0101",
+                    "LAND1": "RU",
+                    "WERKS_NAME": "Майкоп",
+                    "PSTLZ": "625031",
+                    "REGIO": "01",
+                    "ORT01": "Майкоп",
+                    "STRAS": "Адыгейская 178",
+                    "ZSCHWORK": "Пн-Пт – 09:00-18:00; Сб – 10:00-14:00",
+                    "ZALTAD": "string",
+                    "CITY_CODE": "10000100000",
+                    "STREETCODE": "1034669",
+                    "TRANSPZONE": "0000000101",
+                    "TEL_NUMBER": "+78612120720",
+                    "TEL_EXTENS": "string",
+                    "REMARK": "string",
+                    "EKIT": "X"
+                  }
+                ]
+              }
+            ]
           }
         },
         "operationId": "get-ZBC_INT_API_DIR_WERKS",
