@@ -36,35 +36,43 @@
                     "properties": {
                       "WERKS": {
                         "type": "string",
-                        "description": "Код завода"
+                        "description": "Код завода",
+                        "example": "0101"
                       },
                       "LAND1": {
                         "type": "string",
-                        "description": "Код страны"
+                        "description": "Код страны",
+                        "example": "RU"
                       },
                       "WERKS_NAME": {
                         "type": "string",
-                        "description": "Название завода"
+                        "description": "Название завода",
+                        "example": "Майкоп"
                       },
                       "PSTLZ": {
                         "type": "string",
-                        "description": "Почтовый индекс"
+                        "description": "Почтовый индекс",
+                        "example": "625031"
                       },
                       "REGIO": {
                         "type": "string",
-                        "description": "Регион (штат, федер. земля, провинция, область, графство)"
+                        "description": "Регион (штат, федер. земля, провинция, область, графство)",
+                        "example": "01"
                       },
                       "ORT01": {
                         "type": "string",
-                        "description": "Город"
+                        "description": "Город",
+                        "example": "Майкоп"
                       },
                       "STRAS": {
                         "type": "string",
-                        "description": "Улица и номер дома"
+                        "description": "Улица и номер дома",
+                        "example": "Адыгейская 178"
                       },
                       "ZSCHWORK": {
                         "type": "string",
-                        "description": "Расписание РП"
+                        "description": "Расписание РП",
+                        "example": "Пн-Пт – 09:00-18:00; Сб – 10:00-14:00"
                       },
                       "ZALTAD": {
                         "type": "string",
@@ -72,19 +80,23 @@
                       },
                       "CITY_CODE": {
                         "type": "string",
-                        "description": "Кодирование города для файла города и улицы"
+                        "description": "Кодирование города для файла города и улицы",
+                        "example": "10000100000"
                       },
                       "STREETCODE": {
                         "type": "string",
-                        "description": "Кодировка улицы для файла города и улицы"
+                        "description": "Кодировка улицы для файла города и улицы",
+                        "example": "1034669"
                       },
                       "TRANSPZONE": {
                         "type": "string",
-                        "description": "Транспортная зона"
+                        "description": "Транспортная зона",
+                        "example": "0000000101"
                       },
                       "TEL_NUMBER": {
                         "type": "string",
-                        "description": "Первый номер телефона: код + номер"
+                        "description": "Первый номер телефона: код + номер",
+                        "example": "+78612120720"
                       },
                       "TEL_EXTENS": {
                         "type": "string",
@@ -96,7 +108,8 @@
                       },
                       "EKIT": {
                         "type": "string",
-                        "description": "Наличие Касса Е-КИТ"
+                        "description": "Наличие Касса Е-КИТ",
+                        "example": "X"
                       }
                     }
                   }
