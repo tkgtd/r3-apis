@@ -37,25 +37,41 @@
                     "properties": {
                       "Type": {
                         "type": "string",
-                        "description": "Правило расчета условий"
+                        "description": "Правило расчета условий",
+                        "example": "A"
                       },
                       "Land": {
                         "type": "string",
-                        "description": "Код страны"
+                        "description": "Код страны",
+                        "example": "RU"
                       },
                       "Value": {
                         "type": "number",
-                        "description": "Сумма или процентная ставка условия"
+                        "description": "Сумма или процентная ставка условия",
+                        "example": "160,00"
                       },
                       "Waers": {
                         "type": "string",
-                        "description": "Единица условия (валюта или процентная ставка)"
+                        "description": "Единица условия (валюта или процентная ставка)",
+                        "example": "%"
                       }
                     }
                   }
                 }
               }
-            }
+            },
+            "examples": [
+              {
+                "EtData": [
+                  {
+                    "Type": "A",
+                    "Land": "RU",
+                    "Value": "160,00",
+                    "Waers": "%"
+                  }
+                ]
+              }
+            ]
           }
         },
         "operationId": "get-ZbcIntApiDebGetEkitPct",
