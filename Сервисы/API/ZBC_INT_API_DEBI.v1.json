@@ -6,7 +6,7 @@
   "info": {
     "title": "ZBC_INT_API_DEBI.v1",
     "version": "1.0",
-    "description": "Тестовый адрес:\nhttp://81.91.43.211:8000/sap/bc/srt/wsdl/flv_10002A101AD1/bndg_url/sap/bc/srt/rfc/sap/zbc_int_api_debi/850/srv1/srv1?sap-client=850\n\nПродуктивный адрес:\nhttp://81.91.43.211:8030/sap/bc/srt/wsdl/flv_10002A101AD1/bndg_url/sap/bc/srt/rfc/sap/zbc_int_api_debi/850/srv3/srv3?sap-client=850"
+    "description": "Сервис R3\n\nТестовый адрес:\nhttp://81.91.43.211:8000/sap/bc/srt/wsdl/flv_10002A101AD1/bndg_url/sap/bc/srt/rfc/sap/zbc_int_api_debi/850/srv1/srv1?sap-client=850\n\nПродуктивный адрес:\nhttp://81.91.43.211:8030/sap/bc/srt/wsdl/flv_10002A101AD1/bndg_url/sap/bc/srt/rfc/sap/zbc_int_api_debi/850/srv3/srv3?sap-client=850"
   },
   "host": "localhost:3000",
   "schemes": [
