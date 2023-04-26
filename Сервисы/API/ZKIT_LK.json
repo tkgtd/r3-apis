@@ -1077,6 +1077,35 @@
                       "type": "integer"
                     }
                   }
+                },
+                "examples": {
+                  "0": {
+                    "value": {
+                      "EActs": [
+                        {
+                          "Mandt": "",
+                          "DocId": "0000000041",
+                          "Kunnr": "1000100",
+                          "Bukrs": "GPL1",
+                          "StaId": "01",
+                          "Datum": "26.04.2023",
+                          "DTim": "18:15:42",
+                          "Autor": "YUNUSOVVV",
+                          "DatB": "26.04.2023",
+                          "DatE": "26.04.2023",
+                          "InSald": "11 356",
+                          "Dsum": 0,
+                          "Ksum": 0,
+                          "OutSald": "11 356",
+                          "Waers": "RUB",
+                          "Idimg": "0000000482",
+                          "Uploaded": "",
+                          "BukrsName": "ООО 'КИТ.ТК'"
+                        }
+                      ],
+                      "ECount": 1
+                    }
+                  }
                 }
               }
             }
@@ -2301,6 +2330,28 @@
                       }
                     }
                   }
+                },
+                "examples": {
+                  "0": {
+                    "value": {
+                      "ERet": [
+                        {
+                          "Bukrs": "66KS",
+                          "BukrsName": "ООО «КИТ»-Сервис",
+                          "Saldo": -225,
+                          "Waerk": "RUB",
+                          "Ktext": "руб."
+                        },
+                        {
+                          "Bukrs": "KZ99",
+                          "BukrsName": "ТK «GTD Logistics»",
+                          "Saldo": -6840,
+                          "Waerk": "KZT",
+                          "Ktext": "тенге"
+                        }
+                      ]
+                    }
+                  }
                 }
               }
             }
@@ -2427,6 +2478,30 @@
                           "type": "string",
                           "description": "Номер записи"
                         }
+                      }
+                    }
+                  }
+                },
+                "examples": {
+                  "0": {
+                    "value": {
+                      "EAct": {
+                        "Mandt": "",
+                        "DocId": "0000000041",
+                        "Kunnr": "1000100",
+                        "Bukrs": "GPL1",
+                        "StaId": "01",
+                        "Datum": "26.04.2023",
+                        "DTim": "18:15:42",
+                        "Autor": "YUNUSOVVV",
+                        "DatB": "26.04.2023",
+                        "DatE": "26.04.2023",
+                        "InSald": "11 356",
+                        "Dsum": 0,
+                        "Ksum": 0,
+                        "OutSald": "11 356",
+                        "Waers": "RUB",
+                        "Idimg": "0000000482"
                       }
                     }
                   }
