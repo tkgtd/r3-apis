@@ -576,12 +576,12 @@
                       ],
                       "EDebi": [
                         {
-                          "Kunnr": "string",
-                          "Name": "string",
-                          "Partn": "string"
+                          "Kunnr": "1054421",
+                          "Name": "ИП 'Шмулев'",
+                          "Partn": "1"
                         }
                       ],
-                      "ECount": 0
+                      "ECount": 1
                     }
                   }
                 }
