@@ -336,17 +336,29 @@
                     "properties": {
                       "MATKL": {
                         "type": "string",
-                        "description": "Группа материалов"
+                        "description": "Группа материалов",
+                        "example": "10-01"
                       },
                       "WGBEZ": {
                         "type": "string",
-                        "description": "Название группы материалов"
+                        "description": "Название группы материалов",
+                        "example": "Доставка"
                       }
                     }
                   }
                 }
               }
-            }
+            },
+            "examples": [
+              {
+                "ET_MATKL_LIST": [
+                  {
+                    "MATKL": "10-01",
+                    "WGBEZ": "Доставка"
+                  }
+                ]
+              }
+            ]
           }
         },
         "operationId": "get-ZBC_INT_API_DIR_MATKL",
@@ -370,25 +382,41 @@
                     "properties": {
                       "FCURR": {
                         "type": "string",
-                        "description": "Исходная валюта"
+                        "description": "Исходная валюта",
+                        "example": "AMD"
                       },
                       "TCURR": {
                         "type": "string",
-                        "description": "Целевая валюта"
+                        "description": "Целевая валюта",
+                        "example": "BYN"
                       },
                       "UKURS": {
                         "type": "number",
-                        "description": "Валютный курс"
+                        "description": "Валютный курс",
+                        "example": "700,00000"
                       },
                       "GDATU": {
                         "type": "string",
-                        "description": "Дата, начиная с которой действует курс"
+                        "description": "Дата, начиная с которой действует курс",
+                        "example": "05.04.2023"
                       }
                     }
                   }
                 }
               }
-            }
+            },
+            "examples": [
+              {
+                "ET_CURST_LIST": [
+                  {
+                    "FCURR": "AMD",
+                    "TCURR": "BYN",
+                    "UKURS": "700,00000",
+                    "GDATU": "05.04.2023"
+                  }
+                ]
+              }
+            ]
           }
         },
         "operationId": "get-ZBC_INT_API_DIR_CURST",
@@ -412,21 +440,35 @@
                     "properties": {
                       "LAND1": {
                         "type": "string",
-                        "description": "Код страны"
+                        "description": "Код страны",
+                        "example": "AB"
                       },
                       "LANDX": {
                         "type": "string",
-                        "description": "Название страны"
+                        "description": "Название страны",
+                        "example": "Абхазия"
                       },
                       "WAERS": {
                         "type": "string",
-                        "description": "Валюта страны"
+                        "description": "Валюта страны",
+                        "example": "RUB"
                       }
                     }
                   }
                 }
               }
-            }
+            },
+            "examples": [
+              {
+                "ET_COUNTRY_LIST": [
+                  {
+                    "LAND1": "AB",
+                    "LANDX": "Абхазия",
+                    "WAERS": "RUB"
+                  }
+                ]
+              }
+            ]
           }
         },
         "operationId": "get-ZBC_INT_API_DIR_COUNTRY",
