@@ -178,7 +178,18 @@
                   }
                 }
               }
-            }
+            },
+            "examples": [
+              {
+                "ET_WAERS_LIST": [
+                  {
+                    "WAERS": "RUB",
+                    "LTEXT": "Российский рубль",
+                    "KTEXT": "Рубль"
+                  }
+                ]
+              }
+            ]
           }
         },
         "operationId": "get-ZBC_INT_API_DIR_WAERS",
