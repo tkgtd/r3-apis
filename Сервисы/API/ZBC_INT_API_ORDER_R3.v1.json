@@ -32,14 +32,22 @@
               "properties": {
                 "E_VBELN": {
                   "type": "string",
-                  "description": "Торговый документ"
+                  "description": "Торговый документ",
+                  "example": "1100008200"
                 },
                 "E_XBLNR": {
                   "type": "string",
-                  "description": "Ссылочный номер документа"
+                  "description": "Ссылочный номер документа",
+                  "example": "ЕКБНТГ0100003741"
                 }
               }
-            }
+            },
+            "examples": [
+              {
+                "E_VBELN": "1100008200",
+                "E_XBLNR": "ЕКБНТГ0100003741"
+              }
+            ]
           }
         },
         "description": "Создание грузового заказа",

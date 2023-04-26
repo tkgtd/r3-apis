@@ -257,67 +257,83 @@
                         "properties": {
                           "Vbeln": {
                             "type": "string",
-                            "description": "Торговый документ"
+                            "description": "Торговый документ",
+                            "example": "1105888716"
                           },
                           "Xblnr": {
                             "type": "string",
-                            "description": "Ссылочный номер документа"
+                            "description": "Ссылочный номер документа",
+                            "example": "АМТЕКБ0100008292"
                           },
                           "Erdat": {
                             "type": "string",
-                            "description": "Дата создания записи YYYYMMDD"
+                            "description": "Дата создания записи YYYYMMDD",
+                            "example": "21.04.2023"
                           },
                           "Erzet": {
                             "type": "string",
-                            "description": "Время ввода HHMMSS"
+                            "description": "Время ввода HHMMSS",
+                            "example": "00:00:00"
                           },
                           "Kunnr": {
                             "type": "string",
-                            "description": "Заказчик"
+                            "description": "Заказчик",
+                            "example": "1054421"
                           },
                           "Skunr": {
                             "type": "string",
-                            "description": "Клиент отправитель"
+                            "description": "Клиент отправитель",
+                            "example": "1054421"
                           },
                           "Rkunr": {
                             "type": "string",
-                            "description": "Клиент получатель"
+                            "description": "Клиент получатель",
+                            "example": "9000156"
                           },
                           "Netwr": {
                             "type": "number",
-                            "description": "Стоимость нетто заказа в валюте документа"
+                            "description": "Стоимость нетто заказа в валюте документа",
+                            "example": "670,00"
                           },
                           "Waerk": {
                             "type": "string",
-                            "description": "Валюта документа сбыта"
+                            "description": "Валюта документа сбыта",
+                            "example": "RUB"
                           },
                           "Kuntx": {
                             "type": "string",
-                            "description": "Наименование заказчика"
+                            "description": "Наименование заказчика",
+                            "example": "ИП \"Шмулев\""
                           },
                           "Skutx": {
                             "type": "string",
-                            "description": "Наименование отправителя"
+                            "description": "Наименование отправителя",
+                            "example": "ИП \"Шмулев\""
                           },
                           "Rkutx": {
                             "type": "string",
-                            "description": "Наименование получателя"
+                            "description": "Наименование получателя",
+                            "example": "Семьянинова Лидия Юрьевена"
                           },
                           "Netwk": {
                             "type": "number",
-                            "description": "К оплате"
+                            "description": "К оплате",
+                            "example": "0,00"
                           },
                           "Stato": {
                             "type": "string",
-                            "description": "Статус заказа"
+                            "description": "Статус заказа",
+                            "example": "1"
                           },
                           "Statp": {
                             "type": "string",
-                            "description": "Статус оплаты"
+                            "description": "Статус оплаты",
+                            "example": "3"
                           },
                           "StPay": {
                             "type": "string",
-                            "description": "Статус оплаты: Оплачен, Не оплачен, Отсрочка"
+                            "description": "Статус оплаты: Оплачен, Не оплачен, Отсрочка",
+                            "example": "2"
                           },
                           "Sdirect": {
                             "type": "object",
@@ -325,27 +341,33 @@
                             "properties": {
                               "Sland": {
                                 "type": "string",
-                                "description": "Код страны"
+                                "description": "Код страны",
+                                "example": "KZ"
                               },
                               "Sregio": {
                                 "type": "string",
-                                "description": "Регион (штат, федер. земля, провинция, область, графство)"
+                                "description": "Регион (штат, федер. земля, провинция, область, графство)",
+                                "example": "00"
                               },
                               "Scode": {
                                 "type": "string",
-                                "description": "Кодирование города"
+                                "description": "Кодирование города",
+                                "example": "1"
                               },
                               "ScodeName": {
                                 "type": "string",
-                                "description": "Город"
+                                "description": "Город",
+                                "example": "Алматы"
                               },
                               "ScodeType": {
                                 "type": "string",
-                                "description": "Дополнение к названию города"
+                                "description": "Дополнение к названию города",
+                                "example": "город"
                               },
                               "Szone": {
                                 "type": "string",
-                                "description": "Транспортная зона"
+                                "description": "Транспортная зона",
+                                "example": "000000KZ02"
                               }
                             }
                           },
@@ -355,27 +377,33 @@
                             "properties": {
                               "Rland": {
                                 "type": "string",
-                                "description": "Код страны"
+                                "description": "Код страны",
+                                "example": "RU"
                               },
                               "Rregio": {
                                 "type": "string",
-                                "description": "Регион (штат, федер. земля, провинция, область, графство)"
+                                "description": "Регион (штат, федер. земля, провинция, область, графство)",
+                                "example": "66"
                               },
                               "Rcode": {
                                 "type": "string",
-                                "description": "Кодирование города"
+                                "description": "Кодирование города",
+                                "example": "660000100000"
                               },
                               "RcodeName": {
                                 "type": "string",
-                                "description": "Город"
+                                "description": "Город",
+                                "example": "Екатеринбург"
                               },
                               "RcodeType": {
                                 "type": "string",
-                                "description": "Дополнение к названию города"
+                                "description": "Дополнение к названию города",
+                                "example": "Город"
                               },
                               "Rzone": {
                                 "type": "string",
-                                "description": "Транспортная зона"
+                                "description": "Транспортная зона",
+                                "example": "0000006600"
                               }
                             }
                           },
@@ -388,16 +416,19 @@
                                 "Date": {
                                   "type": "string",
                                   "description": "Дата создания записи",
-                                  "pattern": "YYYYMMDD"
+                                  "pattern": "YYYYMMDD",
+                                  "example": "21.04.2023"
                                 },
                                 "Time": {
                                   "type": "string",
                                   "pattern": "HHMMSS",
-                                  "description": "Время создания записи"
+                                  "description": "Время создания записи",
+                                  "example": "14:59:03"
                                 },
                                 "Faksk": {
                                   "type": "string",
-                                  "description": "Блокирование вида фактуры документа сбыта"
+                                  "description": "Блокирование вида фактуры документа сбыта",
+                                  "example": "00"
                                 }
                               }
                             }
@@ -412,7 +443,8 @@
                           },
                           "ZtypeTransp": {
                             "type": "string",
-                            "description": "Выбранный тип перевозки"
+                            "description": "Выбранный тип перевозки",
+                            "example": "01"
                           }
                         }
                       }
@@ -425,15 +457,18 @@
                         "properties": {
                           "Lzone": {
                             "type": "string",
-                            "description": "Транспортная зона"
+                            "description": "Транспортная зона",
+                            "example": "0000006600"
                           },
                           "Vtext": {
                             "type": "string",
-                            "description": "Название"
+                            "description": "Название",
+                            "example": "Екатеринбург"
                           },
                           "Direct": {
                             "type": "string",
-                            "description": "Направление"
+                            "description": "Направление",
+                            "example": "2"
                           }
                         }
                       }
@@ -446,21 +481,107 @@
                         "properties": {
                           "Kunnr": {
                             "type": "string",
-                            "description": "Номер дебитора"
+                            "description": "Номер дебитора",
+                            "example": "1054421"
                           },
                           "Name": {
                             "type": "string",
-                            "description": "Наименование дебитора (длинное)"
+                            "description": "Наименование дебитора (длинное)",
+                            "example": "ИП \"Шмулев\""
                           },
                           "Partn": {
                             "type": "string",
-                            "description": "Партнеры заказа"
+                            "description": "Партнеры заказа",
+                            "example": "1"
                           }
                         }
                       }
                     },
                     "ECount": {
-                      "type": "integer"
+                      "type": "integer",
+                      "example": 1
+                    }
+                  }
+                },
+                "examples": {
+                  "Example 1": {
+                    "value": {
+                      "EOrd": [
+                        {
+                          "Vbeln": "1105888716",
+                          "Xblnr": "АМТЕКБ0100008292",
+                          "Erdat": "21.04.2023",
+                          "Erzet": "00:00:00",
+                          "Kunnr": "1054421",
+                          "Skunr": "1054421",
+                          "Rkunr": "9000156",
+                          "Netwr": "670,00",
+                          "Waerk": "RUB",
+                          "Kuntx": "ИП \"Шмулев\"",
+                          "Skutx": "ИП \"Шмулев\"",
+                          "Rkutx": "Семьянинова Лидия Юрьевена",
+                          "Netwk": "0,00",
+                          "Stato": "1",
+                          "Statp": "3",
+                          "StPay": "2",
+                          "Sdirect": {
+                            "Sland": "KZ",
+                            "Sregio": "00",
+                            "Scode": "1",
+                            "ScodeName": "Алматы",
+                            "ScodeType": "город",
+                            "Szone": "000000KZ02"
+                          },
+                          "Rdirect": {
+                            "Rland": "RU",
+                            "Rregio": "66",
+                            "Rcode": "660000100000",
+                            "RcodeName": "Екатеринбург",
+                            "RcodeType": "Город",
+                            "Rzone": "0000006600"
+                          },
+                          "Stat": [
+                            {
+                              "Date": "21.04.2023",
+                              "Time": "14:59:03",
+                              "Faksk": "00"
+                            },
+                            {
+                              "Date": "21.04.2023",
+                              "Time": "14:59:11",
+                              "Faksk": "01"
+                            },
+                            {
+                              "Date": "26.04.2023",
+                              "Time": "14:59:11",
+                              "Faksk": "F1"
+                            }
+                          ],
+                          "Zbaggage": "string",
+                          "Vbelv": "string",
+                          "ZtypeTransp": "01"
+                        }
+                      ],
+                      "ELzone": [
+                        {
+                          "Lzone": "0000006600",
+                          "Vtext": "Екатеринбург",
+                          "Direct": "2"
+                        },
+                        {
+                          "Lzone": "000000KZ02",
+                          "Vtext": "Алматы (КЗ)",
+                          "Direct": "1"
+                        }
+                      ],
+                      "EDebi": [
+                        {
+                          "Kunnr": "string",
+                          "Name": "string",
+                          "Partn": "string"
+                        }
+                      ],
+                      "ECount": 0
                     }
                   }
                 }
@@ -540,15 +661,18 @@
                         "properties": {
                           "DocType": {
                             "type": "string",
-                            "description": "Тип документа"
+                            "description": "Тип документа",
+                            "example": "01"
                           },
                           "Vbelv": {
                             "type": "string",
-                            "description": "Номер документа"
+                            "description": "Номер документа",
+                            "example": "1100008218"
                           },
                           "Name": {
                             "type": "string",
-                            "description": "Наименование документа"
+                            "description": "Наименование документа",
+                            "example": "Экспедиторская расписка"
                           },
                           "Bukrs": {
                             "type": "string",
@@ -556,10 +680,26 @@
                           },
                           "Vbel2": {
                             "type": "string",
-                            "description": "Номер для отображения"
+                            "description": "Номер для отображения",
+                            "example": "ЕКБМСК0100003758"
                           }
                         }
                       }
+                    }
+                  }
+                },
+                "examples": {
+                  "Example 1": {
+                    "value": {
+                      "Docs": [
+                        {
+                          "DocType": "01",
+                          "Vbelv": "1100008218",
+                          "Name": "Экспедиторская расписка",
+                          "Bukrs": "string",
+                          "Vbel2": "ЕКБМСК0100003758"
+                        }
+                      ]
                     }
                   }
                 }
@@ -627,11 +767,13 @@
                       "properties": {
                         "DocType": {
                           "type": "string",
-                          "description": "Тип документа"
+                          "description": "Тип документа",
+                          "example": "06"
                         },
                         "Vbelv": {
                           "type": "string",
-                          "description": "Номер документа"
+                          "description": "Номер документа",
+                          "example": "2105917741"
                         },
                         "Name": {
                           "type": "string",
@@ -647,8 +789,23 @@
                         },
                         "Bin": {
                           "type": "string",
-                          "description": "Двоичные данные"
+                          "description": "Двоичные данные",
+                          "example": "255044462D312E360D25E2E3CFD30D0A3433322030206F626A0A3C3C2F46696C7465722F466C6174654465636F64652F466972737420313637372F4C656E67746820323833342F4E203230302F547970652F4F626A53746D3E3E73747265616D0D0A68DE"
                         }
+                      }
+                    }
+                  }
+                },
+                "examples": {
+                  "Example 1": {
+                    "value": {
+                      "Binary": {
+                        "DocType": "06",
+                        "Vbelv": "2105917741",
+                        "Name": "string",
+                        "Burks": "string",
+                        "Vbel2": "string",
+                        "Bin": "255044462D312E360D25E2E3CFD30D0A3433322030206F626A0A3C3C2F46696C7465722F466C6174654465636F64652F466972737420313637372F4C656E67746820323833342F4E203230302F547970652F4F626A53746D3E3E73747265616D0D0A68DE"
                       }
                     }
                   }
