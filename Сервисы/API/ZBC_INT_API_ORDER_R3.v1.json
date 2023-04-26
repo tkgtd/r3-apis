@@ -6,7 +6,7 @@
   "info": {
     "title": "ZBC_INT_API_ORDER_R3.v1",
     "version": "1.0",
-    "description": "Тестовый адрес:\nhttp://81.91.43.211:8000/sap/bc/srt/wsdl/flv_10002A101AD1/bndg_url/sap/bc/srt/rfc/sap/zbc_int_api_order/850/srv1/srv1?sap-client=850\n\nПродуктивный адрес:\nhttp://81.91.43.211:8030/sap/bc/srt/wsdl/flv_10002A101AD1/bndg_url/sap/bc/srt/rfc/sap/zbc_int_api_order/850/srv1/srv1?sap-client=850"
+    "description": "Сервис R3\n\nТестовый адрес:\nhttp://81.91.43.211:8000/sap/bc/srt/wsdl/flv_10002A101AD1/bndg_url/sap/bc/srt/rfc/sap/zbc_int_api_order/850/srv1/srv1?sap-client=850\n\nПродуктивный адрес:\nhttp://81.91.43.211:8030/sap/bc/srt/wsdl/flv_10002A101AD1/bndg_url/sap/bc/srt/rfc/sap/zbc_int_api_order/850/srv1/srv1?sap-client=850"
   },
   "host": "localhost:3000",
   "schemes": [
@@ -351,7 +351,88 @@
                 "IS_OPTION"
               ]
             },
-            "description": ""
+            "description": "",
+            "x-examples": [
+              {
+                "IT_ITEM": [
+                  {
+                    "GR_TYPE": "02",
+                    "MENGE": 2,
+                    "LAENG": 4,
+                    "BREIT": 3,
+                    "HOEHE": 3,
+                    "BRGEW": 3,
+                    "VOLUM": 27,
+                    "GR_NATURE": "001",
+                    "HAND_50": 1800,
+                    "HAND_PRICE": 250,
+                    "WAERS": "string",
+                    "UEPOS": 0,
+                    "ABGRU": "string",
+                    "ARTICLE": "string",
+                    "LDDAT": "string",
+                    "LDUHR": "string",
+                    "WADAT": "string",
+                    "WAUHR": "string",
+                    "PAYER": "AG"
+                  }
+                ],
+                "IT_PARTNER": [
+                  {
+                    "PARVW": "string",
+                    "KUNNR": "string",
+                    "STCD1": "string",
+                    "STCD3": "string",
+                    "PHONE": "string",
+                    "PHONE2": "string",
+                    "PHONE3": "string",
+                    "NAME": "string",
+                    "KTOKD": "string",
+                    "BUKRS": "string",
+                    "VKBUR": "string",
+                    "LZONE": "string",
+                    "EMAIL": "string",
+                    "TIME_WORK": "string",
+                    "LAND_JU": "string",
+                    "CITY_JU": "string",
+                    "CITY_ID_JU": "string",
+                    "POSTAL_JU": "string",
+                    "REGIO_JU": "string",
+                    "STREET_JU": "string",
+                    "STREET_ID_JU": "string",
+                    "HOUSE_JU": "string",
+                    "HSN_SUPP_JU": "string",
+                    "ROOM_JU": "string",
+                    "LAND_FA": "string",
+                    "CITY_FA": "string",
+                    "CITY_ID_FA": "string",
+                    "POSTAL_FA": "string",
+                    "REGIO_FA": "string",
+                    "STREET_FA": "string",
+                    "STREET_ID_FA": "string",
+                    "HOUSE_FA": "string",
+                    "HSN_SUPP_FA": "string",
+                    "ROOM_FA": "string"
+                  }
+                ],
+                "PRICE": 0,
+                "WAERS": "string",
+                "IS_OPTION": {
+                  "FR_TYPE": "string",
+                  "WERKS_FROM": "string",
+                  "WERKS_TO": "string"
+                },
+                "I_CRM_GUID": "string",
+                "COMMENT": "string",
+                "I_VTWEG": "string",
+                "I_HAVE_DOC": "string",
+                "I_BAGGAGE": "string",
+                "I_DLV_NOTE": "string",
+                "I_PUP_NOTE": "string",
+                "I_GR_ACC_PD": "string",
+                "I_GR_ACC_PT": "string"
+              }
+            ]
           }
         ]
       }
