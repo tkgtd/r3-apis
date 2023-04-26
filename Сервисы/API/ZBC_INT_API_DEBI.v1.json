@@ -261,10 +261,16 @@
               "properties": {
                 "EOk": {
                   "type": "string",
-                  "description": "Успешно ли разрегистрировались"
+                  "description": "Успешно ли разрегистрировались",
+                  "example": "X"
                 }
               }
-            }
+            },
+            "examples": [
+              {
+                "EOk": "X"
+              }
+            ]
           }
         },
         "description": "Отписка от уведомлений push",
