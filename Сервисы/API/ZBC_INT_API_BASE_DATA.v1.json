@@ -262,25 +262,41 @@
                     "properties": {
                       "MATKL": {
                         "type": "string",
-                        "description": "Группа материалов"
+                        "description": "Группа материалов",
+                        "example": "10-08"
                       },
                       "MATNR": {
                         "type": "string",
-                        "description": "Номер материала"
+                        "description": "Номер материала",
+                        "example": "308"
                       },
                       "ZARTICLE": {
                         "type": "string",
-                        "description": "Артикул"
+                        "description": "Артикул",
+                        "example": "I001"
                       },
                       "MAKTX": {
                         "type": "string",
-                        "description": "Описание услуги"
+                        "description": "Описание услуги",
+                        "example": "СКЛ-ДВР ПЕРЕВОЗКА"
                       }
                     }
                   }
                 }
               }
-            }
+            },
+            "examples": [
+              {
+                "ET_MATNR_LIST": [
+                  {
+                    "MATKL": "10-08",
+                    "MATNR": "308",
+                    "ZARTICLE": "I001",
+                    "MAKTX": "СКЛ-ДВР ПЕРЕВОЗКА"
+                  }
+                ]
+              }
+            ]
           }
         },
         "operationId": "get-ZBC_INT_API_DIR_MATNR",
@@ -294,7 +310,8 @@
               "properties": {
                 "I_MATKL": {
                   "type": "string",
-                  "description": "Группа материалов"
+                  "description": "Группа материалов",
+                  "example": "10-08"
                 }
               }
             }
