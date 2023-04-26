@@ -216,17 +216,29 @@
                     "properties": {
                       "FR_TYPE": {
                         "type": "string",
-                        "description": "Выбранный тип перевозки"
+                        "description": "Выбранный тип перевозки",
+                        "example": "01"
                       },
                       "TYPE_NAME": {
                         "type": "string",
-                        "description": "Имя типа перевозки"
+                        "description": "Имя типа перевозки",
+                        "example": "Стандарт"
                       }
                     }
                   }
                 }
               }
-            }
+            },
+            "examples": [
+              {
+                "ET_TYPE_LIST": [
+                  {
+                    "FR_TYPE": "01",
+                    "TYPE_NAME": "Стандарт"
+                  }
+                ]
+              }
+            ]
           }
         },
         "operationId": "get-ZBC_INT_API_DIR_TRANSP_TYPE",
