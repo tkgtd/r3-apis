@@ -2042,7 +2042,7 @@
                   }
                 },
                 "examples": {
-                  "1": {
+                  "0": {
                     "value": {
                       "EMove": [
                         {
@@ -2131,62 +2131,76 @@
                       },
                       "EServ": [
                         {
-                          "Posnr": "string",
-                          "Article": "string",
-                          "Arktx": "string",
+                          "Posnr": "000001",
+                          "Article": "S039",
+                          "Arktx": "Перевозка груза: Екатеринбург-Москва",
                           "Kwmeng": 1,
-                          "Vrkme": "string",
-                          "Netwr": 0,
-                          "Netws": 0,
+                          "Vrkme": "МСТ",
+                          "Netwr": 300,
+                          "Netws": 300,
+                          "Mwsbp": 45.76,
+                          "Waerk": "RUB",
+                          "Kunnr": "1000100",
+                          "Paytx": "OOO 'Малина!'",
+                          "Nds": "18.00"
+                        },
+                        {
+                          "Posnr": "000002",
+                          "Article": "S103",
+                          "Arktx": "Возмещение страхования груза по объяв.ст",
+                          "Kwmeng": 1,
+                          "Vrkme": "ШТ",
+                          "Netwr": 30,
+                          "Netws": 30,
                           "Mwsbp": 0,
-                          "Waerk": "string",
-                          "Kunnr": "string",
-                          "Paytx": "string",
-                          "Nds": "string"
+                          "Waerk": "RUB",
+                          "Kunnr": "1000100",
+                          "Paytx": "OOO 'Малина!'",
+                          "Nds": "0.00"
                         }
                       ],
                       "ESubi": {
-                        "Mwsbp": 0,
-                        "Summa": 0,
-                        "Route": "string",
-                        "Comment": "string",
-                        "Xblnr": "string",
-                        "Vbelv": "string"
+                        "Mwsbp": 45.76,
+                        "Summa": 330,
+                        "Route": "Екатеринбург-Москва",
+                        "Comment": "",
+                        "Xblnr": "ЕКБМСК0100003782",
+                        "Vbelv": ""
                       },
-                      "EStPay": "string",
+                      "EStPay": "2",
                       "EsFrom": {
-                        "CityCode": "string",
-                        "CityName": "string",
-                        "CityExt": "string"
+                        "CityCode": "660000100000",
+                        "CityName": "Екатеринбург",
+                        "CityExt": "Город"
                       },
                       "EsTo": {
-                        "CityCode": "string",
-                        "CityName": "string",
-                        "CityExt": "string"
+                        "CityCode": "770000000000",
+                        "CityName": "Москва",
+                        "CityExt": "Город"
                       },
-                      "EInvoiceErdat": "string",
+                      "EInvoiceErdat": "",
                       "EtKunnr": [
                         {
-                          "Kunnr": "string",
-                          "LandxU": "string",
-                          "BezeiU": "string",
-                          "StrtypeabU": "string",
-                          "PostCode1U": "string",
-                          "CityCodeU": "string",
-                          "CityU": "string",
-                          "StreetU": "string",
-                          "HouseNum1U": "string",
-                          "HouseNum2U": "string",
-                          "RoomnumberU": "string",
-                          "LandxF": "string",
-                          "StrtypeabF": "string",
-                          "PostCode1F": "string",
-                          "CiteCodeF": "string",
-                          "CityF": "string",
-                          "StreetF": "string",
-                          "HouseNum1F": "string",
-                          "HouseNum2F": "string",
-                          "RoomnumberF": "string"
+                          "Kunnr": "1000100",
+                          "LandxU": "Россия",
+                          "BezeiU": "Свердловская обл.",
+                          "StrtypeabU": "ул",
+                          "PostCode1U": "",
+                          "CityCodeU": "660000100000",
+                          "CityU": "Екатеринбург",
+                          "StreetU": "8 Марта",
+                          "HouseNum1U": "269",
+                          "HouseNum2U": "",
+                          "RoomnumberU": "",
+                          "LandxF": "Россия",
+                          "StrtypeabF": "Свердловская обл.",
+                          "PostCode1F": "",
+                          "CiteCodeF": "660000100000",
+                          "CityF": "Екатеринбург",
+                          "StreetF": "8 Марта",
+                          "HouseNum1F": "269",
+                          "HouseNum2F": "",
+                          "RoomnumberF": ""
                         }
                       ]
                     }
