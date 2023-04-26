@@ -37,31 +37,38 @@
                     "properties": {
                       "WERKS": {
                         "type": "string",
-                        "description": "Завод"
+                        "description": "Завод",
+                        "example": "0201"
                       },
                       "LAND1": {
                         "type": "string",
-                        "description": "Код страны"
+                        "description": "Код страны",
+                        "example": "RU"
                       },
                       "WERKS_NAME": {
                         "type": "string",
-                        "description": "Название завода"
+                        "description": "Название завода",
+                        "example": "Уфа"
                       },
                       "PSTLZ": {
                         "type": "string",
-                        "description": "Почтовый индекс"
+                        "description": "Почтовый индекс",
+                        "example": "450103"
                       },
                       "REGIO": {
                         "type": "string",
-                        "description": "Регион (штат, федер. земля, провинция, область, графство)"
+                        "description": "Регион (штат, федер. земля, провинция, область, графство)",
+                        "example": "02"
                       },
                       "ORT01": {
                         "type": "string",
-                        "description": "Город"
+                        "description": "Город",
+                        "example": "Уфа"
                       },
                       "STRAS": {
                         "type": "string",
-                        "description": "Улица и номер дома"
+                        "description": "Улица и номер дома",
+                        "example": "Трамвайная 2/13"
                       },
                       "ZSCHWORK": {
                         "type": "string",
@@ -72,15 +79,25 @@
                       },
                       "CITY_CODE": {
                         "type": "string",
-                        "description": "Код города"
+                        "description": "Код города",
+                        "example": "20000100000"
                       },
                       "STREETCODE": {
                         "type": "string",
-                        "description": "Код улицы"
+                        "description": "Код улицы",
+                        "example": "8030"
+                      },
+                      "TRANSPZONE": {
+                        "type": "string",
+                        "x-stoplight": {
+                          "id": "nphxz303w76l3"
+                        },
+                        "example": "0000000200"
                       },
                       "TEL_NUMBER": {
                         "type": "string",
-                        "description": "номер телефона: код + номер"
+                        "description": "номер телефона: код + номер",
+                        "example": "+73472242684"
                       },
                       "TEL_EXTENS": {
                         "type": "string",
@@ -97,7 +114,31 @@
                   }
                 }
               }
-            }
+            },
+            "examples": [
+              {
+                "ET_WERKS_LIST": [
+                  {
+                    "WERKS": "0201",
+                    "LAND1": "RU",
+                    "WERKS_NAME": "Уфа",
+                    "PSTLZ": "450103",
+                    "REGIO": "02",
+                    "ORT01": "Уфа",
+                    "STRAS": "Трамвайная 2/13",
+                    "ZSCHWORK": "string",
+                    "ZALTAD": "string",
+                    "CITY_CODE": "20000100000",
+                    "STREETCODE": "8030",
+                    "TRANSPZONE": "0000000200",
+                    "TEL_NUMBER": "+73472242684",
+                    "TEL_EXTENS": "string",
+                    "REMARK": "string",
+                    "EKIT": "string"
+                  }
+                ]
+              }
+            ]
           }
         },
         "operationId": "get-ZBC_INT_API_DIR_WERKS",
@@ -123,21 +164,35 @@
                     "properties": {
                       "WAERS": {
                         "type": "string",
-                        "description": "Код валюты"
+                        "description": "Код валюты",
+                        "example": "RUB"
                       },
                       "LTEXT": {
                         "type": "string",
-                        "description": "Подробный текст"
+                        "description": "Подробный текст",
+                        "example": "Российский рубль"
                       },
                       "KTEXT": {
                         "type": "string",
-                        "description": "Краткий текст"
+                        "description": "Краткий текст",
+                        "example": "Рубль"
                       }
                     }
                   }
                 }
               }
-            }
+            },
+            "examples": [
+              {
+                "ET_WAERS_LIST": [
+                  {
+                    "WAERS": "RUB",
+                    "LTEXT": "Российский рубль",
+                    "KTEXT": "Рубль"
+                  }
+                ]
+              }
+            ]
           }
         },
         "operationId": "get-ZBC_INT_API_DIR_WAERS",
@@ -162,24 +217,40 @@
                     "properties": {
                       "MATKL": {
                         "type": "string",
-                        "description": "Группа материалов"
+                        "description": "Группа материалов",
+                        "example": "20-01-01"
                       },
                       "MATNR": {
                         "type": "string",
-                        "description": "Номер материала"
+                        "description": "Номер материала",
+                        "example": "200000000000000003"
                       },
                       "ZARTICLE": {
                         "type": "string",
-                        "description": "Артикул"
+                        "description": "Артикул",
+                        "example": "S011"
                       },
                       "MAKTX": {
-                        "type": "string"
+                        "type": "string",
+                        "example": "Забор груза"
                       }
                     }
                   }
                 }
               }
-            }
+            },
+            "examples": [
+              {
+                "ET_MATNR_LIST": [
+                  {
+                    "MATKL": "20-01-01",
+                    "MATNR": "200000000000000003",
+                    "ZARTICLE": "S011",
+                    "MAKTX": "Забор груза"
+                  }
+                ]
+              }
+            ]
           }
         },
         "operationId": "get-ZBC_INT_API_DIR_MATNR",
@@ -219,17 +290,29 @@
                     "properties": {
                       "MATKL": {
                         "type": "string",
-                        "description": "Группа материалов"
+                        "description": "Группа материалов",
+                        "example": "20-01-11"
                       },
                       "WGBEZ": {
                         "type": "string",
-                        "description": "Название группы материалов"
+                        "description": "Название группы материалов",
+                        "example": "Возврат документов"
                       }
                     }
                   }
                 }
               }
-            }
+            },
+            "examples": [
+              {
+                "ET_MATKL_LIST": [
+                  {
+                    "MATKL": "20-01-11",
+                    "WGBEZ": "Возврат документов"
+                  }
+                ]
+              }
+            ]
           }
         },
         "operationId": "get-ZBC_INT_API_DIR_MATKL",
@@ -254,17 +337,29 @@
                     "properties": {
                       "FR_TYPE": {
                         "type": "string",
-                        "description": "Тип перевозки"
+                        "description": "Тип перевозки",
+                        "example": "01"
                       },
                       "TYPE_NAME": {
                         "type": "string",
-                        "description": "Название типа перевозки"
+                        "description": "Название типа перевозки",
+                        "example": "Стандарт"
                       }
                     }
                   }
                 }
               }
-            }
+            },
+            "examples": [
+              {
+                "ET_TYPE_LIST": [
+                  {
+                    "FR_TYPE": "01",
+                    "TYPE_NAME": "Стандарт"
+                  }
+                ]
+              }
+            ]
           }
         },
         "operationId": "get-ZBC_INT_API_DIR_TRANSP_TYPE",
@@ -289,25 +384,41 @@
                     "properties": {
                       "FCURR": {
                         "type": "string",
-                        "description": "Исходная валюта"
+                        "description": "Исходная валюта",
+                        "example": "AED"
                       },
                       "TCURR": {
                         "type": "string",
-                        "description": "Целевая валюта"
+                        "description": "Целевая валюта",
+                        "example": "JPY"
                       },
                       "UKURS": {
                         "type": "number",
-                        "description": "Валютный курс"
+                        "description": "Валютный курс",
+                        "example": "31,18700"
                       },
                       "GDATU": {
                         "type": "string",
-                        "description": "Дата, начиная с которой действует курс"
+                        "description": "Дата, начиная с которой действует курс",
+                        "example": "01.01.2001"
                       }
                     }
                   }
                 }
               }
-            }
+            },
+            "examples": [
+              {
+                "ET_CURST_LIST": [
+                  {
+                    "FCURR": "AED",
+                    "TCURR": "JPY",
+                    "UKURS": "31,18700",
+                    "GDATU": "01.01.2001"
+                  }
+                ]
+              }
+            ]
           }
         },
         "operationId": "get-ZBC_INT_API_DIR_CURST",
@@ -332,21 +443,35 @@
                     "properties": {
                       "LAND1": {
                         "type": "string",
-                        "description": "Код страны"
+                        "description": "Код страны",
+                        "example": "GE"
                       },
                       "LANDX": {
                         "type": "string",
-                        "description": "Название страны"
+                        "description": "Название страны",
+                        "example": "Грузия"
                       },
                       "WAERS": {
                         "type": "string",
-                        "description": "Валюта страны"
+                        "description": "Валюта страны",
+                        "example": "GEL"
                       }
                     }
                   }
                 }
               }
-            }
+            },
+            "examples": [
+              {
+                "ET_COUNTRY_LIST": [
+                  {
+                    "LAND1": "GE",
+                    "LANDX": "Грузия",
+                    "WAERS": "GEL"
+                  }
+                ]
+              }
+            ]
           }
         },
         "operationId": "get-ZBC_INT_API_DIR_COUNTRY",
