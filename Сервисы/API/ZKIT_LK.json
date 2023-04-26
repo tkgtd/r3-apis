@@ -1173,6 +1173,35 @@
                       }
                     }
                   }
+                },
+                "examples": {
+                  "0": {
+                    "value": {
+                      "ENdeb": [
+                        {
+                          "Event": "01",
+                          "Caption": "Заказ принят",
+                          "ValSms": "",
+                          "ValEmail": "X",
+                          "ColorLine": "C500"
+                        },
+                        {
+                          "Event": "08",
+                          "Caption": "Заказ обработан",
+                          "ValSms": "",
+                          "ValEmail": "X",
+                          "ColorLine": ""
+                        },
+                        {
+                          "Event": "15",
+                          "Caption": "Заказ подтвержден",
+                          "ValSms": "",
+                          "ValEmail": "",
+                          "ColorLine": ""
+                        }
+                      ]
+                    }
+                  }
                 }
               }
             }
