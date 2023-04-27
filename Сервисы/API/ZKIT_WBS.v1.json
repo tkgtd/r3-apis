@@ -46,6 +46,20 @@
                   }
                 }
               }
+            },
+            "examples": {
+              "1": {
+                "ET_BAGGAGE": [
+                  {
+                    "DOMVALUE": "01",
+                    "DDTEXT": "Бандероль XS"
+                  },
+                  {
+                    "DOMVALUE": "02",
+                    "DDTEXT": "Посылка S"
+                  }
+                ]
+              }
             }
           }
         },
@@ -76,6 +90,13 @@
                   "description": "Высота"
                 }
               }
+            },
+            "examples": {
+              "1": {
+                "E_LENGTH": 30,
+                "E_WIDTH": 21,
+                "E_HEIGHT": 5
+              }
             }
           }
         },
@@ -96,6 +117,11 @@
               "required": [
                 "I_BAGGAGE"
               ]
+            },
+            "x-examples": {
+              "1": {
+                "I_BAGGAGE": "01"
+              }
             }
           }
         ]
@@ -395,6 +421,12 @@
               "required": [
                 "I_XBLNR"
               ]
+            },
+            "x-examples": {
+              "0": {
+                "I_XBLNR": "ЕКБМСК0100008306",
+                "CODE": ""
+              }
             }
           }
         ]
@@ -499,6 +531,11 @@
                   "description": "'N' - xblnr не найден\n'Y' - успешно\n'R' - неудачно"
                 }
               }
+            },
+            "examples": {
+              "1": {
+                "E_RETURN": "Y"
+              }
             }
           }
         },
@@ -521,6 +558,12 @@
               "required": [
                 "I_XBLNR"
               ]
+            },
+            "x-examples": {
+              "1": {
+                "I_XBLNR": "ЕКБМСК0100008306",
+                "I_MSG": ""
+              }
             }
           }
         ]
