@@ -281,13 +281,96 @@
                   "description": "Адрес РП"
                 },
                 "E_RP_TEL": {
-                  "type": "string",
-                  "description": "Телефон РП"
+                  "type": "object",
+                  "description": "Телефон РП",
+                  "properties": {
+                    "ZSD_UPF_TEL": {
+                      "type": "string",
+                      "x-stoplight": {
+                        "id": "snrt5wtzgp30d"
+                      }
+                    }
+                  }
                 },
                 "E_RP_WORKTIME": {
                   "type": "string",
                   "description": "Рабочее время"
                 }
+              }
+            },
+            "examples": {
+              "1": {
+                "E_STAT": [
+                  {
+                    "DATE": "24.04.2023",
+                    "TIME": "12:35:12",
+                    "FAKSK": "00"
+                  },
+                  {
+                    "DATE": "24.04.2023",
+                    "TIME": "12:35:21",
+                    "FAKSK": "01"
+                  },
+                  {
+                    "DATE": "24.04.2023",
+                    "TIME": "12:42:23",
+                    "FAKSK": "02"
+                  },
+                  {
+                    "DATE": "24.04.2023",
+                    "TIME": "16:00:00",
+                    "FAKSK": "F2"
+                  }
+                ],
+                "E_DOP": [
+                  {
+                    "ST_NAME": "",
+                    "XBLNR": "",
+                    "DATE": "",
+                    "TIME": ""
+                  }
+                ],
+                "E_ADR": "г.Москва, УЛ 43-й километр МКАД, дом №корпус 8, тел: +74951081770, Пн – 09:00-23:59; Вт-Сб – круглосуточно",
+                "E_STAT_ORD": [
+                  {
+                    "CRM_GUID": "",
+                    "ERDAT": "",
+                    "KUNNR": "",
+                    "KUNNR_TX": "",
+                    "STAT": [
+                      {
+                        "DATE": "",
+                        "TIME": "",
+                        "FAKSK": ""
+                      }
+                    ],
+                    "DOP": [
+                      {
+                        "ST_NAME": "",
+                        "XBLNR": "",
+                        "DATE": "",
+                        "TIME": ""
+                      }
+                    ],
+                    "ADR": ""
+                  }
+                ],
+                "ET_STATUS": [
+                  {
+                    "VBELN": "",
+                    "FAKSK": "",
+                    "CHARG": "",
+                    "XBLNR": "",
+                    "POINT": "",
+                    "SDATE": "",
+                    "STIME": ""
+                  }
+                ],
+                "E_CITY_FR": "660000100000",
+                "E_CITY_TO": "770000000000",
+                "E_RP_ADR": "Город Москва, улица 43-й километр МКАД, корпус 8",
+                "E_RP_TEL": "+74951081770",
+                "E_RP_WORKTIME": "Пн – 09:00-23:59; Вт-Сб – круглосуточно"
               }
             }
           }
